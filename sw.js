@@ -76,9 +76,3 @@ cache
   .then(function() {
     console.log("All resources have been fetched and cached.");
   });
-
-<img
-  src="image-src.png"
-  srcset="image-src.png 1x, image-2x.png 2x"
-  style="width:400px; height: 400px;"
-/>;
