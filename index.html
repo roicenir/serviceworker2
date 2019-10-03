@@ -2,8 +2,25 @@
 <html>
 
 <head>
+	<!-- CODELAB: Add link rel manifest -->
+    <link rel="manifest" href="/manifest.json">
+
 	<title>Parcel Sandbox</title>
 	<meta charset="UTF-8" />
+
+	<!-- CODELAB: Add iOS meta tags and icons -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Bob Esponja">
+	<link rel="apple-touch-icon" href="/images/icons/lulamolusco.jpg">
+
+	<!-- CODELAB: Add description here -->
+	<meta name="description" content="VAMOS CAÇAR AGUA VIVA!!!">
+
+	<!-- CODELAB: Add meta theme-color -->
+	<meta name="theme-color" content="#2F3BA2" />
+
+	
 </head>
 
 <body>
@@ -15,8 +32,20 @@
 />;
 	<div id="app"></div>
 
-	<script src="src/index.js">
-	</script>
+//	<script src="index.js">
+//	</script>
+
+//	<script>
+//		// CODELAB: Register service worker.
+//		if ('serviceWorker' in navigator) {
+//		window.addEventListener('load', () => {
+//			navigator.serviceWorker.register('/sw.js')
+//				.then((reg) => {
+//				console.log('Service worker registered.', reg);
+//				});
+//		});
+//		}
+//	</script>
 </body>
 
 </html>
