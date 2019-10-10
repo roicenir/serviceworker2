@@ -1,5 +1,5 @@
 var CACHE_NAME = "my-site-cache-v1";
-var urlsToCache = ["/", "/styles/main.css", "/script/main.js"];
+var urlsToCache = ["/", "/styles.css", "/index.js"];
 
 // https://developers.google.com/web/fundamentals/primers/service-workers/?hl=pt-br
 self.addEventListener("install", function(event) {
@@ -91,7 +91,7 @@ self.addEventListener("activate", function(event) {
 //);
 
 // CODELAB: Remove previous cached data from disk.
-evt.waitUntil(
+//evt.waitUntil(
  // caches.keys().then((keyList) => {
   //  return Promise.all(keyList.map((key) => {
   //    if (key !== CACHE_NAME) {
