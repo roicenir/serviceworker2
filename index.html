@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Meu App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- CODELAB: Add link rel manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<title>Parcel Sandbox</title>
-	<meta charset="UTF-8" />
+    <!-- CODELAB: Add link rel manifest -->
+    <link rel="manifest" href="/manifest.json" />
 
-	<!-- CODELAB: Add iOS meta tags and icons -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Bob Esponja">
-	<link rel="apple-touch-icon" href="/images/icons/lulamolusco.jpg">
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
 
-	<!-- CODELAB: Add description here -->
-	<meta name="description" content="VAMOS CAÇAR AGUA VIVA!!!">
+    <!-- CODELAB: Add iOS meta tags and icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Bob Esponja" />
+    <link rel="apple-touch-icon" href="/images/icons/lulamolusco.jpg" />
 
-	<!-- CODELAB: Add meta theme-color -->
-	<meta name="theme-color" content="#2F3BA2" />
+    <!-- CODELAB: Add description here -->
+    <meta name="description" content="VAMOS CAÇAR AGUA VIVA!!!" />
 
-	
-</head>
+    <!-- CODELAB: Add meta theme-color -->
+    <meta name="theme-color" content="#2F3BA2" />
+  </head>
 
-<body>
+  <body>
+    <img
+      src="image-src.png"
+      srcset="image-src.png 1x, image-2x.png 2x"
+      style="width:400px; height: 400px;"
+    />;
+    <div id="app"></div>
 
-<img
-  src="image-src.png"
-  srcset="image-src.png 1x, image-2x.png 2x"
-  style="width:400px; height: 400px;"
->;
-	<div id="app"></div>
+    <script src="index.js"></script>
 
-	<script src="index.js">
-	</script>
-
-	<script>
-		// CODELAB: Register service worker.
-		if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker.register('/sw.js')
-				.then((reg) => {
-				console.log('Service worker registered.', reg);
-				});
-		});
-		}
-	</script>
-</body>
-
+    <script>
+      // CODELAB: Register service worker.
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").then(reg => {
+            console.log("Service worker registered.", reg);
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
-
