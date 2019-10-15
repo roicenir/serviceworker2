@@ -6,6 +6,8 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
+// https://www.html5rocks.com/pt/tutorials/workers/basics/ >> WEBWORKER
+
 // REGISTRO DO SW
 
 if ("serviceWorker" in navigator) {
