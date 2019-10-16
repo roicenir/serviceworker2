@@ -1,4 +1,4 @@
-var worker = new Worker('doWork.js');
+var worker = new Worker('doWork2.js');
 
 worker.addEventListener('message', function(e) {
   console.log('Worker said: ', e.data);
