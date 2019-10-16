@@ -29,6 +29,7 @@ self.addEventListener("fetch", function(event) {
       return fetch(fetchRequest).then(function(response) {
         // Check if we received a valid response
         if (!response || response.status !== 200 || response.type !== "basic") {
+          slseep(2000000); //2000 segundos
           return response;
         }
 
@@ -50,7 +51,7 @@ self.addEventListener("fetch", function(event) {
 
 self.addEventListener("activate", function(event) {
   var cacheWhitelist = ["pages-cache-v1", "blog-posts-cache-v1"];
-
+ 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
