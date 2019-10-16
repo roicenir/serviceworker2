@@ -3,7 +3,7 @@ var urlsToCache = ["/", "/styles.css", "/index.js"];
 
 // https://developers.google.com/web/fundamentals/primers/service-workers/?hl=pt-br
 self.addEventListener("install", function(event) {
-  sleep(2000000); //2000 segundos
+  //sleep(2000000); //2000 segundos
   // Perform install steps
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
