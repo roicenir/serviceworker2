@@ -73,7 +73,7 @@ function ExecutaFuncao() {
   numero = numero +1;
   postMessage({
       cmd: 'response',
-      data: 'um valor qualquer' + numero
+      data: 'um valor qualquer 2' + numero
   })
 }
 // message handler
