@@ -56,7 +56,7 @@ if ('serviceWorker' in navigator) {
         cmd: 'executa-funcao'
       })
     }
-  }, 50000) // every 50 seconds
+  }, 1000) // every 5 seconds
 
   // register
   navigator.serviceWorker.register('/sw.js', {
