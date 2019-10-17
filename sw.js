@@ -67,10 +67,13 @@ self.addEventListener("activate", function(event) {
   );
 });
 
+var numero = 0;
+
 function ExecutaFuncao() {
+  numero = numero +1;
   postMessage({
       cmd: 'response',
-      data: 'um valor qualquer'
+      data: 'um valor qualquer' + numero
   })
 }
 // message handler
