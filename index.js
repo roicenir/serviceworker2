@@ -1,4 +1,5 @@
 var worker = new Worker('doWork2.js');
+var WebTorrent = require('webtorrent');
 
 worker.addEventListener('message', function (e) {
   console.log('Worker said: ', e.data);
