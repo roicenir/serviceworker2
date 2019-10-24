@@ -2,23 +2,19 @@
   <header><title>This is title</title></header>
   <body>
     Hello world
-   
+
     <script src="webtorrent.min.js">
-      var WebTorrent = require("webtorrent");
+      var dragDrop = require('drag-drop')
+      var WebTorrent = require('webtorrent')
 
-      var client = new WebTorrent();
-      var magnetURI = "...";
+      var client = new WebTorrent()
 
-      client.add(magnetURI, function(torrent) {
-        // Got torrent metadata!
-        console.log("Client is downloading:", torrent.infoHash);
-
-        torrent.files.forEach(function(file) {
-          // Display the file by appending it to the DOM. Supports video, audio, images, and
-          // more. Specify a container element (CSS selector or reference to DOM node).
-          file.appendTo("body");
-        });
-      });
+      // When user drops files on the browser, create a new torrent and start seeding it!
+      dragDrop('body', function (files) {
+        client.seed(files, function (torrent) {
+          console.log('Client is seeding ' + torrent.magnetURI)
+        })
+      })
     </script>
   </body>
 </html>
