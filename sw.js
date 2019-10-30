@@ -76,6 +76,7 @@ function ExecutaFuncao() {
       data: 'um valor qualquer 2' + numero
   })
 }
+
 // message handler
 self.addEventListener('message', event => {
   if ( 'cmd' in event.data ) {
