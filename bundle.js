@@ -2046,7 +2046,7 @@
             function m(e) {
                 if (e >= 2147483647)
                     //throw new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + 2147483647.toString(16) + " bytes");
-                    console.log('TESTE: ' + 2147483647);
+                    console.log('TESTE: ' + 0x7FFFFFFF);
                     throw new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + 0x7FFFFFFF + " bytes");
                 return 0 | e
             }
