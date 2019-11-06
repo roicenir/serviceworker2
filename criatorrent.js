@@ -1,3 +1,5 @@
+<script src="dragdrop.min.js"></script>
+
 var dragDrop = require('drag-drop')
 var WebTorrent = require('webtorrent')
 
