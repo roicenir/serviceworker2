@@ -8,6 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "drag-drop": "^5.0.1",
     "webtorrent": "^0.107.16"
   },
   "devDependencies": {
