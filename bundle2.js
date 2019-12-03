@@ -167,7 +167,7 @@
                 e.files.forEach(function(e) {
                     v.log("&nbsp;&nbsp;- " + e.name + " (" + _(e.length) + ")")
                 }),
-                v.log("\" onclick=\"prompt(<a href=\"" + e.magnetURI + "\" target=\"_blank\">[Magnet URI]</a>"),
+                v.log("<a href=\"" + e.magnetURI + "\" target=\"_blank\">[Magnet URI]</a>"),
                 e.on("download", b(t, 250)),
                 e.on("upload", b(t, 250)),
                 setInterval(t, 5e3),
