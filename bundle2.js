@@ -163,7 +163,7 @@
                 var n = document.querySelector("input[name=upload]");
                 n.value = n.defaultValue;
                 var r = g.basename(e.name, g.extname(e.name)) + ".torrent";
-                console.log("teste123");
+                console.log(e.magnetURI);
                 v.log("\"" + r + "\" contains " + e.files.length + " files:"),
                 e.files.forEach(function(e) {
                     v.log("&nbsp;&nbsp;- " + e.name + " (" + _(e.length) + ")")
