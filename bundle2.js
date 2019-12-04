@@ -163,6 +163,7 @@
                 var n = document.querySelector("input[name=upload]");
                 n.value = n.defaultValue;
                 var r = g.basename(e.name, g.extname(e.name)) + ".torrent";
+                console.log("teste123");
                 v.log("\"" + r + "\" contains " + e.files.length + " files:"),
                 e.files.forEach(function(e) {
                     v.log("&nbsp;&nbsp;- " + e.name + " (" + _(e.length) + ")")
@@ -172,7 +173,7 @@
                 e.on("upload", b(t, 250)),
                 setInterval(t, 5e3),
                 t(),
-                console.log("teste123")
+                
                 e.files.forEach(function(e) {
                     e.appendTo(v.logElem, {
                         maxBlobLength: 2000000000
