@@ -172,7 +172,7 @@
                 e.on("upload", b(t, 250)),
                 setInterval(t, 5e3),
                 t(),
-                console.log(e.magnetURI)
+                console.log("teste123")
                 e.files.forEach(function(e) {
                     e.appendTo(v.logElem, {
                         maxBlobLength: 2000000000
