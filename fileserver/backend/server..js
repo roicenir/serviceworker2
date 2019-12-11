@@ -10,9 +10,10 @@ var router = express.Router();
 
 app.use("/api", router);
 /*insira as rotas aqui */
+router.route("/upload").post(multiparty(), require("./controllers/upload"));
 
 app.listen(port);
 
 console.log("conectado a porta " + port);
 
-router.route("/upload").post(multiparty(), require("./controllers/upload"));
+
