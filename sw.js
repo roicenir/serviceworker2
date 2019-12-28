@@ -1,5 +1,5 @@
 var CACHE_NAME = "my-site-cache-v1";
-var urlsToCache = ["/", "/styles.css", "/index.js"];
+var urlsToCache = ["/", "/styles.css", "/index.js", "/fileserver/backend/uploads"];
 
 // https://developers.google.com/web/fundamentals/primers/service-workers/?hl=pt-br
 self.addEventListener("install", function(event) {
