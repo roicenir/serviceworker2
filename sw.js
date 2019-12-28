@@ -8,7 +8,13 @@ self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
       console.log("Opened cache");
-      return cache.addAll(urlsToCache,'/fileserver/backend/uploads/abertura.mp4');
+      //return cache.addAll(urlsToCache);
+      return cache.addAll([
+        '/',
+        '/index.js',
+        '/fileserver/backend/uploads/abertura.mp4',
+        '/styles.css'
+      ]);
     })
   );
 });
