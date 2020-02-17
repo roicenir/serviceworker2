@@ -1,0 +1,11 @@
+tasks:
+  - init: npm install && npm run build
+    command: npm run start
+image:
+  file: .gitpod.Dockerfile
+# ports:
+#   - port: 3000
+#     onOpen: open-preview
+vscode:
+  extensions:
+    - esbenp.prettier-vscode@2.3.0:1F0Pvb/ORZ/T+b60LIMs8w==
