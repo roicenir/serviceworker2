@@ -1,6 +1,6 @@
-tasks:
-  - init: npm install && npm run build
-    command: npm run start
+# tasks:
+#   - init: npm install 
+#     command: npm start
 image:
   file: .gitpod.Dockerfile
 # ports:

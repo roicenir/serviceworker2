@@ -1,5 +1,9 @@
 FROM gitpod/workspace-mysql
-                    
+
+
+USER root
+RUN apt-get -y update && apt-get -y install nginx && apt clean
+
 USER gitpod
 
 # Install custom tools, runtime, etc. using apt-get
