@@ -2,7 +2,7 @@ FROM gitpod/workspace-mysql
 
 
 USER root
-RUN apt-get -y update && apt-get -y install nginx && apt clean
+RUN apt-get -y update && apt-get -y install nginx php-fpm && apt clean
 
 USER gitpod
 
