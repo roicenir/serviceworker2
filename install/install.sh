@@ -48,4 +48,5 @@ require_once(__DIR__ . '/lib/setup.php');
 // it is intentional because it prevents trailing whitespace problems!
 EOF
 install  -d ../moodledata -m 0777
+gp open ../moodle-master/config.php
 echo " pronto."
