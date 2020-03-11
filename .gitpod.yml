@@ -1,4 +1,5 @@
 tasks:
+  - init: cd install && bash install.sh
   - command: APACHE_DOCROOT_IN_REPO=moodle-master && apache2ctl start
 image:
   file: .gitpod.Dockerfile
