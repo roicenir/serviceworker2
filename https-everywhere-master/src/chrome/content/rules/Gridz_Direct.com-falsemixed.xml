@@ -1,0 +1,15 @@
+<!--
+	For rules not causing false/broken MCB, see Gridz_Direct.com.xml.
+
+-->
+<ruleset name="Gridz Direct.com (false MCB)" default_off="handshake failure" platform="mixedcontent">
+
+	<target host="www.gridzdirect.com" />
+
+
+	<securecookie host="^\.(?:www\.)?gridzdirect\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

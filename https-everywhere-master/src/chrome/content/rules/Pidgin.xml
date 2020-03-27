@@ -1,0 +1,36 @@
+<!--
+	Other Pidgin rulesets:
+		- Pidg.in.xml
+
+
+	Invalid certificate:
+		- hg.pidgin.im
+		- rpm.pidgin.im
+		- stats.pidgin.im
+		- test.developer.pidgin.im
+		- mtn.pidgin.im
+		- nicobar.pidgin.im
+
+	Refused:
+		- imperial.pidgin.im
+
+	Timeout:
+		- plugin-pack.pidgin.im
+-->
+<ruleset name="Pidgin.im">
+
+	<target host="pidgin.im" />
+	<target host="www.pidgin.im" />
+	<target host="bamboo.pidgin.im" />
+	<target host="conference.pidgin.im" />
+	<target host="d.pidgin.im" />
+	<target host="developer.pidgin.im" />
+	<target host="planet.pidgin.im" />
+	<target host="rock.pidgin.im" />
+	<target host="status.pidgin.im" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

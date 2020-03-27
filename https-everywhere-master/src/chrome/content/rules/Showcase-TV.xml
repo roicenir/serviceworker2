@@ -1,0 +1,11 @@
+<ruleset name="Showcase-TV">
+	<target host="hadalog.jp"/>
+
+	<target host="hoku.co.jp"/>
+	<target host="www.hoku.co.jp"/>
+
+	<target host="showcase-tv.com"/>
+	<target host="www.showcase-tv.com"/>
+
+	<rule from="^http:" to="https:" />
+</ruleset>

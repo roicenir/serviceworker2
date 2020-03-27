@@ -1,0 +1,25 @@
+<!--
+	^salford.ac.uk doesn't exist.
+
+
+	Nonfunctional subdomains:
+
+		- staff *
+		- students *
+
+	* Redirects to www
+
+-->
+<ruleset name="University of Salford (partial)">
+
+	<target host="usir.salford.ac.uk" />
+	<target host="webhost.salford.ac.uk" />
+	<target host="www.salford.ac.uk" />
+
+
+	<securecookie host="^\.www\.salford\.ac\.uk$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

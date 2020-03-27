@@ -1,0 +1,172 @@
+<!--
+	Northwestern University
+
+
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- course-management *
+		- demosis		(redirects to http, valid cert)
+		- googlesearch		(redirects to http; self-signed, CN: foo.ent.google.com)
+		- invo			(shows chitrec.nubic; mismatched, CN: *.nubic.northwestern.edu)
+		- hrweb **
+		- (www.)it *
+		- groups.linguistics	(shows blank page; mismatched, CN: *.wcas.northwestern.edu)
+		- m **
+		- maps **
+		- offices **
+		- planitpurple *
+		- policies *
+		- www.registrar *
+		- search **
+		- www.tss **
+		- (www.)ugadm ***
+		- ug-finaid ***
+		- undergradaid ***
+
+	* Refused
+	** Times out
+	*** Revoked
+
+
+	Problematic subdomains:
+
+		- alumni *
+		- www.cafe **
+		- giving *
+		- www.ses **
+		- u			(mismatched, CN: umail.northwestern.edu)
+		- www.undergradresearch	(mismatched, CN: websecurity.at.northwestern.edu)
+		- ^wcas			(mismatched, CN: *.wcas.northwestern.edu)
+
+	* Works; mismatched, CN: www.nualumni.org
+	** Cert only matches ^foo
+
+
+	Partially covered subdomains:
+
+		- www.library	(some pages redirect to http)
+
+
+	Fully covered subdomains:
+
+		- blog.nuamps.at
+		- websecurity.at
+		- autodiscover
+		- bfmf
+		- carlsmith
+		- mail.chicago
+		- (www.)collaborate
+		- courses
+		- cscdc
+		- directory
+		- mail.evanston
+		- blog.ipd
+
+		- it subdomains:
+
+			- fed
+			- validate
+			- websso
+
+		- blogs.kellogg
+		- (www.)law
+		- careerspace.law
+		- mail
+		- (www.)math
+		- chitrec.nubic
+		- nuhr
+		- blog.oncofertility
+
+		- qatar subdomains:
+
+			- autodiscover
+			- (www.)collaborate
+			- mail
+			- webmail
+
+		- (www.)research
+		- blog.scienceinsociety
+		- (www.)scs
+		- (www.)ses		(www → ^)
+		- tss
+		- u			(→ mail.google.com)
+		- umail
+		- (www.)undergradresearch	(www → ^)
+		- blog.undergradresearch
+		- (www.)wcas			(^ → www)
+		- womenshealth
+		- blog.womenshealth
+
+-->
+<ruleset name="Northwestern.edu (partial)">
+
+	<target host="blog.nuamps.at.northwestern.edu" />
+	<target host="websecurity.at.northwestern.edu" />
+	<target host="autodiscover.northwestern.edu" />
+	<target host="bfmf.northwestern.edu" />
+	<target host="carlsmith.northwestern.edu" />
+	<target host="mail.chicago.northwestern.edu" />
+	<target host="mail.evanston.northwestern.edu" />
+	<target host="collaborate.northwestern.edu" />
+	<target host="www.collaborate.northwestern.edu" />
+	<target host="courses.northwestern.edu" />
+	<target host="directory.northwestern.edu" />
+	<target host="blog.ipd.northwestern.edu" />
+	<target host="fed.it.northwestern.edu" />
+	<target host="validate.it.northwestern.edu" />
+	<target host="websso.it.northwestern.edu" />
+	<target host="law.northwestern.edu" />
+	<target host="careerspace.law.northwestern.edu" />
+	<target host="www.law.northwestern.edu" />
+	<target host="www.library.northwestern.edu" />
+	<target host="mail.northwestern.edu" />
+	<target host="math.northwestern.edu" />
+	<target host="www.math.northwestern.edu" />
+	<target host="chitrec.nubic.northwestern.edu" />
+	<target host="nuhr.northwestern.edu" />
+	<target host="blog.oncofertility.northwestern.edu" />
+	<target host="autodiscover.qatar.northwestern.edu" />
+	<target host="collaborate.qatar.northwestern.edu" />
+	<target host="www.collaborate.qatar.northwestern.edu" />
+	<target host="mail.qatar.northwestern.edu" />
+	<target host="webmail.qatar.northwestern.edu" />
+	<target host="research.northwestern.edu" />
+	<target host="www.research.northwestern.edu" />
+	<target host="blog.scienceinsociety.northwestern.edu" />
+	<target host="scs.northwestern.edu" />
+	<target host="www.scs.northwestern.edu" />
+	<target host="tss.northwestern.edu" />
+	<target host="umail.northwestern.edu" />
+	<target host="blog.undergradresearch.northwestern.edu" />
+	<target host="womenshealth.northwestern.edu" />
+	<target host="blog.womenshealth.northwestern.edu" />
+	<target host="cafe.northwestern.edu" />
+	<target host="ses.northwestern.edu" />
+	<target host="undergradresearch.northwestern.edu" />
+	<target host="www.cafe.northwestern.edu" />
+	<target host="www.ses.northwestern.edu" />
+	<target host="www.undergradresearch.northwestern.edu" />
+	<target host="u.northwestern.edu" />
+	<target host="wcas.northwestern.edu" />
+	<target host="www.wcas.northwestern.edu" />
+		<exclusion pattern="^http://www\.library\.northwestern\.edu/(?!misc/|modules/|sites/)" />
+
+
+	<!--securecookie host="^\.northwestern\.edu$" name="^(AMAuthCookie|amlbcookie|ExpirePage|NUHR-443-PORTAL-PSJSESSIONID|PS_LOGINLIST|PS_TOKEN|PS_TOKENEXPIRE|SESS\w{32}|SignOnDefault)$" /-->
+	<securecookie host="^(?:blog\.nuamps\.at|autodiscover|bfmf|carlsmith|mail\.(?:chicago|evanston)|(?:www\.)?collaborate(?:\.qatar)?|courses|cscdc|(?:validate|websso)\.it|blogs\.kellogg|(?:www\.)?law|mail|chitrec\.nubic|nuhr|blog\.oncofertility|umail|blog\.undergradresearch|blog\.womenshealth)\.northwestern\.edu$" name=".+" />
+	<securecookie host="^\.undergradresearch\.northwestern\.edu$" name="^SESS\w{32}$" />
+
+
+
+	<rule from="^http://(?:www\.)?(cafe|ses|undergradresearch)\.northwestern\.edu/"
+		to="https://$1.northwestern.edu/" />
+
+	<rule from="^http://u\.northwestern\.edu/"
+		to="https://mail.google.com/a/u.northwestern.edu/" />
+
+	<rule from="^http://(?:www\.)?wcas\.northwestern\.edu/"
+		to="https://www.wcas.northwestern.edu/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

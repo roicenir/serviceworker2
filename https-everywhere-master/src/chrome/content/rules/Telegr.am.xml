@@ -1,0 +1,18 @@
+<ruleset name="Telegr.am">
+
+	<target host="telegr.am" />
+	<target host="blog.telegr.am" />
+	<target host="howto.telegr.am" />
+	<target host="www.telegr.am" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^telegr\.am$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^telegr\.am$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

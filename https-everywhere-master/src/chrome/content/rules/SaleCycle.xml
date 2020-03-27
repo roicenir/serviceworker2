@@ -1,0 +1,31 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^	(refused)
+		- www	(shows reports; mismatched, CN: reports.salecycle.com)
+
+
+	Fully covered subdomains:
+
+		- app
+		- app-staging
+		- platform
+		- platform-staging
+		- reports
+
+-->
+<ruleset name="SaleCycle (partial)">
+
+	<target host="app.salecycle.com" />
+	<target host="app-staging.salecycle.com" />
+	<target host="platform.salecycle.com" />
+	<target host="platform-staging.salecycle.com" />
+	<target host="reports.salecycle.com" />
+
+
+	<securecookie host="^platform(?:-staging)?\.salecycle\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

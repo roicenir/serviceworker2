@@ -1,0 +1,14 @@
+<ruleset name="Chalmers">
+
+	<target host="chalmers.se" />
+	<target host="admin.chalmers.se" />
+	<target host="www.chalmers.se" />
+	<target host="www.admin.chalmers.se" />
+
+
+	<securecookie host="^(?:www\.)?chalmers\.se$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

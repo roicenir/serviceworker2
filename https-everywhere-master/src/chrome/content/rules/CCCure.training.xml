@@ -1,0 +1,9 @@
+<ruleset name="CCCure.training">
+
+	<target host="cccure.training" />
+	<target host="www.cccure.training" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	At least the homepage displays nothing.
+
+-->
+<ruleset name="Web Hosting Pad (partial)">
+
+	<target host="webhostingpad.com" />
+	<target host="livesupport.webhostingpad.com" />
+	<target host="secure.webhostingpad.com" />
+	<target host="support.webhostingpad.com" />
+	<target host="www.webhostingpad.com" />
+		<exclusion pattern="^http://(?:www\.)?webhostingpad\.com/(?!\w+\.css$|images/)" />
+
+
+	<securecookie host="^s(?:ecure|upport)\.webhostingpad\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,16 @@
+<!--
+	- CN: Parallels Panel
+	- !www redirects to www
+
+-->
+<ruleset name="Difference Between" default_off="self-signed">
+
+	<target host="differencebetween.net" />
+	<target host="cdn.differencebetween.net" />
+	<target host="www.differencebetween.net" />
+
+
+	<rule from="^http://(?:cdn\.|www\.)?differencebetween\.net/"
+		to="https://www.differencebetween.net/" />
+
+</ruleset>

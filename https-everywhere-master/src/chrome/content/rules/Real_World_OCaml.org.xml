@@ -1,0 +1,16 @@
+<!--
+	Invalid certificate:
+		www.realworldocaml.org
+-->
+
+<ruleset name="Real World OCaml.org">
+
+	<target host="realworldocaml.org" />
+	<target host="dev.realworldocaml.org" />
+	<target host="v1.realworldocaml.org" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

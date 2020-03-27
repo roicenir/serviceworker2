@@ -1,0 +1,19 @@
+<!--
+	Invalid certificate:
+		dataminelab.com
+
+-->
+<ruleset name="DataMineLab.com">
+
+	<target host="dataminelab.com" />
+	<target host="www.dataminelab.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.dataminelab\.com/"
+		to="https://dataminelab.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,63 @@
+<!--
+	Other University of North Carolina at Chapel Hill rulesets:
+		+ UNC_Lineberger.org.xml
+
+	Non-functional hosts
+		Timeout was reached:
+		- itsapps.unc.edu
+
+		SSL peer certificate was not OK:
+		- www.financeadmin.unc.edu
+		- www.library.unc.edu
+		- www.onecard.unc.edu
+		- www.pid.unc.edu
+-->
+<ruleset name="UNC.edu (partial)">
+	<target host="unc.edu" />
+	<target host="www.unc.edu" />
+
+	<target host="ccinfo.unc.edu" />
+	<target host="cmsp.unc.edu" />
+	<target host="connectcarolina.unc.edu" />
+	<target host="cs.unc.edu" />
+
+	<target host="dir.unc.edu" />
+	<target host="directory.unc.edu" />
+	<target host="diversity.unc.edu" />
+	
+	<target host="enterprises.unc.edu" />
+	<target host="events.unc.edu" />
+
+	<target host="financeadmin.unc.edu" />
+
+	<target host="global.unc.edu" />
+
+	<target host="heelmail.unc.edu" />
+	<target host="help.unc.edu" />
+	<target host="hr.unc.edu" />
+
+	<target host="infoporte.unc.edu" />
+	<target host="its.unc.edu" />
+	<target host="its-commons.unc.edu" />
+
+	<target host="calendar.lib.unc.edu" />
+	<target host="library.unc.edu" />
+
+	<target host="onecard.unc.edu" />
+	<target host="onyen.unc.edu" />
+
+	<target host="pid.unc.edu" />
+
+	<target host="research.unc.edu" />
+
+	<target host="search.unc.edu" />
+	<target host="selfservice.unc.edu" />
+	<target host="sso.unc.edu" />
+
+	<target host="diversity.web.unc.edu" />
+	<target host="webservices.unc.edu" />
+	
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

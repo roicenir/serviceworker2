@@ -1,0 +1,9 @@
+<ruleset name="Mofobian.com">
+
+	<target host="mofobian.com" />
+	<target host="www.mofobian.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

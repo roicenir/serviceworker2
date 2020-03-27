@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^	(times out)
+		- www	(404)
+
+-->
+<ruleset name="Hoover's (partial)" default_off="webmaster request">
+
+	<target host="secure.hoovers.com" />
+	<target host="subscriber.hoovers.com" />
+
+
+	<securecookie host="^subscriber\.hoovers\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

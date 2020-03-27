@@ -1,0 +1,7 @@
+<ruleset name="Breitbandinfrastrukturgesellschaft Oberhessen">
+<target host="www.bigo.net" />
+
+<rule from="^http:" to="https:" />
+
+
+</ruleset>

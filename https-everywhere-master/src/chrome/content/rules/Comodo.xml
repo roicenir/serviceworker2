@@ -1,0 +1,115 @@
+<!--
+	Working subdomains:
+	- accounts.
+	- antivirus.
+	- directory.
+	- download.
+	- downloads.
+	- enterprise.
+	- forums.		(some unencrypted inline links to images)
+	- friends.
+	- help.
+	- icedragon.
+	- m.
+	- marketingdb.
+	- pctuneup.
+	- penetration-testing.
+	- personalfirewall.
+	- secure.
+	- ssl.
+	- www.ssl.
+	- support.
+	- trustlogo.
+	- trustlogostats.
+	- www.
+
+	Problematic subdomains:
+	- backup.		(cert mismatch: www.comodo.com)
+	- blogs.		(cert mismatch: www.comodomail.com)
+	- camas.		(not responding)
+	- cima.security.	(not responding)
+	- cloud-scanner.	(cert mismatch: www.comodo.com)
+	- download-cn.		(cert mismatch: downloads.comodo.com)
+	- www.download.		(cert mismatch: downloads.comodo.com)
+	- file-intelligence.	(connection failed)
+	- internetsecurity.	(cert mismatch: secure.comodo.net)
+	- i-vault.		(cert mismatch: secure.comodo.net)
+	- jp.			(redirects to comodo.jp)
+	- networkcenter.	(not responding)
+	- programs-manager.	(cert mismatch: secure.comodo.net)
+	- securedns.		(not responding)
+	- siteinspector.	(cert mismatch: webinspector.com)
+	- system-utilities.	(cert mismatch: secure.comodo.net)
+	- v.			(not responding)
+	- valkyrie.		(not responding)
+	- www.download.		(cert mismatch:	downloads.comodo.com)
+
+	Problematic domains:
+	- (www.)comodo.net	(cert mismatch: secure.comodo.net)
+	- (www.)comodogroup.com	(cert mismatch: secure.comodo.net)
+	- (www.)trustlogo.com	(cert mismatch: www.comodo.com; sometimes Comodo
+				loads HTTP content from Trustlogo)
+
+	Some pages (comodo.com/news/press_releases/...) try to load a corner
+	image from Trustlogin. Lets redirect those attempts to Comodo:
+	- trustlogo.com/images/cornertrust.gif (only this file)
+	- trustlogo.com/trustlogo/javascript/cot.js (+others from /trustlogo/)
+
+-->
+<ruleset name="Comodo">
+
+	<target host="comodo.com"/>
+	<target host="accounts.comodo.com" />
+	<target host="antivirus.comodo.com" />
+	<target host="directory.comodo.com" />
+	<target host="download.comodo.com" />
+	<target host="downloads.comodo.com" />
+	<target host="enterprise.comodo.com" />
+	<target host="forums.comodo.com" />
+	<target host="friends.comodo.com" />
+	<target host="help.comodo.com" />
+	<target host="icedragon.comodo.com" />
+	<target host="m.comodo.com" />
+	<target host="marketingdb.comodo.com" />
+	<target host="pctuneup.comodo.com" />
+	<target host="penetration-testing.comodo.com" />
+	<target host="personalfirewall.comodo.com" />
+	<target host="secure.comodo.com" />
+	<target host="ssl.comodo.com" />
+	<target host="www.ssl.comodo.com" />
+	<target host="support.comodo.com" />
+	<target host="trustlogo.comodo.com" />
+	<target host="trustlogostats.comodo.com" />
+	<target host="www.comodo.com" />
+	<target host="www.download.comodo.com" />
+	<target host="siteinspector.comodo.com" />
+	<target host="comodo.net"/>
+	<target host="www.comodo.net"/>
+	<target host="secure.comodo.net"/>
+	<target host="comodogroup.com"/>
+	<target host="www.comodogroup.com"/>
+	<target host="trustlogo.com"/>
+	<target host="www.trustlogo.com"/>
+
+
+	<securecookie host="^[\w-]+\.comodo\.com$" name=".+" />
+
+
+
+	<rule from="^http://www\.download\.comodo\.com/"
+		to="https://download.comodo.com/" />
+
+
+	<!--	Check Web-Inspector-App.xml
+		https://trac.torproject.org/projects/tor/ticket/8133	-->
+	<rule from="^http://siteinspector\.comodo\.com/"
+		to="https://app.webinspector.com/" />
+
+	<!-- Comodo's SSL image from lower right corner -->
+
+	<!-- Redirect to avoid SSL stripping -->
+	<rule from="^http://(?:www\.)?comodo(?:group\.com|\.net)/"
+		to="https://www.comodo.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

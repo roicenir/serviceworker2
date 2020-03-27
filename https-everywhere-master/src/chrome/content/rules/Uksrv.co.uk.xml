@@ -1,0 +1,15 @@
+<ruleset name="uksrv.co.uk">
+
+	<target host="ceres.uksrv.co.uk" />
+	<target host="eris.uksrv.co.uk" />
+	<target host="pluto.uksrv.co.uk" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

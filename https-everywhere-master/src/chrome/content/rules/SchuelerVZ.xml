@@ -1,0 +1,13 @@
+<!--
+	Invalid Certificate:
+	blog.schuelervz.net
+	static.pe.schuelervz.net
+
+	Time Out:
+	schuelervz.net
+-->
+<ruleset name="SchuelerVZ.net">
+	<target host="www.schuelervz.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

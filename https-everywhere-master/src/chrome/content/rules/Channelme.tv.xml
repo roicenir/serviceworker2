@@ -1,0 +1,16 @@
+<!--
+	Problematic subdomains:
+
+		- cdn-media	(mismatched, CN: media.channelme.tv)
+
+-->
+<ruleset name="channelme.tv">
+
+	<target host="media.channelme.tv" />
+	<target host="cdn-media.channelme.tv" />
+
+
+	<rule from="^http://(?:cdn-)?media\.channelme\.tv/"
+		to="https://media.channelme.tv/" />
+
+</ruleset>

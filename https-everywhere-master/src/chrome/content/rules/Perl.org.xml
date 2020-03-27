@@ -1,0 +1,50 @@
+<!--
+	CDN buckets:
+
+		- devcdn.develooper.netdna-cdn.com
+
+			- st.pimg.net
+
+
+	Nonfunctional perl.org subdomains:
+
+		- blogs *
+		- cpansearch	(times out)
+		- history *
+		- irc		(http reply)
+		- pdl *
+		- use *
+		- svn		(times out)
+
+	* Refused
+
+
+	Mixed image from www on rt
+
+-->
+<ruleset name="Perl.org">
+
+	<target host="perl.org" />
+	<target host="www.perl.org" />
+	<target host="blob.perl.org" />
+	<target host="books.perl.org" />
+	<target host="cpan.perl.org" />
+	<target host="cpanratings.perl.org" />
+	<target host="dbi.perl.org" />
+	<target host="dev.perl.org" />
+	<target host="perl5.git.perl.org" />
+	<target host="www.irc.perl.org" />
+	<target host="jobs.perl.org" />
+	<target host="learn.perl.org" />
+	<target host="lists.perl.org" />
+	<target host="log.perl.org" />
+	<target host="noc.perl.org" />
+	<target host="pause.perl.org" />
+	<target host="perldoc.perl.org" />
+	<target host="rt.perl.org" />
+
+	<securecookie host="^rt\.perl\.org$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

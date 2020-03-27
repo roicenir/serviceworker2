@@ -1,0 +1,46 @@
+
+<!--
+	Nonfunctional hosts:
+
+		go *
+
+	* Marketo
+
+
+	Problematic hosts:
+
+		- blog *
+
+	* Mismatched
+
+
+	Fully covered hosts:
+
+		- (www.)?
+		- support
+
+
+	Insecure cookies are set for theses hosts:
+
+		- blog.brighttalk.com
+
+-->
+<ruleset name="BrightTALK.com (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="brighttalk.com" />
+	<!--target host="blog.brighttalk.com" /-->
+	<target host="business.brighttalk.com" />
+	<target host="support.brighttalk.com" />
+	<target host="www.brighttalk.com" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^blog\.brighttalk\.com$" name="^(JSESSIONID|ss_sd)$" /-->
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

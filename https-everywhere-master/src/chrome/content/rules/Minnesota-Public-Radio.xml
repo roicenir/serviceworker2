@@ -1,0 +1,30 @@
+<!--
+	Nonfunctional subdomains:
+
+		- americanpublicmedia	(Akamai; "Service Unavailable")
+		- minnesota		(ditto)
+		- origin-americanpublicmedia
+		- origin-minnesota
+
+
+	^publicradio.org does not exist
+
+-->
+<ruleset name="Minnesota Public Radio (partial)">
+
+	<target host="contribute.publicradio.org" />
+	<target host="www.publicradio.org" />
+	<target host="minnesota.publicradio.org" />
+
+
+	<securecookie host="^\.publicradio\.org$" name="^WT_FPC$" />
+	<securecookie host="^\.contribute\.publicradio\.org$" name=".+" />
+
+
+	<rule from="^http://(contribute|www)\.publicradio\.org/"
+		to="https://$1.publicradio.org/" />
+
+	<rule from="^http://minnesota\.publicradio\.org/www_publicradio/"
+		to="https://www.publicradio.org/www_publicradio/" />
+
+</ruleset>

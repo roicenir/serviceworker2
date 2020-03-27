@@ -1,0 +1,194 @@
+<!--
+
+	University of California, Berkeley
+	http://www.berkeley.edu/
+
+
+	Nonfunctional hosts in *berkeley.edu:
+
+		- admissions      ¹
+		- blog.admissions	Redirects to www.ocf.berkeley.edu
+		- bdrive		    Handshake fails
+		- beartracks-new  ¹
+		- e-news		    Shows www.berkeley.edu
+		- icsi            ¹, equivalent to www.icsi
+		- mailman.icsi    ¹
+		- ls			    200 "Site not found"
+		- research		    Shows blank tree
+		- visit           ²
+		- visitors        ²
+
+	¹ Refused
+	² Redirects to HTTP
+
+	Problematic hosts in *berkeley.edu:
+		- asterix       *
+		- beartalk      ᴵ
+		- www.give      *
+		- www.givetocal *
+		- journalism    ᴵ
+		- newstudents   *
+		- students      *
+		- visitors      *
+
+	* Mismatched
+	ᴵ Incomplete certificate chain
+
+	Insecure cookies are set for these domains:
+
+		- .commencement.berkeley.edu
+		- .events.berkeley.edu
+
+
+	Mixed content:
+
+		- css on news, visit from fonts.googleapis.com *
+
+		- Images, on:
+
+			- news from newsdev.berkeley.edu
+			- news from www.berkeley.edu *
+
+		- Bug on events from s7.addthis.com *
+
+	* Secured by us
+-->
+
+<ruleset name="Berkeley.edu (partial)">
+
+	<!-- Direct rewrites -->
+	<target host="berkeley.edu" />
+	<target host="www.berkeley.edu" />
+	<target host="apply.berkeley.edu" />
+	<target host="atcal.berkeley.edu" />
+	<target host="auth.berkeley.edu" />
+	<target host="awards.berkeley.edu" />
+	<target host="beartracks-new.berkeley.edu" />
+	<target host="beartracks.berkeley.edu" />
+	<target host="boinc.berkeley.edu" />
+	<target host="bconnected.berkeley.edu" />
+	<target host="bcourses.berkeley.edu" />
+	<target host="bspace.berkeley.edu" />
+	<target host="cal.berkeley.edu" />
+	<target host="cal1card.berkeley.edu" />
+	<target host="calcentral.berkeley.edu" />
+	<target host="calfutures.berkeley.edu" />
+	<target host="callink.berkeley.edu" />
+	<target host="calmail.berkeley.edu" />
+	<target host="calmessages.berkeley.edu" />
+	<target host="calnet.berkeley.edu" />
+	<target host="calparents.berkeley.edu" />
+	<target host="career.berkeley.edu" />
+	<target host="ccc.berkeley.edu" />
+	<target host="commencement.berkeley.edu" />
+	<target host="developer.berkeley.edu" />
+	<target host="diversity.berkeley.edu" />
+	<target host="eureka.berkeley.edu" />
+	<target host="events.berkeley.edu" />
+	<target host="fellowship.berkeley.edu" />
+	<target host="foundation.berkeley.edu" />
+	<target host="give.berkeley.edu" />
+	<target host="www.give.berkeley.edu" />
+	<target host="givetocal.berkeley.edu" />
+	<target host="graduation.berkeley.edu" />
+	<target host="gspp.berkeley.edu" />
+	<target host="haasawards.berkeley.edu" />
+	<target host="ist.berkeley.edu" />
+	<target host="or.berkeley.edu" />
+	<target host="pt.berkeley.edu" />
+	<target host="registrar.berkeley.edu" />
+	<target host="setiathome.berkeley.edu" />
+	<target host="ihouseonline.berkeley.edu" />
+	<target host="inews.berkeley.edu" />
+	<target host="international.berkeley.edu" />
+	<target host="nature.berkeley.edu" />
+	<target host="netreg.berkeley.edu" />
+	<target host="oskicatp.berkeley.edu" />
+	<target host="scholarship.berkeley.edu" />
+	<target host="security.berkeley.edu" />
+	<target host="seniors.berkeley.edu" />
+	<target host="services.housing.berkeley.edu" />
+	<target host="wikihub-new.berkeley.edu" />
+	<target host="wikihub.berkeley.edu" />
+
+	<!-- International Computer Science Institute -->
+	<target host="www.icsi.berkeley.edu" />
+	<target host="notary.icsi.berkeley.edu" />
+	<target host="www.notary.icsi.berkeley.edu" />
+
+	<!-- Open Computing Facility -->
+	<target host="ocf.berkeley.edu" />
+	<target host="www.ocf.berkeley.edu" />
+	<target host="accounts.ocf.berkeley.edu" />
+	<target host="docs.ocf.berkeley.edu" />
+	<target host="mirrors.ocf.berkeley.edu" />
+	<target host="pma.ocf.berkeley.edu" />
+	<target host="puppet.ocf.berkeley.edu" />
+	<target host="rt.ocf.berkeley.edu" />
+	<target host="ssh.ocf.berkeley.edu" />
+	<target host="static.ocf.berkeley.edu" />
+	<target host="wiki.ocf.berkeley.edu" />
+
+	<!-- University Relations -->
+	<target host="urel.berkeley.edu" />
+	<target host="campustours.urel.berkeley.edu" />
+	<target host="cd.urel.berkeley.edu" />
+	<target host="wiki.urel.berkeley.edu" />
+
+	<!-- Department of Agriculture and Resource Economics -->
+	<target host="are.berkeley.edu" />
+	<target host="www.are.berkeley.edu" />
+
+	<!-- College of Natural Resources -->
+	<target host="cnr.berkeley.edu" />
+	<target host="nature.cnr.berkeley.edu" />
+	<target host="www.cnr.berkeley.edu" />
+
+	<!-- EECS and CS -->
+	<target host="cs.berkeley.edu" />
+	<target host="www.cs.berkeley.edu" />
+	<target host="autoconfig.cs.berkeley.edu" />
+	<target host="autodiscover.cs.berkeley.edu" />
+	<target host="eecs.berkeley.edu" />
+	<target host="www.eecs.berkeley.edu" />
+	<target host="autoconfig.eecs.berkeley.edu" />
+	<target host="autodiscover.eecs.berkeley.edu" />
+	<target host="buffy.eecs.berkeley.edu" />
+	<target host="chisel.eecs.berkeley.edu" />
+	<target host="hkn.eecs.berkeley.edu" />
+	<target host="people.eecs.berkeley.edu" />
+
+	<!-- Complications -->
+	<target host="bmail.berkeley.edu" />
+	<target host="callcenter.berkeley.edu" />
+	<target host="icsi.berkeley.edu" />
+	<target host="mirrors.berkeley.edu" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.commencement\.berkeley\.edu$" name="^SESS[\da-f]{32}$" /-->
+	<!--securecookie host="^\.events\.berkeley\.edu$" name="^sid$" /-->
+
+	<securecookie host="^((?!www\.berkeley\.edu$)\w.*|\.events|(\.fortuna)?\.security)\.berkeley\.edu$" name=".+" />
+
+
+	<!--	Redirect drops forward slash, path, and args:
+								-->
+	<rule from="^http://bmail\.berkeley\.edu/.*"
+		to="https://mail.google.com/a/berkeley.edu" />
+
+		<test url="http://bmail.berkeley.edu/path/is/dropped" />
+
+	<rule from="^http://callcenter\.berkeley\.edu/$"
+		to="https://give.berkeley.edu/browse/index.cfm?u=191" />
+
+	<rule from="^http://icsi\.berkeley\.edu/"
+		  to="https://www.icsi.berkeley.edu/" />
+
+	<rule from="^http://mirrors\.berkeley\.edu/"
+		to="https://mirrors.ocf.berkeley.edu/" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

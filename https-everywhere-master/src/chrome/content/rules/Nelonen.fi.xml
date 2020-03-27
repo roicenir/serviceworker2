@@ -1,0 +1,16 @@
+<!--
+	Invalid certificate:
+		gigantti.nelonen.fi
+		kampanjat.nelonen.fi
+
+-->
+<ruleset name="Nelonen.fi">
+
+	<target host="nelonen.fi" />
+	<target host="www.nelonen.fi" />
+
+	<securecookie host="^\.nelonen\.fi$" name="^(adptset|enzgd|evid1st|evid(_ref|_set)?|__utm\w)$" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

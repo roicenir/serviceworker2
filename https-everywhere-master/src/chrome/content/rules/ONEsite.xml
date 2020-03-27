@@ -1,0 +1,35 @@
+<!--
+	CDN buckets:
+
+		- community.onesite.com.edgesuite.net
+			- www.onesite.com
+		- fast1.onesite.com.edgesuite.net
+
+
+	Nonfunctional subdomains:
+
+		- ^		(times out)
+		- www	 	(Akamai; 404)
+		- community	(times out)
+		- developer	(ditto)
+		- keymaster	(ditto)
+
+-->
+<ruleset name="ONEsite (partial)">
+
+	<target host="admin.onesite.com" />
+	<target host="fast1.onesite.com" />
+	<target host="images.onesite.com" />
+
+
+	<securecookie host="^\.admin\.onesite\.com$" name=".+" />
+
+
+
+	<!--	fast1: Akamai
+				-->
+	<rule from="^http://(?:fast1|images)\.onesite\.com/"
+		to="https://images.onesite.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

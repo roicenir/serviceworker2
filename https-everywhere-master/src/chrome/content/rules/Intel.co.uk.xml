@@ -1,0 +1,13 @@
+<!--
+	For other Intel coverage, see Intel.xml.
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- intel.co.uk
+-->
+<ruleset name="Intel.co.uk (partial)">
+	<target host="iq.intel.co.uk" />
+	<target host="www.intel.co.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,33 @@
+<!--
+	For other Salesforce.com coverage, see Salesforce.com.xml.
+
+
+	Nonfunctional subdomains:
+
+		- info		(redirects to app-c.marketo.com; CN: *.marketo.com)
+
+
+	Problematic subdomains:
+
+		- ^	(dropped)
+
+-->
+<ruleset name="Data.com">
+
+	<target host="data.com" />
+	<target host="www.data.com" />
+	<target host="connect.data.com" />
+	<target host="jigsaw.data.com" />
+	<target host="www.jigsaw.data.com" />
+	<target host="static.data.com" />
+
+
+	<securecookie host="^.+\.data\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?data\.com/"
+		to="https://www.data.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

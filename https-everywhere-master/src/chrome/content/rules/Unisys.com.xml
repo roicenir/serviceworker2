@@ -1,0 +1,32 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- blogs			(shows www.app3; mismatched, CN: www.app3.unisys.com)
+		- public.support	(reset)
+		- webcast *
+
+	* Dropped
+
+
+	Fully covered subdomains:
+
+		- www.app3
+		- infoselect
+		- www.support
+
+-->
+<ruleset name="Unisys.com (partial)">
+
+	<target host="www.app3.unisys.com" />
+	<!--target host="infoselect.unisys.com" /-->
+	<target host="www.support.unisys.com" />
+		<!--exclusion pattern="^http://(blogs|public\.support|webcast|www)\.unisys\.com/" /-->
+
+
+	<securecookie host="^www\.support\.unisys\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

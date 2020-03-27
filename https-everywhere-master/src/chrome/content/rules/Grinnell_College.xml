@@ -1,0 +1,79 @@
+<!--
+	Nonfunctional subdomains:
+
+		- athdb			(replies with http)
+		- pdid			(times out)
+		- schedule25wb		(times out)
+		- (www.)web
+		- wm
+		- wm2
+
+
+	Problematic subdomains:
+
+		- ^		(times out)
+		- drupal	(works, mismatched, CN: www.cs.grinnell.edu)
+		- www.cat.lib	(cert only matches ^cat.lib)
+		- db		(cert only matches ^itwebapps)
+		- www.math	(cert only matches ^www.cs)
+		- magazine	(bad cert domain)
+		- *.grin.edu	(bad cert domain)
+
+
+	Partially covered subdomains:
+
+		- (www.)	(^ → www, some pages redirect to http *sometimes*)
+
+
+	Fully covered subdomains:
+
+		- bookstore
+		- digital
+		- help
+		- imap
+		- itwebapps
+		- (www.)cat.lib		(www → ^)
+		- libweb
+		- mail
+		- webmail
+		- www.cs
+
+-->
+<ruleset name="Grinnell College (partial)">
+
+	<target host="grinnell.edu" />
+	<target host="www.grinnell.edu" />
+	<target host="admission.grinnell.edu" />
+	<target host="alumni.grinnell.edu" />
+	<target host="appdev.grinnell.edu" />
+	<target host="bookstore.grinnell.edu" />
+	<target host="catalog.grinnell.edu" />
+	<target host="cat.lib.grinnell.edu" />
+	<target host="www.cs.grinnell.edu" />
+	<target host="digital.grinnell.edu" />
+	<target host="ebill.grinnell.edu" />
+	<target host="help.grinnell.edu" />
+	<target host="imap.grinnell.edu" />
+	<target host="itwebapps.grinnell.edu" />
+	<target host="libweb.grinnell.edu" />
+	<target host="mail.grinnell.edu" />
+	<target host="m.catalog.grinnell.edu" />
+	<target host="pioneers.grinnell.edu" />
+	<target host="selfservice.grinnell.edu" />
+	<target host="sga.grinnell.edu" />
+	<target host="sites.grinnell.edu" />
+	<target host="*.sites.grinnell.edu" />
+		<test url="http://gciel.sites.grinnell.edu/" />
+		<test url="http://dasil.sites.grinnell.edu/" />
+		<test url="http://wilsonspark.sites.grinnell.edu/" />
+		<test url="http://comm.sites.grinnell.edu/" />
+		<test url="http://makerlab.sites.grinnell.edu/" />
+	<target host="wa3.grinnell.edu" />
+
+	<!--securecookie host="^\.grinnell\.edu$" name="^SESS\w{32}$" /-->
+	<securecookie host=".+" name=".+" />
+
+
+        <rule from="^http:" to="https:" />
+
+</ruleset>

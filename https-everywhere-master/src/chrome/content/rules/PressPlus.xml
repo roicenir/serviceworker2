@@ -1,0 +1,27 @@
+<!--
+	Nonfunctional domains:
+
+	Self-signed certificates:
+		- mypressplus.com
+		- www.mypressplus.com
+
+	Redirect to HTTP:
+		- s.ppjol.net
+
+	ppjol sets the following wildcard cookies
+	on whichever domain it is loaded from:
+
+		- ppRef
+		- ppThirdPartyCookieFound
+
+-->
+<ruleset name="Press+ (partial)" default_off="cert-invalid">
+
+	<target host="mypressplus.com" />
+	<target host="www.mypressplus.com" />
+	<target host="s.ppjol.net" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

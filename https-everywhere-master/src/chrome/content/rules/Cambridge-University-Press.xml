@@ -1,0 +1,33 @@
+<!--
+	Cambridge University Press
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- mobile.journals.cambridge.org
+
+		Timeout was reached:
+		- cambridge.org
+
+		SSL peer certificate was not OK:
+		- athens.cambridge.org
+
+		Redirect to HTTP:
+		- education.cambridge.org
+-->
+<ruleset name="Cambridge University Press (partial)">
+	<target host="cambridge.org" />
+	<target host="www.cambridge.org" />
+	<target host="assets.cambridge.org" />
+	<target host="dictionary.cambridge.org" />
+	<target host="dictionary-api.cambridge.org" />
+	<target host="dictionaryblog.cambridge.org" />
+	<target host="ebooks.cambridge.org" />
+	<target host="journals.cambridge.org" />
+	<target host="shibboleth.cambridge.org" />
+	<target host="stahlonline.cambridge.org" />
+
+	<rule from="^http://cambridge\.org/"
+		to="https://www.cambridge.org/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

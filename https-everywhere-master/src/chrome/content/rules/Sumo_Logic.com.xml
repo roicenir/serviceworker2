@@ -1,0 +1,19 @@
+<!--
+	Connection closed:
+		- go
+		- mail
+-->
+<ruleset name="SumoLogic.com (partial)">
+    <target host="sumologic.com" />
+    <target host="www.sumologic.com" />
+    <target host="api.sumologic.com" />
+    <target host="collectors.sumologic.com" />
+    <target host="help.sumologic.com" />
+    <target host="info.sumologic.com" />
+    <target host="operations.sumologic.com" />
+    <target host="service.sumologic.com" />
+    <target host="status.sumologic.com" />
+    <target host="support.sumologic.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

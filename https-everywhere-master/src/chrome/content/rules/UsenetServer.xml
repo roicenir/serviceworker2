@@ -1,0 +1,14 @@
+<ruleset name="UsenetServer">
+
+	<target host="usenetserver.com" />
+	<target host="accounts.usenetserver.com" />
+	<target host="globalsearch.usenetserver.com" />
+	<target host="www.usenetserver.com" />
+
+
+	<securecookie host="^.*\.usenetserver\.com$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

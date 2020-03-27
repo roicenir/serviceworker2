@@ -1,0 +1,26 @@
+<!--
+	For rules that are on by default, see Martha-Stewart.xml.
+
+-->
+<ruleset name="Martha Stewart (mismatches)" default_off="expired, mismatch, self-signed">
+
+	<target host="shop.marthastewart.com" />
+	<target host="community.wholeliving.com" />
+	<target host="wholelivingdaily.wholeliving.com" />
+	<!--	* for cross-domain cookie.	-->
+
+
+
+	<securecookie host="^\.community\.wholeliving\.com$" name=".+" />
+
+
+	<!--	Cert: storefront.amazon.com	-->
+	<rule from="^http:" to="https:" />
+
+	<!--	Cert: *.ning.com	-->
+
+
+	<!--	Expired, self-signed	-->
+
+
+</ruleset>

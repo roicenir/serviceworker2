@@ -1,0 +1,51 @@
+<!--
+	CDN buckets:
+		- wac.1ddb.edgecastcdn.net/??1DDB/
+			- images.cheezburger.com (mismatched, CN: *.chzbgr.com)
+		- cheezburger.freshdesk.com
+
+	Invalid certificate:
+		- advertising.cheezburger.com
+		- blog.cheezburger.com
+		- corp.cheezburger.com
+		- feedback.cheezburger.com
+		- sites.cheezburger.com
+		- support.cheezburger.com, equivalent to cheezburger.freshdesk.com
+
+	However, there are tens (hundreds?) of subdomains supporting https with
+	a wildcard certificate, so it's not worth whitelisting them one by one.
+
+	Other related unprotected hosts:
+		- knowyourmeme.com
+
+	Problematic domains:
+		- images.cheezburger.com	(works; mismatched, CN: gp1.wac.edgecastcdn.net)
+
+	There are some inconsistent redirects between cheezburger.com and www.cheezburger.com,
+ 	so don't try to enforce either hostname.
+-->
+
+<ruleset name="Cheezburger" platform="mixedcontent">
+	<!-- cheezburger.com -->
+	<target host="cheezburger.com" />
+	<target host="www.cheezburger.com" />
+	<target host="images.cheezburger.com" />
+	<target host="jobs.cheezburger.com" />
+	<target host="support.cheezburger.com" />
+
+	<!-- chzbgr.com -->
+	<target host="i.chzbgr.com" />
+	<target host="s.chzbgr.com" />
+	<target host="t.chzbgr.com" />
+
+	<securecookie host="^www\.cheezburger\.com$" name=".+" />
+
+	<!-- https://lists.eff.org/pipermail/https-everywhere-rules/2013-August/001665.html -->
+	<rule from="^http://images\.cheezburger\.com/"
+		to="https://i.chzbgr.com/" />
+
+	<rule from="^http://support\.cheezburger\.com/"
+		to="https://cheezburger.freshdesk.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

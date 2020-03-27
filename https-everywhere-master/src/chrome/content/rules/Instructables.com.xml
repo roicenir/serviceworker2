@@ -1,0 +1,42 @@
+<!--
+	Wildcard DNS
+
+	Refused:
+		instructables.com
+
+	Bad certificate:
+		download.instructables.com
+
+-->
+<ruleset name="Instructables">
+
+	<target host="instructables.com" />
+	<target host="www.instructables.com" />
+	<target host="cdn.instructables.com" />
+	<target host="ssl.instructables.com" />
+
+	<!-- Redirect to HTTP -->
+	<exclusion pattern="^http://((ssl|www)\.)?instructables\.com/(contest|id)/" />
+
+		<test url="http://instructables.com/contest/paper2018/" />
+		<test url="http://ssl.instructables.com/id/8-Transistor-Stereo-Amplifier/" />
+		<test url="http://www.instructables.com/contest/" />
+		<test url="http://www.instructables.com/id/8-Transistor-Stereo-Amplifier/" />
+
+	<!-- CORS issue. Visit http://www.instructables.com/id/8-Transistor-Stereo-Amplifier -->
+	<exclusion pattern="^http://((ssl|www)\.)?instructables\.com/(intl_static|json-api)/" />
+
+		<test url="http://instructables.com/json-api/getIbleStats?id=E2XYK3LJC6K541G" />
+		<test url="http://www.instructables.com/intl_static/fonts/icomoon.woff" />
+		<test url="http://www.instructables.com/json-api/getIbleStats?id=E2XYK3LJC6K541G" />
+		<test url="http://ssl.instructables.com/json-api/getFiles?instructableId=E2XYK3LJC6K541G" />
+
+	<securecookie host="^\.instructables\.com$" name=".+" />
+
+	<rule from="^http://instructables\.com/"
+		to="https://www.instructables.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

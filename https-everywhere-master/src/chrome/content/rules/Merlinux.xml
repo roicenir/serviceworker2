@@ -1,0 +1,6 @@
+<ruleset name="Merlinux">
+	<target host="merlinux.eu" />
+	<target host="www.merlinux.eu" />
+	<target host="hq5.merlinux.eu" />
+	<rule from="^http:" to="https:" />
+</ruleset>

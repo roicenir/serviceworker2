@@ -1,0 +1,16 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(502, valid cert)
+
+-->
+<ruleset name="iClick Interactive (partial)">
+
+	<target host="e02.optimix.asia" />
+
+	<securecookie host="^e02\.optimix\.asia$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,33 @@
+<!--
+	For other GitHub coverage, see Github.xml.
+-->
+<ruleset name="GitHub Pages">
+
+	<target host="*.github.io" />
+
+	<!-- random test urls -->
+	<test url="http://ansible.github.io/" />
+	<test url="http://google.github.io/" />
+	<test url="http://mozilla.github.io/" />
+	<test url="http://twitter.github.io/" />
+
+	<exclusion pattern="^http://duckietv\.github\.io/DuckieTV/?" />
+		<test url="http://duckietv.github.io/DuckieTV" />
+		<test url="http://duckietv.github.io/DuckieTV/" />
+
+	<exclusion pattern="^http://googletrends\.github\.io/iframe-scaffolder" />
+		<test url="http://googletrends.github.io/iframe-scaffolder" />
+		<test url="http://googletrends.github.io/iframe-scaffolder/" />
+
+	<exclusion pattern="^http://schizoduckie\.github\.io/DuckieTorrent/?" />
+	<exclusion pattern="^http://schizoduckie\.github\.io/PimpMyuTorrent/?" />
+		<test url="http://schizoduckie.github.io/DuckieTorrent" />
+		<test url="http://schizoduckie.github.io/DuckieTorrent/" />
+		<test url="http://schizoduckie.github.io/PimpMyuTorrent" />
+		<test url="http://schizoduckie.github.io/PimpMyuTorrent/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:"/>
+
+</ruleset>

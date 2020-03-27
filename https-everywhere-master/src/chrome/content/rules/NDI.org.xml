@@ -1,0 +1,26 @@
+<!--
+	^: self-signed
+
+
+	These altnames don't exist:
+
+		- www.contribute.ndi.org
+		- www.idp.ndi.org
+		- www.portal.ndi.org
+
+-->
+<ruleset name="NDI.org">
+
+	<target host="ndi.org" />
+	<target host="www.ndi.org" />
+	<target host="contribute.ndi.org" />
+	<target host="idp.ndi.org" />
+	<target host="portal.ndi.org" />
+
+
+	<rule from="^http://(?:www\.)?ndi\.org/"
+		to="https://www.ndi.org/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

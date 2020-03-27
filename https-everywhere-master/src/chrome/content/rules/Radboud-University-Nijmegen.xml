@@ -1,0 +1,56 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://ru.nl/ => https://www.ru.nl/: Too many redirects while fetching 'https://www.ru.nl/'
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://ru.nl/ => https://www.ru.nl/: Cycle detected - URL already encountered: https://www.ru.nl/
+
+	Nonfunctional domains:
+
+		- www2.cmbi.ru.nl	(cert: www.cmbi.ru.nl; redirects to http)
+
+-->
+<ruleset name="Radboud University Nijmegen" default_off="failed ruleset test">
+
+	<target host="www.radboudnet.nl" />
+	<target host="www-acc.radboudnet.nl" />
+	<target host="ru.nl" />
+	<target host="www.ru.nl" />
+	<target host="ldap2.cmbi.ru.nl" />
+	<target host="mr.cmbi.ru.nl" />
+	<target host="nmr.cmbi.ru.nl" />
+	<target host="mrms.cmbi.ru.nl" />
+	<target host="svn.cmbi.ru.nl" />
+	<target host="webmail.cmbi.ru.nl" />
+	<target host="www.cmbi.ru.nl" />
+	<target host="cms.ru.nl" />
+	<target host="cms-acc.ru.nl" />
+	<target host="bangalore.hosting.ru.nl" />
+	<target host="bombay.hosting.ru.nl" />
+	<target host="delhi.hosting.ru.nl" />
+	<target host="hubli.hosting.ru.nl" />
+	<target host="jaipur.hosting.ru.nl" />
+	<target host="kota.hosting.ru.nl" />
+	<target host="mangalore.hosting.ru.nl" />
+	<target host="portalhelp.hosting.ru.nl" />
+	<target host="pune.hosting.ru.nl" />
+	<target host="idm.ru.nl" />
+	<target host="student.ru.nl" />
+	<target host="www-acc.ru.nl" />
+	<!--	* for cross-domain cookie.	-->
+
+
+	<securecookie host="^www(?:-acc)?\.radboudnet\.nl$" name=".+" />
+	<securecookie host="^.*\.ru\.nl$" name=".+" />
+
+
+
+	<!--	Cert doesn't match //ru.nl.
+						-->
+	<rule from="^http://(?:www\.)?ru\.nl/"
+		to="https://www.ru.nl/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,17 @@
+pkg/*.xpi
+*~
+*.sw?
+*/.*.sw?
+*/*/.*.sw?
+*/*/*/.*.sw?
+chrome/content/rules/*.xml
+chrome/content/rules/*.py
+chrome/content/rules/validity-*
+chrome/content/rules/make-*
+*.xcf.gz
+.gitignore
+.eslintrc.json
+.eslintignore
+node_modules
+package-lock.json
+test

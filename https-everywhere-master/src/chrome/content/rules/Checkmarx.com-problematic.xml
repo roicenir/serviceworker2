@@ -1,0 +1,13 @@
+<!--
+	For problematic rules, see Checkmarx.com-problematic-problematic.xml.
+
+-->
+<ruleset name="Checkmarx.com (problematic)" default_off="mismatched">
+
+	<target host="lp.checkmarx.com" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

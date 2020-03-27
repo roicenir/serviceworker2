@@ -1,0 +1,34 @@
+<!--
+	CDN buckets:
+
+		- d2hcl8anv7xxg0.cloudfront.net
+
+			- cdn2.janalta.com
+
+
+	Fully covered subdomains:
+
+		- cdn		(→ d2hcl8anv7xxg0.cloudfront.net)
+		- www
+
+
+	Mixed content:
+
+		- Images on www from cdn2.janalta.com *
+
+		- Web bugs from platform.twitter.com *
+
+	* Secured by us
+
+
+	^janalta.com doesn't exist.
+
+-->
+<ruleset name="Janalta.com">
+	<target host="www.janalta.com" />
+	<target host="cdn2.janalta.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,35 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://pointroll.com/ => https://pointroll.com/: (7, 'Failed to connect to pointroll.com port 443: Network is unreachable')
+
+	For other Gannett Company coverage, see Gannett-Company.xml.
+
+
+	Fully covered subdomains:
+
+		- spd-s
+		- t
+
+-->
+<ruleset name="Pointroll" default_off="failed ruleset test">
+
+	<target host="pointroll.com" />
+	<target host="adportal.pointroll.com" />
+	<target host="ads.pointroll.com" />
+	<target host="blogs.pointroll.com" />
+	<target host="onpoint.pointroll.com" />
+	<target host="spd-s.pointroll.com" />
+	<target host="t.pointroll.com" />
+	<target host="www.pointroll.com" />
+
+
+	<!--	Set by ads:
+				-->
+	<securecookie host="^\.pointroll\.com$" name="^PR(?:bu|go)$" />
+	<securecookie host="^(?:adportal|\.ads)\.pointroll\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

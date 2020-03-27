@@ -1,0 +1,17 @@
+<!--
+	For rules that are on by default, see Dynamite-Data.xml.
+
+-->
+<ruleset name="Dynamite Data (mismatches)" default_off="mismatched">
+
+	<target host="dynamitedeals.com" />
+	<target host="www.dynamitedeals.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?dynamitedeals\.com/"
+		to="https://dynamitedeals.com/" />
+
+</ruleset>

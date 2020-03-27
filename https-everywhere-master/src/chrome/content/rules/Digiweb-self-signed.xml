@@ -1,0 +1,30 @@
+<!--
+	For rules that are on by default, see Digiweb.xml.
+
+-->
+<ruleset name="Digiweb (self-signed)" default_off="expired, self-signed">
+
+	<!--	self-signed	-->
+	<target host="uweb2.host.ie" />
+	<target host="uweb3.host.ie" />
+	<target host="novweb.novara.ie" />
+	<!--	expired	-->
+	<target host="securecerts.ie" />
+	<target host="www.securecerts.ie" />
+
+
+	<securecookie host="^uweb[23]\.host\.ie$" name=".+" />
+	<securecookie host="^novweb\.novara\.ie$" name=".+" />
+
+
+	<rule from="^http://uweb([23])\.host\.ie/"
+		to="https://uweb$1.host.ie/" />
+
+	<rule from="^http://novweb\.novara\.ie/"
+		to="https://novweb.novara.ie/" />
+
+	<!--	Cert only matches www.	-->
+	<rule from="^http://(?:www\.)?securecerts\.ie/"
+		to="https://www.securecerts.ie/" />
+
+</ruleset>

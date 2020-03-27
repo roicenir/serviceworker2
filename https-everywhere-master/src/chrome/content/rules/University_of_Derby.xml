@@ -1,0 +1,27 @@
+<!--
+	For problematic rules, see University_of_Derby-problematic.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(times out)
+
+-->
+<ruleset name="University of Derby (partial)">
+
+	<target host="erecruitment.derby.ac.uk" />
+	<target host="password.derby.ac.uk" />
+	<target host="pssprd.derby.ac.uk" />
+	<target host="students.derby.ac.uk" />
+	<target host="udo.derby.ac.uk" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<!--		www.../enrolment$ points to pssprd...8030,
+		which works with or without port appended.
+								-->
+
+	<rule from="^http:" to="https:" />
+</ruleset>

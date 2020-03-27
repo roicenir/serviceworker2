@@ -1,0 +1,33 @@
+<!--
+	Partially covered subdomains:
+
+		- pagalba	(pages redirect to http)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- gedimai
+		- grafika
+		- klientams
+		- sutartys
+
+-->
+<ruleset name="Iv.lt (partial)">
+
+	<target host="iv.lt" />
+	<target host="gedimai.iv.lt" />
+	<target host="grafika.iv.lt" />
+	<target host="klientams.iv.lt" />
+	<target host="pagalba.iv.lt" />
+	<target host="sutartys.iv.lt" />
+	<target host="www.iv.lt" />
+		<exclusion pattern="^http://pagalba\.iv\.lt/(?!images/)" />
+
+
+	<securecookie host="^klientams\.iv\.lt$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

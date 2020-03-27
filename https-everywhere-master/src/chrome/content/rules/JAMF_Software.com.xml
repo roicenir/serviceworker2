@@ -1,0 +1,17 @@
+<ruleset name="JAMF_Software.com (partial)">
+	<target host="jamfnation.jamfsoftware.com" />
+	<target host="my.jamfsoftware.com" />
+	<target host="store.jamfsoftware.com" />
+	<target host="support.jamfsoftware.com" />
+
+	<target host="*.jamfcloud.com" />
+		<test url="http://signup.jamfcloud.com/" />
+		<test url="http://jamf.jamfcloud.com/" />
+		<test url="http://hosted.jamfcloud.com/" />
+
+	<!--	Mismatched:	-->
+	<exclusion pattern="^http://content\.jamfcloud\.com/" />
+		<test url="http://content.jamfcloud.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

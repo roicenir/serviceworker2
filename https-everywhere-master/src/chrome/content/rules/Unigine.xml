@@ -1,0 +1,14 @@
+<ruleset name="Unigine">
+
+	<target host="unigine.com" />
+	<target host="developer.unigine.com" />
+	<target host="eu4.unigine.com" />
+	<target host="www.unigine.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,51 @@
+<!--
+	Non-functional hosts:
+		Timeout:
+		- research.pdx.edu
+
+		SSL error:
+		- mail.pdx.edu
+
+		Incomplete certificate chain:
+		- banweb.banner.pdx.edu
+		- banweb.pdx.edu
+
+		Certificate mismatched:
+		- print.pdx.edu
+
+		Different content:
+		- www.library.pdx.edu
+-->
+<ruleset name="Portland State University (partial)">
+	<target host="pdx.edu" />
+	<target host="www.pdx.edu" />
+	
+	<target host="alba.pdx.edu" />
+
+	<target host="cat.pdx.edu" />
+	
+	<target host="d2l.pdx.edu" />
+	
+	<target host="library.pdx.edu" />
+	<target host="www.library.pdx.edu" />
+	<target host="guides.library.pdx.edu" />
+	<target host="pdxscholar.library.pdx.edu" />
+	<target host="search.library.pdx.edu" />
+	
+	<target host="oaiplus.pdx.edu" />
+	
+	<target host="publishing.pdx.edu" />
+	
+	<target host="climatecope.research.pdx.edu" />
+	<target host="wpsa.research.pdx.edu" />
+	
+	<target host="my.pdx.edu" />
+	
+	<target host="sso.pdx.edu" />
+		<test url="http://sso.pdx.edu/idp/profile/SAML2/POST/SSO" />
+
+	<rule from="^http://www\.library\.pdx\.edu/"
+		  	to="https://library.pdx.edu/" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,10 @@
+<ruleset name="G33kinfo.com">
+
+	<target host="g33kinfo.com" />
+	<target host="www.g33kinfo.com" />
+	<target host="mail.g33kinfo.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

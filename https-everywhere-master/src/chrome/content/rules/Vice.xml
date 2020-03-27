@@ -1,0 +1,78 @@
+<!--
+	Other Vice Media rulesets:
+
+		- Motherboard.tv.xml
+		- Noisey.com.xml
+		- viceland.com.xml
+
+
+	Non-functional hosts:
+
+		Timeout:
+		- socials.uk.vice.com
+
+		Certificate mismatched:
+		- link.vice.com
+		- assets.thump.vice.com
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- link from media.sailthru.com *
+			- munchies from images *
+			- noisey from assets.noisey.com *
+			- thump from assets.thump *
+			- www from assets *
+			- www from scs-assets.s3.amazonaws.com *
+
+		- Bugs, on:
+
+			- motherboard from s1.2mdn.net *
+			- motherboard, munchies, noisey, thecreatorsproject, www from b.scorecardresearch.com *
+			- www from platform.tumblr.com *
+			- www from platform.twitter.com *
+
+	* Secured by us
+-->
+<ruleset name="Vice.com (partial)">
+
+	<target host="vice.com" />
+	<target host="www.vice.com" />
+	<test url="http://www.vice.com/stuff" />
+	<target host="assets.vice.com" />
+	<target host="assets2.vice.com" />
+	<target host="assets-news.vice.com" />
+	<target host="assets-sports.vice.com" />
+	<target host="broadly.vice.com" />
+	<target host="embeds.vice.com" />
+	<target host="hbo.vice.com" />
+	<target host="i-d.vice.com" />
+	<target host="i-d-images.vice.com" />
+	<target host="images.vice.com" />
+	<target host="manage.vice.com" />
+	<target host="motherboard.vice.com" />
+	<target host="motherboard-cdn-assets.vice.com" />
+	<target host="motherboard-images.vice.com" />
+	<target host="munchies.vice.com" />
+	<target host="news.vice.com" />
+	<test url="http://news.vice.com/shows" />
+	<target host="news-images.vice.com" />
+	<target host="noisey.vice.com" />
+	<target host="scs-assets-cdn.vice.com" />
+	<target host="shop.vice.com" />
+	<target host="sports.vice.com" />
+	<target host="sports-images.vice.com" />
+	<target host="staging-assets-news.vice.com" />
+	<target host="store.vice.com" />
+	<target host="thecreatorsproject.vice.com" />
+	<target host="thecreatorsproject-images.vice.com" />
+	<target host="thump.vice.com" />
+	<target host="vice-sundry-assets-cdn.vice.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

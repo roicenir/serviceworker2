@@ -1,0 +1,74 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- dn.rambler.ru
+
+		Timeout was reached:
+		- booking.rambler.ru
+
+		SSL connect error:
+		- moana.rambler.ru
+
+		SSL peer certificate was not OK:
+		- gamesclub.rambler.ru
+		- www.kassa.rambler.ru
+		- pgc.rambler.ru
+		- www.tv.rambler.ru
+
+		4xx client error:
+		- c-champ.rambler.ru
+		- cnt.rambler.ru
+		- counter.rambler.ru
+		- api.news.rambler.ru
+		- tools.rambler.ru
+
+		Mixed content blocking (MCB) triggered:
+		- kinobot.rambler.ru
+-->
+<ruleset name="Rambler.ru">
+	<target host="rambler.ru" />
+	<target host="audio.rambler.ru" />
+	<target host="brain.rambler.ru" />
+	<target host="c.rambler.ru" />
+	<target host="dating.rambler.ru" />
+	<target host="m.dating.rambler.ru" />
+	<target host="developers.rambler.ru" />
+	<target host="finance.rambler.ru" />
+	<target host="m.finance.rambler.ru" />
+	<target host="fun.rambler.ru" />
+	<target host="games.rambler.ru" />
+	<target host="horoscopes.rambler.ru" />
+	<target host="m.horoscopes.rambler.ru" />
+	<target host="id.rambler.ru" />
+	<target host="dyn.ig.rambler.ru" />
+	<target host="images.rambler.ru" />
+	<target host="kassa.rambler.ru" />
+	<target host="m.kassa.rambler.ru" />
+	<target host="widget.kassa.rambler.ru" />
+	<target host="m.rambler.ru" />
+	<target host="mail.rambler.ru" />
+	<target host="mail-pda.rambler.ru" />
+	<target host="nerve.rambler.ru" />
+	<target host="news.rambler.ru" />
+	<target host="nova.rambler.ru" />
+	<target host="org.rambler.ru" />
+	<target host="rcounter.rambler.ru" />
+	<target host="realty.rambler.ru" />
+	<target host="reklama.rambler.ru" />
+	<target host="scounter.rambler.ru" />
+	<target host="soft.rambler.ru" />
+	<target host="sport.rambler.ru" />
+	<target host="sync.rambler.ru" />
+	<target host="top100.rambler.ru" />
+	<target host="topline.rambler.ru" />
+	<target host="travel.rambler.ru" />
+	<target host="tv.rambler.ru" />
+	<target host="update.rambler.ru" />
+	<target host="video.rambler.ru" />
+	<target host="weather.rambler.ru" />
+	<target host="weekend.rambler.ru" />
+	<target host="www.rambler.ru" />
+	<target host="yourside.rambler.ru" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,47 @@
+<!--
+	CDN buckets:
+
+		- bi.medscape.com.edgesuite.net
+		- images.medscape.com.edgesuite.net
+		- img.medscape.com.edgekey.net
+
+
+	Nonfunctional domains:
+
+		- medscape.com subdomains:
+
+			- (www.)
+			- emedicine
+			- search
+
+		- (www.)medscape.org
+
+	Problematic domains:
+
+		- bi.medscape.com	(works, akamai)
+
+-->
+<ruleset name="Medscape (partial)">
+
+	<target host="images.medscape.com" />
+	<target host="img.medscape.com" />
+	<target host="login.medscape.com" />
+	<target host="profreg.medscape.com" />
+
+
+	<!--	Presumably at least some cross-domain cookies need
+		to be unsecure in order for logging in to work.
+								-->
+	<securecookie host="^(?:login|profreg)\.medscape\.com$" name=".+" />
+
+
+	<!--	Akamai.
+			-->
+	<rule from="^http://images\.medscape\.com/"
+		to="https://img.medscape.com/" />
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

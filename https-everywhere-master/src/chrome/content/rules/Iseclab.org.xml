@@ -1,0 +1,20 @@
+<!--
+	Invalid certificate:
+		anubis.iseclab.org
+		blog.iseclab.org
+		mail.iseclab.org
+		secenv.iseclab.org
+		secprog.iseclab.org
+		wepawet.iseclab.org
+
+-->
+<ruleset name="Iseclab.org">
+
+	<target host="iseclab.org"/>
+	<target host="www.iseclab.org"/>
+	<target host="course.iseclab.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

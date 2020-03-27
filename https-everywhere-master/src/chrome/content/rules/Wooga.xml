@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+		- cdn12
+		- support
+
+-->
+<ruleset name="Wooga (partial)">
+
+	<target host="cdn12.wooga.com" />
+	<target host="cdn-mkt.wooga.com" />
+
+
+	<rule from="^http://cdn(?:12|-mkt)\.wooga\.com/"
+		to="https://cdn-mkt.wooga.com/" />
+
+</ruleset>

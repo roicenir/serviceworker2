@@ -1,0 +1,21 @@
+<!--
+	Other Highcharts.com related rulesets:
+		+ Highsoft.com.xml
+
+	Non-functional hosts
+		Redirect to HTTP:
+		- highcharts.com
+-->
+<ruleset name="Highcharts.com (partial)">
+	<target host="highcharts.com" />
+	<target host="www.highcharts.com" />
+	<target host="api.highcharts.com" />
+	<target host="code.highcharts.com" />
+	<target host="cloud.highcharts.com" />
+	<target host="forum.highcharts.com" />
+
+	<rule from="^http://highcharts\.com/"
+		to="https://www.highcharts.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

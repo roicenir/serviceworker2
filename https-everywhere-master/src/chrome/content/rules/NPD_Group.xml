@@ -1,0 +1,24 @@
+<!--
+	Other NPD Group rulesets:
+
+		- DecisionKey.xml
+
+-->
+<ruleset name="NPD Group">
+
+	<target host="npd.com" />
+	<target host="autodiscover.npd.com" />
+	<target host="webmail.npd.com" />
+	<target host="www.npd.com" />
+	<target host="www0.npd.com" />
+	<target host="npdgroup.com" />
+	<target host="www.npdgroup.com" />
+
+
+	<securecookie host="^.+\.npd\.com$" name=".+" />
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

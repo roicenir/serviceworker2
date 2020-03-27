@@ -1,0 +1,11 @@
+<ruleset name="Beyond Binary.io">
+
+	<target host="beyondbinary.io" />
+	<target host="www.beyondbinary.io" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

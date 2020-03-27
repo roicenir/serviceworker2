@@ -1,0 +1,29 @@
+<!--
+	These altnames don't exist:
+
+		- www.svn.redmine.org
+
+
+	Insecure cookies are set for these hosts:
+
+		- redmine.org
+		- www.redmine.org
+
+-->
+<ruleset name="Redmine.org">
+
+	<target host="redmine.org" />
+	<target host="www.redmine.org" />
+	<target host="svn.redmine.org" />
+
+
+	<!--	Not secured by server_
+					-->
+	<!--securecookie host="^(www\.)?redmine\.org$" name="^_redmine_session$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

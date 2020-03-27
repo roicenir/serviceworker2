@@ -1,0 +1,21 @@
+<!--
+	For other CIMB coverage, see CIMB.com.xml
+
+
+	Non-functional subdomains:
+		- (www.)bizchannel   (certificate mismatch)
+
+-->
+
+<ruleset name="CIMB Cambodia">
+
+	<target host="cimbbank.com.kh" />
+	<target host="www.cimbbank.com.kh" />
+	<target host="www.internetbanking.cimbbank.com.kh" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

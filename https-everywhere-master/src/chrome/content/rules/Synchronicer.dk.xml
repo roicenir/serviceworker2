@@ -1,0 +1,9 @@
+<ruleset name="Synchronicer.dk">
+	<target host="synchronicer.dk" />
+	<target host="www.synchronicer.dk" />
+		<test url="http://www.synchronicer.dk/app?WSLOAD=TipHerlev4229fdF" />
+
+	<securecookie host="(www\.)?synchronicer\.dk" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

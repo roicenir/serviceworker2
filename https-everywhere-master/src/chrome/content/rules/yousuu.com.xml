@@ -1,0 +1,15 @@
+<!--
+	Mismatch:
+		^	( equal to www )
+		js
+-->
+
+<ruleset name="yousuu.com">
+	<target host="yousuu.com" />
+	<target host="www.yousuu.com" />
+	<target host="img.yousuu.com" />
+
+	<rule from="^http://yousuu\.com/" to="https://www.yousuu.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

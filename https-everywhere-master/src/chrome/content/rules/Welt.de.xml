@@ -1,0 +1,78 @@
+<!--
+	Connection closed:
+		- welt.de
+		- wetter.welt.de
+
+	Invalid certificate:
+		- biowetter.welt.de
+		- bundle.welt.de
+		- klassiker.welt.de
+		- kompakt.welt.de
+		- kosmos.welt.de
+		- liveticker.welt.de
+		- m.liveticker.welt.de
+		- luxusautos.welt.de
+		- luxusuhren.welt.de
+		- m.welt.de
+		- reisewetter.welt.de
+		- schmid.welt.de
+		- service.welt.de
+		- to.welt.de
+
+	Mismatch:
+		- apps.welt.de
+
+	Refused:
+		- epaper.apps.welt.de
+		- donnerunddoria.welt.de
+		- epaper.welt.de
+		- freie.welt.de
+		- medien.welt.de
+-->
+<ruleset name="Welt.de (Partial)">
+	<target host="www.welt.de" />
+		<!-- HTTP redirect -->
+		<exclusion pattern="^http://www\.welt\.de/((article)?\d{9}|icon|lesestueck|storytorial)/" />
+		<test url="http://www.welt.de/157702604/?noredirect=true&amp;config=langeslestueck&amp;ref&amp;refresh2" />
+		<test url="http://www.welt.de/article157741535/?noredirect=true&amp;config=lesestueckbiga&amp;refresh2" />
+		<test url="http://www.welt.de/icon/" />
+		<test url="http://www.welt.de/lesestueck/" />
+		<test url="http://www.welt.de/storytorial/escada/" />
+	<target host="abo.welt.de" />
+	<target host="codewidget.welt.de" />
+	<target host="css.welt.de" />
+	<target host="gutscheine.welt.de" />
+	<target host="img.welt.de" />
+	<target host="investigativ.welt.de" />
+	<target host="jobs.welt.de" />
+	<target host="js.welt.de" />
+	<target host="resources-production.la.welt.de" />
+		<test url="http://resources-production.la.welt.de/loader/la-loader-default.js" />
+	<target host="luxus.welt.de" />
+	<target host="mobil.welt.de" />
+	<target host="mobile.welt.de" />
+	<target host="online.welt.de" />
+	<target host="stepstone.welt.de" />
+	<target host="tv.welt.de" />
+	<target host="zeitung.welt.de" />
+	<!-- *.apps.welt.de -->
+		<target host="iqtest.apps.welt.de" />
+		<target host="static.apps.welt.de" />
+			<!-- serves wrong content (404 pages also look different, but that's trivial -->
+			<exclusion pattern="^http://static\.apps\.welt\.de/lesestueck/" />
+			<test url="http://static.apps.welt.de/lesestueck/" />
+	<!-- *.la.welt.de (^la.welt.de does not exist) -->
+		<target host="api-co.la.welt.de" />
+		<target host="co.la.welt.de" />
+		<target host="judge.la.welt.de" />
+		<target host="lo.la.welt.de" />
+		<target host="loader.la.welt.de" />
+		<target host="schrotty.la.welt.de" />
+
+	<test url="http://codewidget.welt.de/beta-promotion/css/betapromotion.css" />
+	<test url="http://css.welt.de/skins/welt/css/693/reset.css" />
+	<test url="http://img.welt.de/img/config_master_header/orig149433181/3270004236/welt-logo-trans.png" />
+
+	<rule from="^http:" to="https:" />
+	
+</ruleset>

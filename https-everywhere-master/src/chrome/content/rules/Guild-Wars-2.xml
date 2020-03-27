@@ -1,0 +1,52 @@
+<!--
+	For other NCsoft coverage, see NCsoft.com.xml.
+
+	en.support.guildwars2.com is handled in RightNow-clients.xml.
+
+
+	CDN buckets:
+
+		- d15glo5zfrmw71.cloudfront.net
+		- d1ej19d7kwigfi.cloudfront.net
+		- d1h9a8s8eodvjz.cloudfront.net
+		- d1r2pgr9caw5gy.cloudfront.net
+		- d28ur01pzlzof2.cloudfront.net
+		- d2bdvqr0jmx8mi.cloudfront.net
+		- d2vn94glaxzkz3.cloudfront.net
+		- d37exe0a8qxg70.cloudfront.net
+		- d3cwiis26rm8qb.cloudfront.net
+		- dcjbo57tl8rde.cloudfront.net
+		- dj2zsht84zuzp.cloudfront.net
+		- dru1t5calhgfr.cloudfront.net
+		- dviw3bl0enbyw.cloudfront.net
+		- static.hom.guildwars2.com.edgesuite.net
+
+
+	Nonfunctional subdomains:
+
+		- hom		(reset)
+		- static.hom	(503)
+		- wiki		(times out)
+
+-->
+<ruleset name="Guild Wars 2 (partial)">
+
+	<target host="guildwars2.com" />
+	<target host="account.guildwars2.com" />
+	<target host="buy.guildwars2.com" />
+	<target host="forum.guildwars2.com" />
+	<target host="forum-de.guildwars2.com" />
+	<target host="forum-en.guildwars2.com" />
+	<target host="forum-es.guildwars2.com" />
+	<target host="forum-fr.guildwars2.com" />
+	<target host="register.guildwars2.com" />
+	<target host="support.guildwars2.com" />
+	<target host="www.guildwars2.com" />
+
+
+	<securecookie host="^.+\.guildwars2\.com$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

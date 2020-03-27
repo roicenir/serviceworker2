@@ -1,0 +1,8 @@
+<ruleset name="ChampionCasino.net (partial)">
+	<target host="championcasino.net" />
+	<target host="www.championcasino.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

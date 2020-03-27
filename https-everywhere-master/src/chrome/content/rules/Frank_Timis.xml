@@ -1,0 +1,13 @@
+<!--
+	!www works over neither http nor https
+
+-->
+<ruleset name="Frank Timis">
+
+	<target host="www.franktimis.com" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

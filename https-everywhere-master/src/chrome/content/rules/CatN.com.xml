@@ -1,0 +1,16 @@
+<ruleset name="CatN.com">
+
+	<target host="catn.com" />
+	<target host="www.catn.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^cp\.c4\.catn\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^cp\.c4\.catn\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

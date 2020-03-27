@@ -1,0 +1,11 @@
+<!--
+	Other Showcase Media rulesets:
+		- Smdg.ca.xml
+-->
+<ruleset name="Showcase.ca">
+	<target host="showcase.ca" />
+	<target host="www.showcase.ca" />
+	<target host="media.showcase.ca" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

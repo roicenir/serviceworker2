@@ -1,0 +1,13 @@
+<!--
+	Invalid certificate:
+		www.birds-are-nice.me
+
+-->
+<ruleset name="Birds-Are-Nice.me">
+
+	<target host="birds-are-nice.me" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

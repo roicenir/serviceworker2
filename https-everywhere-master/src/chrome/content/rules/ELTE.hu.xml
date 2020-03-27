@@ -1,0 +1,85 @@
+<!--
+	Eötvös Loránd University
+
+
+	Problematic subdomains:
+
+		- ceasar	(refused)
+		- kutinf.pik	(works; mismatched, CN: web.caesar.elte.hu)
+
+
+	Fully covered subdomains:
+
+		- alumni
+		- (www.)caesar	(^ → www)
+		- web.caesar
+		- webmail.caesar	(→ webmail)
+		- felveteli
+		- iig
+		- mars
+		- minoseg
+		- hallgato.neptun
+		- pik
+		- telefon
+		- telefonkonyv
+		- ugykezelo
+		- webmail
+		- www
+
+
+	^elte.hu doesn't exist.
+
+
+	Observed cookie domains:
+
+		- hallgato.neptun
+		- telefon
+		- telefonkonyv
+		- .webmail
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- alumni from alumni *
+			- felveteli from felveteli *
+			- www from www *
+
+	* Secured by us, doesn't trip MCB.
+
+-->
+<ruleset name="ELTE.hu (partial)">
+
+	<target host="alumni.elte.hu" />
+	<target host="web.caesar.elte.hu" />
+	<target host="felveteli.elte.hu" />
+	<target host="iig.elte.hu" />
+	<target host="mars.elte.hu" />
+	<target host="minoseg.elte.hu" />
+	<target host="hallgato.neptun.elte.hu" />
+	<target host="pik.elte.hu" />
+	<target host="telefon.elte.hu" />
+	<target host="telefonkonyv.elte.hu" />
+	<target host="ugykezelo.elte.hu" />
+	<target host="webmail.elte.hu" />
+	<target host="www.elte.hu" />
+	<target host="caesar.elte.hu" />
+	<target host="www.caesar.elte.hu" />
+	<target host="webmail.caesar.elte.hu" />
+
+
+	<securecookie host="^(?:hallgato\.neptun|telefon|telefonkonyv|\.webmail)\.elte\.hu$" name=".+" />
+
+
+
+	<rule from="^http://(?:www\.)?caesar\.elte\.hu/"
+		to="https://www.caesar.elte.hu/" />
+
+	<!--	Redirects like so over http:
+						-->
+	<rule from="^http://webmail\.caesar\.elte\.hu/"
+		to="https://webmail.elte.hu/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

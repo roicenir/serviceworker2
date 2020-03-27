@@ -1,0 +1,19 @@
+<!--	!functional:
+		- (www.)sitesense-oo.com
+		- (members.|www.)smartname.com	(timeout)
+-->
+<ruleset name="NameMedia (partial)">
+
+	<target host="partners.smartname.com"/>
+	<target host="images.sitesense-oo.com" />
+	<target host="origin-images.sitesense-oo.com" />
+
+	<securecookie host="^partners\.smartname\.com$" name=".+" />
+
+	<!--	!origin: Akamai		-->
+	<rule from="^http://(?:origin-)?images\.sitesense-oo\.com/"
+		to="https://origin-images.sitesense-oo.com/"/>
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

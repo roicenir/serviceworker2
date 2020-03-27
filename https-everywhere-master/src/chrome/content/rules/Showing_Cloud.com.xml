@@ -1,0 +1,16 @@
+<ruleset name="Showing Cloud.com">
+
+	<target host="showingcloud.com" />
+	<target host="cn.showingcloud.com" />
+	<target host="en.showingcloud.com" />
+	<target host="www.showingcloud.com" />
+
+
+	<!--	Server doesn't secure:
+					-->
+	<securecookie host="^(?:cn|www)?\.showingcloud\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	For problematic rules, see Livefyre-mismatches.xml.
+-->
+<ruleset name="Livefyre (partial)">
+
+	<!-- *.fyre.co -->
+	<target host="avatars.fyre.co" />
+	<target host="zor.fyre.co" />
+
+	<!-- *.livefyre.com -->
+	<target host="livefyre.com" />
+	<target host="www.livefyre.com" />
+	<target host="web.livefyre.com" />
+	<target host="zor.livefyre.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

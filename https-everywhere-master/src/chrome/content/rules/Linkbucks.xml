@@ -1,0 +1,20 @@
+<!--
+	Problematic subdomains:
+
+		- static	(CN: gp1.wac.edgecastcdn.net; 404)
+
+-->
+<ruleset name="Linkbucks">
+
+	<target host="linkbucks.com" />
+	<target host="static.linkbucks.com" />
+	<target host="www.linkbucks.com" />
+
+
+	<securecookie host="^(?:www\.)?linkbucks\.com$" name=".+" />
+
+
+	<rule from="^http://(?:static\.|(www\.))?linkbucks\.com/"
+		to="https://$1linkbucks.com/" />
+
+</ruleset>

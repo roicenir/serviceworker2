@@ -1,0 +1,25 @@
+
+<!--
+	Other Jimdo rulesets:
+		-Jimdo-Server.com.xml
+		-Jimcdn.com.xml
+		-Jimstatic.com.xml
+		-Jimdo.design.xml
+
+	Jimdo is a web hosting provider. All client pages have a subdomain with the Jimdo certificate.
+-->
+<ruleset name="Jimdo.com">
+
+	<target host="jimdo.com" />
+	<target host="*.jimdo.com" />
+			<test url="http://de.jimdo.com/" />
+			<test url="http://es.jimdo.com/" />
+			<test url="http://help.jimdo.com/" />
+			<test url="http://webmail.jimdo.com/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

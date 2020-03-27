@@ -1,0 +1,24 @@
+<!--
+	For rules that are on by default, see Meetic.xml.
+
+-->
+<ruleset name="Meetic (problematic)" default_off="mismatched">
+
+	<target host="k.ilius.net" />
+	<target host="stda.ilius.net" />
+		<!--
+			Handled in Meetic.xml:
+						-->
+		<exclusion pattern="^http://stda\.ilius\.net/(?!css/(?!components/core/forgot\.css))" />
+	<target host="pictures.meetic.com" />
+	<target host="photos.meetic.fr" />
+	<target host="statics.meetic-affinity.com" />
+
+
+
+	<rule from="^http://p(?:ictures\.meetic\.com|hotos\.meetic\.fr)/"
+		to="https://photos.meetic.fr/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

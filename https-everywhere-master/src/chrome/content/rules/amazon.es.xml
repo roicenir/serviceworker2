@@ -1,0 +1,37 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .amazon.es
+		- .www.amazon.es
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Amazon.es">
+
+	<target host="amazon.es" />
+	<target host="advertising.amazon.es" />
+	<target host="afiliados.amazon.es" />
+	<target host="dropship.amazon.es" />
+	<target host="fls-eu.amazon.es" />
+	<target host="sellercentral.amazon.es" />
+	<target host="services.amazon.es" />
+	<target host="transportation.amazon.es" />
+	<target host="vendorcentral.amazon.es" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.amazon\.es$" name="^(?:session-id|session-id-time|x-wl-uid)$" /-->
+	<!--securecookie host="^\.www\.amazon\.es$" name="^(?:UserPref|at-acbes|lc-acbes|sess-at-aches|session-id|session-id-time|session-token|ubid-acbes|x-acbes|x-wl-uid)$" /-->
+
+	<securecookie host=".+" name="^aps-trtmnt$" />
+	<securecookie host="^(?!\.amazon\.es$)." name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

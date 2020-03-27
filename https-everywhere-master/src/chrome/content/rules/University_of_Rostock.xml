@@ -1,0 +1,51 @@
+<!--
+	Nonfunctional subdomains:
+
+		- ^		(dropped)
+		- bax.comlab	(refused)
+		- www.itmz *
+		- www *
+
+	* Shows typo3cluster.rz.uni-greifswald.de; mismatched, CN: typo3cluster.rz.uni-greifswald.de
+
+
+	Fully covered subdomains:
+
+		- autodiscover
+		- email
+		- lsf
+		- mail
+		- aktivierung.rz
+		- passwd.rz
+		- pwd.rz
+		- studip
+		- webapp
+
+
+	Observed cookie domains:
+
+		- email
+		- lsf
+		- studip
+		- webapp
+		- www
+
+-->
+<ruleset name="University of Rostock (partial)">
+
+	<target host="autodiscover.uni-rostock.de" />
+	<target host="lsf.uni-rostock.de" />
+	<target host="aktivierung.rz.uni-rostock.de" />
+	<target host="passwd.rz.uni-rostock.de" />
+	<target host="pwd.rz.uni-rostock.de" />
+	<target host="studip.uni-rostock.de" />
+	<target host="webapp.uni-rostock.de" />
+		<!--exclusion pattern="^http://(bax\.comlab|www\.itmz|www)\." /-->
+
+
+	<securecookie host="^(?:email|lsf|studip|webapp)\.uni-rostock\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

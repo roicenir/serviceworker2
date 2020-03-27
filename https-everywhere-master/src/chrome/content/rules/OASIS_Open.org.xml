@@ -1,0 +1,30 @@
+<!--
+	For rules causing false/broken MCB, see OASIS_Open.org-falsemixed.xml.
+
+
+	Invalid certificate:
+		- events.oasis-open.org
+		- search.oasis-open.org
+		- interoperate-iot.oasis-open.org
+
+	Mixed content:
+		- psi.oasis-open.org
+-->
+<ruleset name="OASIS Open.org (partial)">
+
+	<target host="oasis-open.org" />
+	<target host="www.oasis-open.org" />
+	<target host="docs.oasis-open.org" />
+	<target host="issues.oasis-open.org" />
+	<target host="lists.oasis-open.org" />
+	<target host="support.oasis-open.org" />
+	<target host="tools.oasis-open.org" />
+	<target host="wiki.oasis-open.org" />
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

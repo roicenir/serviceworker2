@@ -1,0 +1,22 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)
+		- hostedmedia
+		- origin-hostedmedia
+
+-->
+<ruleset name="reimanpub.com">
+
+	<target host="reimanpub.com" />
+	<target host="hostedmedia.reimanpub.com" />
+	<target host="origin-hostedmedia.reimanpub.com" />
+	<target host="www.reimanpub.com" />
+
+
+	<securecookie host="^(?:(?:origin-)?hostedmedia\.|www\.)?reimanpub\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

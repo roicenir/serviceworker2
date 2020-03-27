@@ -1,0 +1,13 @@
+<!--
+	!www doesn't exist
+
+-->
+<ruleset name="Roloil">
+
+	<target host="www.roloil.com" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

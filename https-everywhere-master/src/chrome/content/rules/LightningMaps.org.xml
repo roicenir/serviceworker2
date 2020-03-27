@@ -1,0 +1,46 @@
+<!--
+	Mismatched:
+		- s4.www
+		- cdn
+		- fo-ovh
+		- fo-ovh3
+		- git
+		- s1.gitlab
+		- webmail.mail
+		- server1
+		- server4
+		- tiles-radar
+		- wiki
+		- ws
+		- s4.ws
+		- s5.ws
+		- ws1
+		- ws3
+		- www1
+		- www2
+
+	No test URL found:
+		- live
+		- live2
+		- map.tiles
+		- osm.tiles
+		- overlay.tiles
+-->
+<ruleset name="LightningMaps.org">
+	<target host="lightningmaps.org" />
+	<target host="www.lightningmaps.org" />
+	<target host="counter.lightningmaps.org" />
+	<target host="data.lightningmaps.org" />
+	<target host="docs.lightningmaps.org" />
+	<target host="forum.lightningmaps.org" />
+	<target host="gitlab.lightningmaps.org" />
+	<target host="ibod.lightningmaps.org" />
+	<target host="images.lightningmaps.org" />
+	<target host="mail.lightningmaps.org" />
+	<target host="monitor.lightningmaps.org" />
+	<target host="piwik.lightningmaps.org" />
+	<target host="tiles.lightningmaps.org" />
+	<target host="tracker.lightningmaps.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

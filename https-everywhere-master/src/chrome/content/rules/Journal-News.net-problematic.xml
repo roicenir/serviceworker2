@@ -1,0 +1,16 @@
+<!--
+	For rules that are on by default, see Journal-News.net.xml.
+
+-->
+<ruleset name="Journal-News.net (mismatched)" default_off="mismatched">
+
+	<target host="cu.journal-news.net" />
+	<target host="mobile.journal-news.net" />
+
+
+	<securecookie host="^mobile\.journal-news\.net$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

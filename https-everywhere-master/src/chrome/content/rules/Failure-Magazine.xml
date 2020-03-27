@@ -1,0 +1,14 @@
+<ruleset name="Failure Magazine" default_off="mismatched">
+
+	<!--	all: cert: *.gridserver.com	-->
+	<target host="failuremag.com"/>
+	<!--	* for cross-domain cookie	-->
+	<target host="origin.failuremag.com" />
+	<target host="www.failuremag.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(?:origin\.|www\.)?failuremag\.com/"
+		to="https://failuremag.com/"/>
+
+</ruleset>

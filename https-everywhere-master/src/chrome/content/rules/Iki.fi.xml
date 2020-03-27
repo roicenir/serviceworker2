@@ -1,0 +1,7 @@
+<ruleset name="Iki.fi (partial)">
+	<target host="iki.fi" />
+	<target host="www.iki.fi" />
+	<target host="ikiwiki.iki.fi" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

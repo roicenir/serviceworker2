@@ -1,0 +1,10 @@
+<ruleset name="iFriends (partial)">
+
+	<!--	* for cross-domain cookie.	-->
+	<target host="images.ifriends.net" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

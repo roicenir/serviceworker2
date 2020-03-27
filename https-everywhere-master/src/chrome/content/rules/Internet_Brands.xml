@@ -1,0 +1,17 @@
+<!--
+	Other Internet Brands rulesets:
+
+		- Model_Mayhem.xml
+		- IBsrv.net.xml
+
+-->
+<ruleset name="Internet Brands">
+
+	<target host="pxlssl.ibpxl.com" />
+	<target host="internetbrands.com" />
+	<target host="www.internetbrands.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<ruleset name="Mayo Clinic (partial)">
+	<target host="mayoclinic.com" />
+	<target host="www.mayoclinic.com" />
+	<target host="healthletter.mayoclinic.com" />
+	<target host="marketplace.mayoclinic.com" />
+	<target host="store.mayoclinic.com" />
+
+	<target host="mayoclinic.org" />
+	<target host="www.mayoclinic.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,35 @@
+<!--
+	CDN buckets:
+
+		- flashtalking.com.xml.edgesuite.net
+
+			- www.flashtalking.com
+
+
+	Mixed content:
+
+		- css on www.flashtalking.com from ajax.googleapis.com *
+		- css on www.flashtalking.com from fonts.googleapis.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Flashtalking (partial)">
+
+	<target host="flashtalking.com" />
+	<target host="cdn.flashtalking.com" />
+	<target host="servedby.flashtalking.com" />
+	<target host="flashtalking.net" />
+	<target host="www.flashtalking.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.flashtalking\.com$" name="^flashtalkingad1$" /-->
+
+	<securecookie host="^\.flashtalking\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

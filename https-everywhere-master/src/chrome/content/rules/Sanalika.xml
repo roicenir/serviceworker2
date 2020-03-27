@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)
+
+-->
+<ruleset name="Sanalika (partial)">
+
+	<target host="cdn4.sanalika.com" />
+	<target host="fb.sanalika.com" />
+	<target host="fs.sanalika.com" />
+
+
+	<securecookie host="^fb\.sanalika\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

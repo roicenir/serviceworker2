@@ -1,0 +1,17 @@
+<!--
+	CDN buckets:
+
+		- static.velvetcache.org.s3.amazonaws.com
+
+
+	(www.): dropped
+
+-->
+<ruleset name="Velvet Cache.org (partial)">
+
+	<target host="static.velvetcache.org" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,7 @@
+<ruleset name="kriminalvarden.se">
+	<target host="kriminalvarden.se" />
+	<target host="www.kriminalvarden.se" />
+  	<target host="blogg.kriminalvarden.se" />
+	
+	<rule from="^http:" to="https:" />
+</ruleset>

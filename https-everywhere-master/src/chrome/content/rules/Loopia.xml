@@ -1,0 +1,32 @@
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://loopiasecure.com/ => https://www.loopia.se/: (60, 'SSL certificate problem: certificate has expired')
+	Other Loopia rulesets:
+
+		- Loopia_secure.com.xml
+
+-->
+<ruleset name="Loopia">
+
+	<target host="loopia.se" />
+	<target host="static.loopia.se" />
+	<target host="support.loopia.se" />
+	<target host="webmail.loopia.se" />
+	<target host="www.loopia.se" />
+		<!--	blogg times out.	-->
+		<exclusion pattern="^http://blogg\." />
+	<!--	* for cross-domain cookie.	-->
+	<target host="loopiasecure.com" />
+
+
+	<securecookie host="^(?:.*\.)?loopia\.se$" name=".+" />
+
+
+
+	<!--	Cert doesn't match,
+		server redirects as so.	-->
+	<rule from="^http://loopiasecure\.com/"
+		to="https://www.loopia.se/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="Exclusive X">
+
+	<target host="exclusivex.com" />
+	<target host="www.exclusivex.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

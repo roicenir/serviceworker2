@@ -1,0 +1,43 @@
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://desire2learn.com/ => https://desire2learn.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+	Desire2learn Incorporated
+
+
+	Nonfunctional subdomains:
+
+		- keytool.edev	(shows lmscloud.edev; expired 2013-07-23; mismatched, CN: *.desire2learn.com)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- community
+		- lmscloud.edev
+		- pt.valence
+
+
+	Observed cookie domains:
+
+		- ^
+		- community
+		- lmscloud.edev
+		- pt.valence
+		- www
+
+-->
+<ruleset name="Desire2learn.com">
+
+	<target host="desire2learn.com" />
+	<target host="community.desire2learn.com" />
+	<target host="lmscloud.edev.desire2learn.com" />
+	<target host="pt.valence.desire2learn.com" />
+	<target host="www.desire2learn.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

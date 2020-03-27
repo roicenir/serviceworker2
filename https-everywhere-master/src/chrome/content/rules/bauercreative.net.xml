@@ -1,0 +1,15 @@
+<!--
+	For other Bauer Media coverage, see bauermedia.co.uk.xml.
+
+-->
+<ruleset name="Bauer creative.net">
+
+	<target host="static.bauercreative.net" />
+		<test url="http://static.bauercreative.net/zombie/css/index.css" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+
+</ruleset>

@@ -1,0 +1,38 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://federatedmedia.net/ => https://federatedmedia.net/: (60, 'SSL certificate problem: certificate has expired')
+Fetch error: http://www.federatedmedia.net/ => https://www.federatedmedia.net/: (60, 'SSL certificate problem: certificate has expired')
+
+Disabled by https-everywhere-checker because:
+Fetch error: http://federatedmedia.net/ => https://federatedmedia.net/: (60, 'SSL certificate problem: self signed certificate')
+Fetch error: http://www.federatedmedia.net/ => https://www.federatedmedia.net/: (60, 'SSL certificate problem: self signed certificate')
+	Nonfunctional domains:
+
+		- cm.cdn.fm
+
+-->
+<ruleset name="Federated Media Publishing (partial)" default_off="failed ruleset test">
+
+	<target host="federatedmedia.net" />
+	<target host="www.federatedmedia.net" />
+	<target host="keywords.fmpub.net" />
+	<target host="r1.fmpub.net" />
+	<target host="static.fmpub.net" />
+	<target host="tenzing.fmpub.net" />
+	<target host="static-cf.fmpub.net" />
+
+
+	<securecookie host="^.*\.fmpub\.net$" name=".+" />
+	<securecookie host="^www\.federatedmedia\.net$" name=".+" />
+
+
+
+	<!--	Ads included on 3rd-party websites.	-->
+
+	<!--	Ditto.	-->
+	<rule from="^http://static-cf\.fmpub\.net/"
+		to="https://fmpub.cachefly.net/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

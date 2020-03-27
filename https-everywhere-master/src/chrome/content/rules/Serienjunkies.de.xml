@@ -1,0 +1,30 @@
+<!--
+	This domain contains a wildcard DNS record.
+
+	Insecure cookies are set for these hosts:
+		- www.serienjunkies.de
+-->
+<ruleset name="Serienjunkies.de">
+
+	<target host="serienjunkies.de" />
+	<target host="www.serienjunkies.de" />
+	<target host="a-cdn.serienjunkies.de" />
+	<target host="admin.serienjunkies.de" />
+	<target host="admin-stage.serienjunkies.de" />
+	<target host="f-cdn.serienjunkies.de" />
+	<target host="g-cdn.serienjunkies.de" />
+	<target host="n-cdn.serienjunkies.de" />
+	<target host="r-cdn.serienjunkies.de" />
+	<target host="s-cdn.serienjunkies.de" />
+	<target host="shop.serienjunkies.de" />
+	<target host="u-cdn.serienjunkies.de" />
+	<target host="v-cdn.serienjunkies.de" />
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^www\.serienjunkies\.de$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>
+

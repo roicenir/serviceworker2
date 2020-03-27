@@ -1,0 +1,15 @@
+<!--
+	For rules not causing false/broken MCB, see HK_Yanto_Yan.com.xml.
+
+-->
+<ruleset name="HK Yanto Yan.com (false MCB)" platform="mixedcontent">
+
+	<target host="www.hkyantoyan.com" />
+
+
+	<securecookie host="^(?:\.|www\.)?hkyantoyan\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,22 @@
+<!--
+	Handshake failure:
+		content.scientificlinux.org
+
+	Time out:
+		ftp.scientificlinux.org
+		ftp1.scientificlinux.org
+		ftp2.scientificlinux.org
+
+	Invalid certificate:
+		ww.scientificlinux.org
+
+-->
+<ruleset name="Scientific Linux.org">
+
+	<target host="scientificlinux.org" />
+	<target host="www.scientificlinux.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

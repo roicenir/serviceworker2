@@ -1,0 +1,14 @@
+<ruleset name="Crash Space">
+
+	<target host="crashspace.org" />
+	<target host="blog.crashspace.org" />
+	<target host="www.crashspace.org" />
+
+
+	<!--	- (www.) times out over https
+		- (www.) redirects to blog over http
+							-->
+	<rule from="^http://(?:blog\.|www\.)?crashspace\.org/"
+		to="https://blog.crashspace.org/" />
+
+</ruleset>

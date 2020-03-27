@@ -1,0 +1,21 @@
+<!--
+	CDN buckets:
+
+		- d1xmanv2p9uj30.cloudfront.net
+
+			- files.pcbooster.com
+
+-->
+<ruleset name="PC Booster">
+
+	<target host="pcbooster.com" />
+	<target host="www.pcbooster.com" />
+	<target host="files.pcbooster.com" />
+
+
+	<securecookie host="^\.?pcbooster\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

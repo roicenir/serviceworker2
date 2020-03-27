@@ -1,0 +1,25 @@
+<!--
+	CDN buckets:
+
+		- du4ozcxd5zwr5.cloudfront.net
+
+			- static.iwebreader.com
+
+
+	 domains:
+
+		- (www.)	(shows secure; mismatched, CN: secure.iwebreader.com)
+
+-->
+<ruleset name="iWebReader (partial)">
+
+	<target host="secure.iwebreader.com" />
+	<target host="static.iwebreader.com" />
+
+
+
+	<rule from="^http://static\.iwebreader\.com/"
+		to="https://du4ozcxd5zwr5.cloudfront.net/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,9 @@
+<ruleset name="datamind.ru">
+
+	<target host="sync.pool.datamind.ru" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

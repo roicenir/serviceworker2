@@ -1,0 +1,13 @@
+<!--
+	^snolab.ca doesn't exist.
+
+-->
+<ruleset name="Sudbury Neutrino Observatory Institute">
+
+	<target host="www.snolab.ca" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

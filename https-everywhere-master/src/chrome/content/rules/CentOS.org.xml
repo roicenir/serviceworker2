@@ -1,0 +1,46 @@
+<!--
+	Content mismatch:
+		- projects
+
+	Timeout:
+		- debuginfo
+		- mirror
+		- mirrorlist
+		- packet0[1-4]
+		- torrent
+		- vault
+-->
+<ruleset name="CentOS.org (partial)">
+
+	<target host="centos.org" />
+	<target host="www.centos.org" />
+	<target host="accounts.centos.org" />
+	<target host="apps.centos.org" />
+	<target host="blog.centos.org" />
+	<target host="blogs.centos.org" />
+	<target host="bugs.centos.org" />
+	<target host="cbs.centos.org" />
+	<target host="ci.centos.org" />
+	<target host="cloud.centos.org" />
+	<target host="docs.centos.org" />
+	<target host="feeds.centos.org" />
+	<target host="forums.centos.org" />
+	<target host="fr.centos.org" />
+	<target host="git.centos.org" />
+	<target host="id.centos.org" />
+	<target host="lists.centos.org" />
+	<target host="mirror-status.centos.org" />
+	<target host="paste.centos.org" />
+	<target host="pastebin.centos.org" />
+	<target host="people.centos.org" />
+	<target host="planet.centos.org" />
+	<target host="registry.centos.org" />
+	<target host="seven.centos.org" />
+	<target host="status.centos.org" />
+	<target host="wiki.centos.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

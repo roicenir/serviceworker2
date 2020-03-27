@@ -1,0 +1,15 @@
+<!--
+	Invalid certificate:
+		download.notepad-plus-plus.org
+-->
+<ruleset name="Notepad-plus-plus.org">
+
+	<target host="notepad-plus-plus.org" />
+	<target host="www.notepad-plus-plus.org" />
+	<target host="community.notepad-plus-plus.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

@@ -1,0 +1,14 @@
+<!--
+	For other Instagram coverage, see Instagr.am.xml.
+
+-->
+<ruleset name="CDN Instagram.com">
+
+	<target host="scontent.cdninstagram.com" />
+	<target host="scontent-a.cdninstagram.com" />
+	<target host="scontent-b.cdninstagram.com" />
+	<target host="scontent-frx5-1.cdninstagram.com" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

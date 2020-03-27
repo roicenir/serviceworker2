@@ -1,0 +1,42 @@
+<!--
+	Invalid certificate:
+		eventvm.entropia.de
+		gpn-noc.entropia.de
+		oid.entropia.de
+		planet.entropia.de
+		poc.entropia.de
+		sistina.entropia.de
+		soup.entropia.de
+		tttool.entropia.de
+		vorstand.entropia.de
+
+	Refused:
+		club.entropia.de
+		dns.entropia.de
+		mail.entropia.de
+
+	Timeout:
+		ccc-tool-1.entropia.de
+
+	Unable to get local issuer certificate:
+		pretalx.entropia.de
+		pretix.entropia.de
+-->
+<ruleset name="Entropia.de">
+
+	<target host="entropia.de" />
+	<target host="www.entropia.de" />
+	<target host="badge.entropia.de" />
+	<target host="blog.entropia.de" />
+	<target host="code.entropia.de" />
+	<target host="lists.entropia.de" />
+	<target host="podcast.entropia.de" />
+	<target host="sdr.entropia.de" />
+
+	<!-- GPN -->
+	<target host="gulas.ch" />
+	<target host="www.gulas.ch" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

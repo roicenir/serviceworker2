@@ -1,0 +1,45 @@
+<!--
+	Other OpenTTD rulesets:
+		- Openttdcoop.org.xml
+
+	Nonfunctional hosts in *.openttd.org:
+		- *.binaries.openttd.org (m, for each language code)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+
+	Rules for binaries are disabled after an IRC request from the site's admins:
+		<target host="*.binaries.openttd.org" />
+		<rule from="^http://\w+\.binaries\.openttd\.org/"
+			to="https://secure.openttd.org/binaries/" />
+-->
+<ruleset name="OpenTTD">
+
+	<target host="openttd.org" />
+	<target host="www.openttd.org" />
+	<target host="account.openttd.org" />
+	<target host="bananas.openttd.org" />
+	<target host="binaries.openttd.org" />
+	<target host="bugs.openttd.org" />
+	<target host="devs.openttd.org" />
+	<target host="docs.openttd.org" />
+	<target host="farm.openttd.org" />
+	<target host="forum.openttd.org" />
+	<target host="grfsearch.openttd.org" />
+	<target host="hg.openttd.org" />
+	<target host="media.openttd.org" />
+		<test url="http://media.openttd.org/images/screens/1.0/20091018_panswat_tongvorarat.png" />
+	<target host="noai.openttd.org" />
+	<target host="nogo.openttd.org" />
+	<target host="servers.openttd.org" />
+	<target host="translator.openttd.org" />
+	<target host="wiki.openttd.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

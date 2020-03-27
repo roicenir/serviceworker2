@@ -1,0 +1,46 @@
+<!--
+	Other ProcessOne rulesets:
+
+		- Boxcar.io.xml
+
+
+	Problematic subdomains:
+
+		- ^ ¹
+		- feedback ²
+
+
+	¹ Shows maintenance notice
+	² uservoice
+
+
+	Fully covered subdomains:
+
+		- (www.)?	(^ → www)
+		- blog
+		- static
+		- support
+
+-->
+<ruleset name="Process-One.net (partial)">
+
+	<target host="process-one.net" />
+	<target host="www.process-one.net" />
+	<target host="blog.process-one.net" />
+	<target host="static.process-one.net" />
+	<target host="support.process-one.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.process-one\.net$" name="^exp_(last_activity|last_visit|tracker)$" /-->
+
+	<securecookie host="^www\.process-one\.net$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?process-one\.net/"
+		to="https://www.process-one.net/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

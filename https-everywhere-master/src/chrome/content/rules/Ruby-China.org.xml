@@ -1,0 +1,13 @@
+<!--
+	SSL_ERROR_NO_CYPHER_OVERLAP:
+		cache.ruby-china.org
+-->
+<ruleset name="Ruby-China.org">
+	<target host="ruby-china.org" />
+	<target host="www.ruby-china.org" />
+	<target host="gems.ruby-china.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

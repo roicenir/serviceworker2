@@ -1,0 +1,22 @@
+<!--
+	Invalid certificate:
+		www.mod.gnutls.org
+		www2.gnutls.org
+
+	Refused:
+		ftp.gnutls.org
+		nmav.gnutls.org
+
+	Timeout:
+		gitlab.gnutls.org
+-->
+<ruleset name="GnuTLS.org">
+
+	<target host="gnutls.org" />
+	<target host="www.gnutls.org" />
+	<target host="lists.gnutls.org" />
+	<target host="mod.gnutls.org" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

@@ -1,0 +1,69 @@
+<!--
+	For other News Corporation coverage, see News-Corporation.xml.
+
+	CDN buckets:
+		- maint.ign.com.edgesuite.net
+		- www.ign.com.edgesuite.net/…
+
+	Invalid certificate:
+		- fonts.ignimgs.com
+
+	Server error:
+		- docs.widgets.ign.com
+
+	Timed out:
+		- ign.com, equivalent to www.ign.com
+		- ds.ign.com, equivalent to www.ign.com/ds if no path, else www.ign.com
+-->
+
+<ruleset name="IGN (partial)">
+	<!-- ign.com -->
+	<target host="ign.com" />
+	<target host="www.ign.com" />
+	<target host="ads.ign.com" />
+	<target host="ap.ign.com" />
+	<target host="au.ign.com" />
+	<target host="assets.ign.com" />
+	<target host="ca.ign.com" />
+	<target host="corp.ign.com" />
+	<target host="de.ign.com" />
+	<target host="ds.ign.com" />
+		<test url="http://ds.ign.com/a" />
+	<target host="dsmedia.ign.com" />
+	<target host="ie.ign.com" />
+	<target host="media.ign.com" />
+	<target host="nwvault.ign.com" />
+	<target host="pcmedia.ign.com" />
+	<target host="ps3media.ign.com" />
+	<target host="pspmedia.ign.com" />
+	<target host="redirect.ign.com" />
+	<target host="s.ign.com" />
+	<target host="sea.ign.com" />
+	<target host="uk.ign.com" />
+	<target host="widgets.ign.com" />
+	<target host="wirelessmedia.ign.com" />
+	<target host="xbox360media.ign.com" />
+
+	<!-- ignimgs.com -->
+	<target host="assets1.ignimgs.com" />
+	<target host="assets2.ignimgs.com" />
+	<target host="kraken.ignimgs.com" />
+	<target host="media.ignimgs.com" />
+	<target host="oystatic.ignimgs.com" />
+	<target host="oyster.ignimgs.com" />
+
+
+	<securecookie host="^.+\.ign\.com$" name=".+" />
+
+
+	<rule from="^http://ign\.com/"
+		to="https://www.ign.com/" />
+
+	<rule from="^http://ds\.ign\.com/$"
+		to="https://www.ign.com/ds" />
+
+	<rule from="^http://ds\.ign\.com/"
+		to="https://www.ign.com/ds/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

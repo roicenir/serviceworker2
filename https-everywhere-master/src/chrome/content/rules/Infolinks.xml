@@ -1,0 +1,70 @@
+<!--
+	CDN buckets:
+
+		- wac.12ce.edgecastcdn.net
+
+			- resources.infolinks.com
+
+
+	Nonfunctional subdomains:
+
+		- router	(times out)
+
+	Partially covered subdomains:
+
+		- ls		(at least some pages & LookSmart_files/ 404)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- advertisers
+		- blog
+		- c1
+		- indnf
+		- internalindn
+		- metrics
+		- p1105
+		- publishers
+		- resources
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- blog and metrics from blog *
+			- metrics from metrics *
+
+		- Web bugs, on:
+
+			- blog from blog *
+			- blog and metrics from www.facebook.com *
+			- metrics from metrics *
+
+	* Secured by us
+
+-->
+<ruleset name="Infolinks (partial)">
+
+	<target host="infolinks.com" />
+	<target host="advertisers.infolinks.com" />
+	<target host="blog.infolinks.com" />
+	<target host="c1.infolinks.com" />
+	<target host="indnf.infolinks.com" />
+	<target host="internalindn.infolinks.com" />
+	<target host="ls.infolinks.com" />
+	<target host="metrics.infolinks.com" />
+	<target host="p1105.infolinks.com" />
+	<target host="publishers.infolinks.com" />
+	<target host="resources.infolinks.com" />
+	<target host="www.infolinks.com" />
+		<exclusion pattern="^http://ls\.infolinks\.com/(?!images/)" />
+
+
+	<securecookie host="^advertisers\.infolinks\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

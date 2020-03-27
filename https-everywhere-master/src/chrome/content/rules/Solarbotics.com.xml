@@ -1,0 +1,17 @@
+<ruleset name="Solarbotics.com">
+
+	<target host="solarbotics.com" />
+	<target host="www.solarbotics.com" />
+	<target host="blog.solarbotics.com" />
+	<target host="cdn.solarbotics.com" />
+	<target host="content.solarbotics.com" />
+	<target host="distributors.solarbotics.com" />
+	<target host="helios.solarbotics.com" />
+	<target host="static.solarbotics.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

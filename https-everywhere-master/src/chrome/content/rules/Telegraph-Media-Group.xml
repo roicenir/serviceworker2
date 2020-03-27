@@ -1,0 +1,125 @@
+<!--
+	Telegraph Media Group
+
+	For problematic rules, see Telegraph-Media-Group-mismatches.xml.
+
+
+	CDN buckets:
+
+		- (wac.437a|gs1.wac).edgecastcdn.net/00437A/telegraph/fantasycricket/
+
+			- i.fantasyfootball.telegraph.co.uk
+
+		- telegraph.co.uk.edgesuite.net
+
+			- a1362.w7.akamai.net
+			- i.telegraph.co.uk
+			- s.telegraph.co.uk
+			- www.telegraph.co.uk
+
+		- redirect.telegraph.co.uk.edgesuite.net
+
+			- fashion
+
+		- secure.telegraph.co.uk.edgesuite.net
+
+			- secure[1-9]
+			- secure1\d
+			- secure20
+
+
+	Nonfunctional domains:
+
+		- blogs *
+		- courses ʳ
+		- dating **
+		- fashion	(503, akamai)
+		- i ***
+		- my *
+		- puzzles **
+		- secure *
+		- secure[1-9] *
+		- secure1\d *
+		- secure20 *
+		- shares	(refused)
+		- subscriber *
+		- tickets	(tixdaq.com)
+
+	¹ 503, Akamai
+	* 504, akamai
+	** Dropped
+	*** Redirects to http, akamai
+	ʳ Refused
+
+
+	Problematic subdomains:
+
+		- i.fantasycricket (mismatched)
+		- i.fantasyracing  (mismatched)
+		- fantasygames ¹
+		- fashionshop	(works; mismatched, CN: shop.look.co.uk)
+		- fbapp (mismatched)
+		- m ³
+		- s ³
+		- blogs.uat ³
+
+	¹ Expired
+	³ Akamai
+
+
+	These altnames don't exist:
+
+		- www.reporting.shop.telegraph.co.uk
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .telegraph.co.uk
+		- announcements.telegraph.co.uk
+		- fantasyracing.telegraph.co.uk
+		- reporting.shop.telegraph.co.uk
+
+
+	Mixed content:
+
+		- Image on fantasygames from i.fantasyfootball.telegraph.co.uk *
+
+	* Secured by us
+
+-->
+<ruleset name="Telegraph.co.uk (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="telegraph.co.uk" />
+	<target host="www.telegraph.co.uk" />
+	<target host="announcements.telegraph.co.uk" />
+	<target host="auth.telegraph.co.uk" />
+	<target host="fantasycricket.telegraph.co.uk" />
+	<target host="fantasyfootball.telegraph.co.uk" />
+	<target host="i.fantasyfootball.telegraph.co.uk" />
+	<!--target host="fantasygames.telegraph.co.uk" /-->
+	<target host="fantasyracing.telegraph.co.uk" />
+	<target host="secure.i.telegraph.co.uk" />
+	<target host="jobs.telegraph.co.uk" />
+	<target host="recruiters.jobs.telegraph.co.uk" />
+	<target host="secure.s.telegraph.co.uk" />
+	<target host="shop.telegraph.co.uk" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.telegraph\.co\.uk$" name="^__TGC$" /-->
+	<!--securecookie host="^announcements\.telegraph\.co\.uk$" name="^ASP\.NET_SessionId$" /-->
+	<!--securecookie host="^fantasyracing\.telegraph\.co\.uk$" name="^_FGTeam$" /-->
+	<!--securecookie host="^reporting\.shop\.telegraph\.co\.uk$" name="^(?:NetOutcome|redeye)$" /-->
+	<!--securecookie host="^webtrends\.telegraph\.co\.uk$" name="^ACOOKIE$" /-->
+
+	<!--	Tracking cookies:
+					-->
+	<securecookie host="^\.(?:\w+\.)?telegraph\.co\.uk$" name="^(?:tmg_web_trends|__utm\w)$" />
+	<securecookie host="^(?:announcements|jobs|recruiters\.jobs)\.telegraph\.co\.uk$" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	Timeout:
+		- folding
+		- foldingstats
+-->
+<ruleset name="Overclock.net">
+	<target host="overclock.net" />
+	<target host="www.overclock.net" />
+	<target host="cdn.overclock.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

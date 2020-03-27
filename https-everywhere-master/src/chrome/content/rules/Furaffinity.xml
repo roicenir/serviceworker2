@@ -1,0 +1,30 @@
+<!--
+	Nonfunctional subdomains:
+
+		- help *
+
+	* Redirects to www.web-site-scripts.com; mismatched, CN: *.host4kb.com
+
+-->
+<ruleset name="Furaffinity (partial)">
+
+	<target host="d.facdn.net" />
+	<target host="t.facdn.net" />
+	<target host="furaffinity.net" />
+	<target host="forums.furaffinity.net" />
+	<target host="ox.furaffinity.net" />
+	<target host="sfw.furaffinity.net" />
+	<target host="www.furaffinity.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.furaffinity.net$" name="^b$" /-->
+	<!--securecookie host="^forums\.furaffinity.net$" name="^bb_sessionhash$" /-->
+
+	<securecookie host="^(?:forums|ox|sfw|www)?\.furaffinity\.net$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,44 @@
+<!--
+	Nonfunctional subdomains:
+
+		- blog *
+		- forums *
+
+	* 503
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- my
+		- support
+		- vps
+
+
+	These altnames don't exist:
+
+		- internal.hawkhost.com
+
+-->
+<ruleset name="Hawk Host.com (partial)">
+
+	<target host="hawkhost.com" />
+	<target host="my.hawkhost.com" />
+	<target host="support.hawkhost.com" />
+	<target host="vps.hawkhost.com" />
+	<target host="www.hawkhost.com" />
+		<!--exclusion pattern="^http://(blog|forums)\.hawkhost\.com/" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^my\.hawkhost\.com$" name="^WHMCS\w{12}$" /-->
+	<!--securecookie host="^support\.hawkhost\.com$" name="^(SWIFT_client|SWIFT_sessionid\d+)$" /-->
+	<!--securecookie host="^vps\.hawkhost\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:my|support|vps)?\.hawkhost\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

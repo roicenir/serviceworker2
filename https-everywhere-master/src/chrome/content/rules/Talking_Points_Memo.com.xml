@@ -1,0 +1,39 @@
+<!--
+	CDN buckets:
+
+		- d2lix3jnlp95fq.cloudfront.net
+
+			- cdn1
+
+
+	Nonfunctional subdomains:
+
+		- (www.) *
+		- advertising *
+		- discourse **
+		- editors *
+		- elections *
+		- idealab *
+		- livewire *
+		- media *
+		- meta *
+		- news *
+		- polltracker **
+		- prime *
+		- s **
+		- static *
+		- tpmdc *
+		- tpmmuckraker *
+
+	* Refused
+	** Times out
+
+-->
+<ruleset name="Talking Points Memo.com (partial)">
+
+	<target host="cdn1.talkingpointsmemo.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,24 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+-->
+<ruleset name="University of Tampa">
+
+	<target host="ut.edu" />
+	<target host="www.ut.edu" />
+	<target host="jobs.ut.edu" />
+	<target host="sfs.ut.edu" />
+	<target host="spartanweb.ut.edu" />
+
+
+	<securecookie host="^.+\.ut\.edu$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?ut\.edu/"
+		to="https://www.ut.edu/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

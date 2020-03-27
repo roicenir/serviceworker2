@@ -1,0 +1,8 @@
+<ruleset name="Drawception">
+  <target host="drawception.com" />
+  <target host="www.drawception.com" />
+
+
+  <rule from="^http:" to="https:" />
+  <securecookie host="^\.?drawception\.com$" name=".+" />
+</ruleset>

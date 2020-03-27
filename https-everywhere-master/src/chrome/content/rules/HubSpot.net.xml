@@ -1,0 +1,15 @@
+<!--
+	Fully covered hosts:
+
+		- cdn2
+
+-->
+<ruleset name="HubSpot.net">
+
+	<target host="cdn2.hubspot.net" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

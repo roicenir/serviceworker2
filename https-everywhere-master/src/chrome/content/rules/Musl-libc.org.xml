@@ -1,0 +1,10 @@
+<ruleset name="musl-libc.org">
+	<target host="musl-libc.org" />
+	<target host="www.musl-libc.org" />
+	<target host="git.musl-libc.org" />
+	<target host="wiki.musl-libc.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

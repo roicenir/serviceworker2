@@ -1,0 +1,23 @@
+<!--
+	For other Pixnet coverage, see Pixnet.net.xml.
+
+
+	^: refused
+
+
+	^ differs from www.
+
+-->
+<ruleset name="PIXinsight.com.tw (partial)">
+
+	<target host="www.pixinsight.com.tw" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.pixinsight\.com\.tw$" name="^pixinsight-adm$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

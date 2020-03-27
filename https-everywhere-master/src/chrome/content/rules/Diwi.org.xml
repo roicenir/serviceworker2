@@ -1,0 +1,34 @@
+<!--
+	Nonfunctional subdomains:
+
+		- cyrille *
+		- people *
+		- stats *
+
+	* Shows blank page
+
+
+	Fully covered subdomains:
+
+		- adn
+		- fox
+		- schmeuf
+		- titus
+		- zorglub
+
+-->
+<ruleset name="diwi.org (partial)" default_off="self-signed">
+
+	<target host="adn.diwi.org" />
+	<target host="fox.diwi.org" />
+	<target host="schmeuf.diwi.org" />
+	<target host="titus.diwi.org" />
+	<target host="zorglub.diwi.org" />
+
+
+	<securecookie host="^titus\.diwi\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

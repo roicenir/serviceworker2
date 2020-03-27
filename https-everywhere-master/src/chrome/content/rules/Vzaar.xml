@@ -1,0 +1,18 @@
+<ruleset name="vzaar.com (partial)">
+	<target host="vzaar.com" />
+	<target host="www.vzaar.com" />
+	<target host="assets1.vzaar.com" />
+	<target host="assets2.vzaar.com" />
+	<target host="download.vzaar.com" />
+	<target host="framegrabs.vzaar.com" />
+	<target host="player.vzaar.com" />
+	<target host="resources.vzaar.com" />
+	<target host="static.vzaar.com" />
+	<target host="video.vzaar.com" />
+	<target host="view.vzaar.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

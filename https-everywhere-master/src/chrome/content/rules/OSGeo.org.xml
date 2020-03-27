@@ -1,0 +1,79 @@
+<!--
+	Invalid certificate:
+		de.osgeo.org
+		gallery.osgeo.org
+		grassold.osgeo.org
+		journal2.osgeo.org
+		mail.osgeo.org
+		orfeo-toolbox.osgeo.org
+		tilecache.osgeo.org
+		uk.osgeo.org
+
+	Different content HTTP/HTTPS:
+		downloads.osgeo.org
+		upload.osgeo.org
+
+	Refused:
+		geohealthcheck.osgeo.org
+		projects.mapbender.osgeo.org
+		oam.osgeo.org
+		docs.oam.osgeo.org
+
+	Time out:
+		mapguidebeta.osgeo.org
+		mapserver.osgeo.org
+		openid.osgeo.org
+
+	Redirect to HTTP:
+		www2.osgeo.org
+
+	Expired:
+		osgeo.org
+		csmap.osgeo.org
+		edu.osgeo.org
+		es.osgeo.org
+		fr.osgeo.org
+		geodata.osgeo.org
+		geotools.osgeo.org
+		gvsig.osgeo.org
+		incubator.osgeo.org
+		jp.osgeo.org
+		mapguide.osgeo.org
+		mapguide2.osgeo.org
+		metacrs.osgeo.org
+		openlayers.osgeo.org
+		osgeo4w.osgeo.org
+		ossim.osgeo.org
+		proj.osgeo.org
+		quebec.osgeo.org
+		vienna2014.sprint.osgeo.org
+		wiki2.osgeo.org
+		staging2.www.osgeo.org
+-->
+<ruleset name="OSGeo.org">
+	<target host="www.osgeo.org" />
+	<target host="download.osgeo.org" />
+	<target host="drone.osgeo.org" />
+	<target host="fdo.osgeo.org" />
+	<target host="fdo2.osgeo.org" />
+	<target host="geos.osgeo.org" />
+	<target host="geotiff.osgeo.org" />
+	<target host="git.osgeo.org" />
+	<target host="grass.osgeo.org" />
+	<target host="grasswiki.osgeo.org" />
+	<target host="id.osgeo.org" />
+	<target host="journal.osgeo.org" />
+	<target host="lists.osgeo.org" />
+	<target host="live.osgeo.org" />
+	<target host="mapbender.osgeo.org" />
+	<target host="mapbuilder.osgeo.org" />
+	<target host="planet.osgeo.org" />
+	<target host="svn.osgeo.org" />
+	<target host="trac.osgeo.org" />
+	<target host="wiki.osgeo.org" />
+	<target host="staging.www.osgeo.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

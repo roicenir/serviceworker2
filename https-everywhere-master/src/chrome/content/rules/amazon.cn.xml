@@ -1,0 +1,19 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+-->
+<ruleset name="amazon.cn">
+	<target host="amazon.cn" />
+	<target host="associates.amazon.cn" />
+	<target host="fls-cn.amazon.cn" />
+	<target host="haimai.amazon.cn" />
+	<target host="kaidian.amazon.cn" />
+	<target host="mai.amazon.cn" />
+	<target host="tui.amazon.cn" />
+	<target host="widgets.amazon.cn" />
+
+	<target host="z.cn" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

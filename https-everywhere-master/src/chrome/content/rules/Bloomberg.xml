@@ -1,0 +1,48 @@
+<!--
+	Other Bloomberg related rulesets:
+		+ bbthat.com.xml
+		+ Bloomberg.net.xml
+		+ Bloomberg_Sports.com.xml
+		+ BusinessWeek.com.xml
+		+ Bwbx.io.xml
+		+ Gotraffic.net.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- about.bloomberg.com
+
+		SSL connect error:
+		- jpmobile.bloomberg.com
+
+		SSL peer certificate was not OK:
+		- b.bloomberg.com
+		- cdn.videos.bloomberg.com
+-->
+<ruleset name="Bloomberg.com (partial)">
+	<target host="bloomberg.com" />
+	<target host="www.bloomberg.com" />
+	<target host="api.bloomberg.com" />
+	<test url="http://api.bloomberg.com/syndication/newsml/v12/news/P6XMSU6KLVRB" />
+	<target host="assist.bloomberg.com" />
+	<target host="bba.bloomberg.com" />
+	<target host="blinks.bloomberg.com" />
+	<target host="newsletters.briefs.bloomberg.com" />
+	<target host="bsym.bloomberg.com" />
+	<target host="careers.bloomberg.com" />
+	<target host="chartmaker.bloomberg.com" />
+	<target host="console.bloomberg.com" />
+	<target host="go.bloomberg.com" />
+	<target host="jobs.bloomberg.com" />
+	<target host="lei.bloomberg.com" />
+	<target host="login.bloomberg.com" />
+	<target host="m.bloomberg.com" />
+	<target host="mediasource.bloomberg.com" />
+	<target host="nav.bloomberg.com" />
+	<test url="http://nav.bloomberg.com/public/images/ad_choices-62a535e263.png" />
+	<target host="origin-www.bloomberg.com" />
+	<target host="service.bloomberg.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

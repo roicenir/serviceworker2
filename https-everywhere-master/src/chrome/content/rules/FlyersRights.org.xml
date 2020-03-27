@@ -1,0 +1,37 @@
+<!--
+	Other Flyers Rights related rulesets:
+		+ FlyersRights.com.xml
+
+	Non-functional hosts:
+		Couldn't connect to server:
+		- smtp.flyersrights.org
+
+		Timeout was reached:
+		- imap.flyersrights.org
+		- pop.flyersrights.org
+
+		SSL peer certificate was not OK:
+		- admin.flyersrights.org
+		- mail.flyersrights.org
+		- email.flyersrights.org
+		- ftp.flyersrights.org
+		- sucuriip.flyersrights.org
+		- e.flyersrights.org
+		- pda.flyersrights.org
+		- webmail.flyersrights.org
+		- mobilemail.flyersrights.org
+		- www.admin.flyersrights.org
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- new.flyersrights.org
+-->
+<ruleset name="Flyers Rights.org">
+
+	<target host="flyersrights.org" />
+	<target host="www.flyersrights.org" />
+	
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

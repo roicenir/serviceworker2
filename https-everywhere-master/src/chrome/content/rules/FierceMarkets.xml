@@ -1,0 +1,21 @@
+<!--
+	Other FierceMarkets rulesets:
+		- FiercePharma.xml
+
+	Non-functional hosts:
+		Timeout:
+		- fiercemarkets.com
+		- secure.fiercemarkets.com
+		- static.fiercemarkets.com
+-->
+<ruleset name="FierceMarkets (partial)">
+
+	<target host="www.fiercemarkets.com" />
+	<target host="assets.fiercemarkets.com" />
+	<target host="assets.fiercemarkets.net" />
+		<test url="http://assets.fiercemarkets.net/public/SNY38294_20150205_Results_en.pdf" />
+		<test url="http://assets.fiercemarkets.net/public/sanofiq3.pdf" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

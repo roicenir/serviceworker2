@@ -1,0 +1,35 @@
+<!--
+	For other Ziff Davis coverage, see Ziff-Davis.xml.
+
+
+	CDN buckets:
+
+		- deh50at6yod5w.cloudfront.net
+
+			- userimages
+
+
+	Nonfunctional subdomains:
+
+		- database ¹
+		- linux ²
+		- unix ¹
+
+	¹ Refused
+	² 404; mismatched, CN: it.toolbox.com
+
+-->
+<ruleset name="IT Toolbox.com (partial)">
+
+	<target host="images.ittoolbox.com" />
+	<target host="userimages.ittoolbox.com" />
+
+
+	<!--	Could we secure this safely?
+						-->
+	<!--securecookie host="^\.ittoolbox\.com$" name="^iNa$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

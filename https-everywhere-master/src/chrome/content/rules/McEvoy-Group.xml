@@ -1,0 +1,10 @@
+<ruleset name="McEvoy Group (partial)" platform="mixedcontent">
+
+	<target host="chroniclebooks.com" />
+	<target host="www.chroniclebooks.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

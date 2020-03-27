@@ -1,0 +1,32 @@
+<!--
+	Non-functional subdomains:
+		- document-store	(m)
+		- links		(m)
+
+	e: expired certificate
+	h: http redirect
+	i: invalid certificate chain
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+-->
+<ruleset name="TransferWise.com">
+
+	<target host="transferwise.com" />
+	<target host="www.transferwise.com" />
+	<target host="api.transferwise.com" />
+	<target host="api-docs.transferwise.com" />
+	<target host="api-sandbox.transferwise.com" />
+	<target host="bootstrap.transferwise.com" />
+	<target host="bot.transferwise.com" />
+	<target host="brand.transferwise.com" />
+	<target host="jobs.transferwise.com" />
+	<target host="tech.transferwise.com" />
+	<target host="vpn.transferwise.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

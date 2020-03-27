@@ -1,0 +1,15 @@
+<!--
+	At least some pages redirect to http.
+
+-->
+<ruleset name="vsexshop.ru (partial)">
+
+	<target host="l.vimgs.ru" />
+	<target host="m.vimgs.ru" />
+	<target host="vsexshop.ru" />
+
+
+	<rule from="^http://(?:[lm]\.vimgs|vsexshop)\.ru/images/"
+		to="https://vsexshop.ru/images/" />
+
+</ruleset>

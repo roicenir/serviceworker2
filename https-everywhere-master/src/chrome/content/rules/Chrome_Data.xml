@@ -1,0 +1,19 @@
+<ruleset name="Chrome Data">
+
+	<target host="login.carbook.com" />
+	<target host="chromedata.com" />
+	<target host="autodiscover.chromedata.com" />
+	<target host="mail.chromedata.com" />
+	<target host="mopar.chromedata.com" />
+	<target host="webmail.chromedata.com" />
+	<target host="www.chromedata.com" />
+
+
+	<securecookie host="^login\.carbook\.com$" name=".+" />
+	<securecookie host="^.+\.chromedata\.com$" name=".+" />
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

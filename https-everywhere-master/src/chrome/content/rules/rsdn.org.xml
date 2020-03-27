@@ -1,0 +1,15 @@
+<!--
+	These URLs don't have HTTP support.
+		- tc.rsdn.org
+
+	These URLs return non 2xx status code while working correctly with HTTP.
+		- track.rsdn.org
+-->
+<ruleset name="rsdn.org">
+	<target host="rsdn.org" />
+	<target host="www.rsdn.org" />
+	<target host="blogs.rsdn.org" />
+	<target host="files.rsdn.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

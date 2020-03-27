@@ -1,0 +1,46 @@
+<!--
+	For University of South Florida Saint Petersburg see USFSP.edu.xml
+
+	Mismatched:
+		- directory.acomp
+		- it
+		- system
+
+	Refused:
+		- news
+
+	Timeout:
+		- tap
+
+	Incomplete certificate chain:
+		- lib
+
+	SSL configuration error:
+		- usfweb2 (see https://www.ssllabs.com/ssltest/analyze.html?d=usfweb2.usf.edu)
+-->
+<ruleset name="University of South Florida (partial)">
+	<target host="usf.edu" />
+	<target host="www.usf.edu" />
+	<target host="it.usf.edu" />
+	<target host="lib.usf.edu" />
+	<target host="www.lib.usf.edu" />
+	<target host="guides.lib.usf.edu" />
+	<target host="my.usf.edu" />
+	<target host="mysites.usf.edu" />
+	<target host="netid.usf.edu" />
+	<target host="news.usf.edu" />
+	<target host="research.usf.edu" />
+	<target host="www.research.usf.edu" />
+	<target host="system.usf.edu" />
+	<target host="webauth.usf.edu" />
+
+	<!-- .* removes the path to match website's own 301 redirect -->
+	<rule from="^http://(it|news|system)\.usf\.edu/.*" to="https://www.usf.edu/$1" />
+	<test url="http://it.usf.edu/abcdef" />
+	<test url="http://news.usf.edu/abcdef" />
+	<test url="http://system.usf.edu/abcdef" />
+
+	<rule from="^http://lib\.usf\.edu/" to="https://www.lib.usf.edu/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

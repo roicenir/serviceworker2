@@ -1,0 +1,11 @@
+<ruleset name="Engineering.com (partial)">
+
+	<target host="engineering.com" />
+	<target host="www.engineering.com" />
+	<target host="file1.engineering.com" />
+	<test url="http://file1.engineering.com/scripts/jquery.hoverIntent.min.js" />
+	<target host="file2.engineering.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

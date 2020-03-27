@@ -1,0 +1,12 @@
+<ruleset name="Prosody.im">
+
+	<target host="prosody.im" />
+	<target host="www.prosody.im" />
+	<target host="issues.prosody.im" />
+	<target host="blog.prosody.im" />
+	<target host="hg.prosody.im" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

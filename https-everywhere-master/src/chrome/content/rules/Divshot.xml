@@ -1,0 +1,22 @@
+<!--
+	CDN buckets:
+
+		- djyhxgczejc94.cloudfront.net
+
+			- a1.divshot.com
+
+-->
+<ruleset name="Divshot">
+
+	<target host="divshot.com" />
+	<target host="app.divshot.com" />
+	<target host="www.divshot.com" />
+	<target host="a1.divshot.com" />
+
+
+	<securecookie host="^\.divshot\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

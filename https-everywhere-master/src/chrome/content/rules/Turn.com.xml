@@ -1,0 +1,75 @@
+<!--
+	Chain issues:
+		- mag.sjc2.turn.com
+		- ra01.sjc2.turn.com
+
+	Connection refused:
+		- info.turn.com
+
+	Self-signed cert:
+		- analytics.turn.com
+		- bomgar.turn.com
+		- corp1.sjc2.turn.com
+
+	Timeout:
+		- mag.atl1.turn.com
+		- ra01.atl1.turn.com
+		- bid-spotxchange-sjc2.turn.com
+		- ftp2.turn.com
+
+	TLS error:
+		- bid-atl1.turn.com
+		- bid-sjc2.turn.com
+		- bid.turn.com
+
+	Cert mismatch:
+		- turn.com
+		- www.turn.com
+		- ak.ad.turn.com
+		- ad2.turn.com
+		- akamai.turn.com
+		- emb.akamai.turn.com
+		- blog.turn.com
+		- cdn.turn.com
+		- developer.turn.com
+		- e.turn.com
+		- img.turn.com
+		- metrics.turn.com
+		- pages.turn.com
+		- static.turn.com
+		- status.turn.com
+		- trust.turn.com
+-->
+<ruleset name="Turn.com (partial)" >
+
+	<target host="ad.turn.com" />
+	<target host="ad2.cdns.turn.com" />
+	<target host="console.turn.com" />
+	<target host="creative-preview.turn.com" />
+	<target host="d-atl1.turn.com" />
+	<target host="d-hkg1.turn.com" />
+	<target host="d.turn.com" />
+	<target host="img.cdns.turn.com" />
+	<target host="origin-cdn.turn.com" />
+	<target host="presentation-ams1.turn.com" />
+	<target host="presentation-atl1.turn.com" />
+	<target host="presentation-hkg1.turn.com" />
+	<target host="presentation-sjc2.turn.com" />
+	<target host="preview.turn.com" />
+	<target host="r.turn.com" />
+	<target host="redbull-as.turn.com" />
+	<target host="redbull.turn.com" />
+	<target host="rwcvpn1.turn.com" />
+	<target host="sd.turn.com" />
+	<target host="sr.turn.com" />
+	<target host="tb-prd.turn.com" />
+	<target host="tb.turn.com" />
+	<target host="vid1.cdns.turn.com" />
+	<target host="vidyo.turn.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

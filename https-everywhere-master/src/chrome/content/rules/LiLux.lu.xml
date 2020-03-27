@@ -1,0 +1,30 @@
+<!--
+	Linux User Group Luxembourg
+
+
+	Other Linux User Group Luxembourg rulesets:
+
+		- Linux.lu.xml
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- lists
+		- mail
+
+-->
+<ruleset name="LiLux.lu">
+
+	<target host="lilux.lu" />
+	<target host="lists.lilux.lu" />
+	<target host="mail.lilux.lu" />
+	<target host="www.lilux.lu" />
+
+
+	<securecookie host="^(?:mail|www)\.lilux\.lu$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

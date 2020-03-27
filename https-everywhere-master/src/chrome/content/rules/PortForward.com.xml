@@ -1,0 +1,26 @@
+<!--
+	HTTP != HTTPS:
+		- admin
+
+	Mismatched:
+		- auth
+		- images
+		- img
+		- new
+		- search
+
+	Timeout:
+		- forum
+		- mail
+
+	Expired:
+		- screenshots
+-->
+<ruleset name="PortForward.com">
+	<target host="portforward.com" />
+	<target host="www.portforward.com" />
+	<target host="portchecker.portforward.com" />
+	<target host="secure.portforward.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

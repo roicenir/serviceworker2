@@ -1,0 +1,27 @@
+<!--
+	Invalid certificate:
+		chefkoch-blog.de
+		www.chefkoch-blog.de
+
+-->
+<ruleset name="Chefkoch (partial)">
+
+
+	<target host="css.chefkoch-cdn.de" />
+	<target host="img.chefkoch-cdn.de" />
+	<target host="js.chefkoch-cdn.de" />
+	<target host="static.chefkoch-cdn.de" />
+
+	<exclusion pattern="^http://css\.chefkoch-cdn\.de/$" />
+				<test url="http://css.chefkoch-cdn.de/css/ck.de/snippet-newsletter-form.css" />
+
+	<exclusion pattern="^http://js\.chefkoch-cdn\.de/$" />
+				<test url="http://js.chefkoch-cdn.de/js/webtrekk-pi-source.js" />
+
+	<exclusion pattern="^http://static\.chefkoch-cdn\.de/$" />
+				<test url="http://static.chefkoch-cdn.de/ck.de/faded-end.min.js" />
+
+	<rule from="^http:"
+			to="https:" />
+
+</ruleset>

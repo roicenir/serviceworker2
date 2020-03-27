@@ -1,0 +1,120 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- ubs.com
+		- connect.ubs.com
+		- realty.ubs.com
+		- www1.ubs.com
+		- www2.ubs.com
+
+		SSL connect error:
+		- apps.ubs.com
+		- apps1.ubs.com
+		- apps2.ubs.com
+		- assetgateway.ubs.com
+		- fusion.ubs.com
+		- grs.ubs.com
+		- clientlogin.ibb.ubs.com
+		- eqi.ibb.ubs.com
+		- liquidalpha.ibb.ubs.com
+		- skc.ibb.ubs.com
+		- swiskey.ibb.ubs.com
+		- swiskey-certificates.ibb.ubs.com
+		- sbms.ubs.com
+		- sbms1.ubs.com
+		- sbms2.ubs.com
+
+		SSL peer certificate was not OK:
+		- financialservices.ubs.com
+		- portfolio.ibb.ubs.com
+		- topsy.ubs.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- uhnw-gfo.ubs.com
+		- young.ubs.com
+
+		Incomplete certificate chain error:
+		- ibol61.ibb.ubs.com
+		- itanywhere.ibb.ubs.com
+		- keyinvest.ibb.ubs.com
+		- research.ibb.ubs.com
+		- selfservice.ibb.ubs.com
+		- marketsurvey.ubs.com
+		- newsletter-pictures.ubs.com
+
+		Site uses weak encryption (TLSv1.1 or earlier):
+		- cfs.ubs.com
+
+		4xx client error:
+		- janap1.ubs.com
+		- jobs.ubs.com
+		- marketingcentral.ubs.com
+		- microsites.ubs.com
+-->
+<ruleset name="UBS.com (partial)">
+	<target host="ubs.com" />
+	<target host="www.ubs.com" />
+	<target host="adviceadvantage.ubs.com" />
+	<target host="ais-transport.ubs.com" />
+	<target host="connect-ch.ubs.com" />
+	<target host="connect-ch1.ubs.com" />
+	<target host="connect-ch2.ubs.com" />
+	<target host="donoradvisedfund.ubs.com" />
+	<target host="ebanking-asia1.ubs.com" />
+	<target host="ebanking-ch.ubs.com" />
+	<target host="ebanking-ch2.ubs.com" />
+	<target host="ebanking-de.ubs.com" />
+	<target host="ebanking-de1.ubs.com" />
+	<target host="ebanking-es.ubs.com" />
+	<target host="ebanking-es1.ubs.com" />
+	<target host="ebanking-es2.ubs.com" />
+	<target host="ebanking-it.ubs.com" />
+	<target host="ebanking-it1.ubs.com" />
+	<target host="ebanking-it2.ubs.com" />
+	<target host="emidas.ubs.com" />
+	<target host="etracs.ubs.com" />
+	<target host="eventlounge.ubs.com" />
+	<target host="financialservicesinc.ubs.com" />
+	<target host="forum.ubs.com" />
+	<target host="frame-keyinvest-ch.ubs.com" />
+	<target host="frame-keyinvest-de.ubs.com" />
+	<target host="fundgate.ubs.com" />
+	<target host="delta.ibb.ubs.com" />
+	<target host="investments-au.ubs.com" />
+	<target host="japan1.ubs.com" />
+	<target host="keyinvest-ch.ubs.com" />
+	<target host="keyinvest-ch-en.ubs.com" />
+	<target host="keyinvest-ch-fr.ubs.com" />
+	<target host="keyinvest-de.ubs.com" />
+	<target host="keyinvest-eu.ubs.com" />
+	<target host="keyinvest-it.ubs.com" />
+	<target host="keyinvest-za.ubs.com" />
+	<target host="m.ubs.com" />
+	<target host="microsites.ubs.com" />
+		<test url="http://microsites.ubs.com/iso/fr/" />
+	<target host="mychoicerewards.ubs.com" />
+	<target host="myhomeloan.ubs.com" />
+	<target host="neo.ubs.com" />
+	<target host="onlineservices.ubs.com" />
+	<target host="privatebank-us.ubs.com" />
+	<target host="quotes-global.ubs.com" />
+	<target host="quotes-global1.ubs.com" />
+	<target host="quotes-global2.ubs.com" />
+	<target host="secure.ubs.com" />
+	<target host="echannel.ubssecuritieschina.ubs.com" />
+	<target host="unique-community.ubs.com" />
+	<target host="warrants.ubs.com" />
+	<target host="www1.ubs.com" />
+	<target host="www2.ubs.com" />
+	<target host="xs2a-devportal.ubs.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(www[12]\.)?ubs\.com/"
+			to="https://www.ubs.com/" />
+	
+	<rule from="^http://japan1\.ubs\.com/"
+		  	to="https://www.ubs.com/jp/ja.html" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

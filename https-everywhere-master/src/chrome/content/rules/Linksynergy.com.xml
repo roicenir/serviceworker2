@@ -1,0 +1,31 @@
+<!--
+	For other Rakuten coverage, see Rakuten.co.jp.xml.
+
+	Invalid certificate:
+		- m.www.linksynergy.com, equivalent to linkshare.com
+-->
+
+<ruleset name="Linksynergy.com">
+	<target host="m.www.linksynergy.com" />
+	<target host="ad.linksynergy.com" />
+	<target host="banner.linksynergy.com" />
+	<target host="mproxy.banner.linksynergy.com" />
+	<target host="bento.linksynergy.com" />
+	<target host="cli.linksynergy.com" />
+	<target host="click.linksynergy.com" />
+	<target host="couponfeed.linksynergy.com" />
+	<target host="lld2.linksynergy.com" />
+	<target host="merchant.linksynergy.com" />
+	<target host="ssl.linksynergy.com" />
+
+	<!-- Not secured by server -->
+	<!--securecookie host="^cli\.linksynergy\.com$" name="^PHPSESSID$" /-->
+	<!--securecookie host="^\.cli\.linksynergy\.com$" name="^langpref$" /-->
+	<!--securecookie host="^signup\.linksynergy\.com$" name="^NSC_\w+(-\w+){3}$" /-->
+	<securecookie host="^(?:\.?cli|signup)\.linksynergy\.com$" name=".+" />
+
+	<rule from="^http://m\.www\.linksynergy\.com/"
+		to="https://linkshare.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

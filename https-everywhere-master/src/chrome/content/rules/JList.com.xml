@@ -1,0 +1,27 @@
+<!--
+	Other J-List related rulesets:
+		- jbox.com.xml
+
+	Non-functional hosts
+		Peer certificate cannot be authenticated with given CA certificates:
+		- devo.jlist.com
+
+		Incomplete certificate chain error:
+		- devo2.jlist.com
+-->
+<ruleset name="JList.com">
+	<target host="jlist.com" />
+	<target host="www.jlist.com" />
+	<target host="blog.jlist.com" />
+	<target host="company.jlist.com" />
+	<target host="help.jlist.com" />
+	<target host="mail.jlist.com" />
+	<target host="sendy.jlist.com" />
+	<target host="senpai.jlist.com" />
+	<target host="status.jlist.com" />
+	<target host="support.jlist.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

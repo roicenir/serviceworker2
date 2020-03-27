@@ -1,0 +1,15 @@
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://anb.com.sa/ => https://www.anb.com.sa/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+-->
+<ruleset name="ANB">
+  <target host="anb.com.sa" />
+  <target host="e.anb.com.sa" />
+  <target host="ebusiness.anb.com.sa" />
+  <target host="onlinebanking.anb.com.sa" />
+  <target host="www.anb.com.sa" />
+
+  <rule from="^http://anb\.com\.sa/"
+	  to="https://www.anb.com.sa/" />
+  <rule from="^http:" to="https:" />
+</ruleset>

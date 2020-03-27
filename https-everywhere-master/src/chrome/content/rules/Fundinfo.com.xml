@@ -1,0 +1,38 @@
+<!--
+	Invalid certificate:
+		blob.fundinfo.com
+
+	No working URL known:
+		meet.fundinfo.com
+		ucweb.fundinfo.com
+
+	Login required:
+		microsites.fundinfo.com
+
+	Different content HTTP/HTTPS:
+		tv.fundinfo.com
+
+-->
+<ruleset name="fundinfo.com">
+
+	<target host="fundinfo.com" />
+	<target host="www.fundinfo.com" />
+	<target host="about.fundinfo.com" />
+	<target host="api.fundinfo.com" />
+	<target host="datafeed.fundinfo.com" />
+	<target host="datahub.fundinfo.com" />
+	<target host="digital.fundinfo.com" />
+	<target host="ftpwebclient.fundinfo.com" />
+	<target host="gateway.fundinfo.com" />
+	<target host="kiid.fundinfo.com" />
+	<target host="media.fundinfo.com" />
+		<test url="http://media.fundinfo.com/design/css/jquery-ui/jquery-ui-1.8.16.custom.css" />
+	<target host="mobile.fundinfo.com" />
+	<target host="paperboy.fundinfo.com" />
+	<target host="trendscout.fundinfo.com" />
+	<target host="validate.fundinfo.com" />
+	<target host="web.fundinfo.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,43 @@
+<!--
+	For problematic rules, see Ferris_State_University-problematic.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(shows m, mismatched, CN: m.ferris.edu)
+
+
+	Problematic subdomains:
+
+		- calendar	(works, self-signed)
+
+
+	Partially covered subdomains:
+
+		- myfsu		(at least the login page[!] redirects to http)
+
+
+	Fully covered subdomains:
+
+		- ebill
+		- fsuban2...:9000
+		- m
+		- passwordhelp
+
+-->
+<ruleset name="Ferris State University (partial)">
+
+	<target host="ebill.ferris.edu" />
+	<target host="fsuban2.ferris.edu" />
+	<target host="m.ferris.edu" />
+	<target host="mysfu.ferris.edu" />
+	<target host="passwordhelp.ferris.edu" />
+		<exclusion pattern="^http://myfsu.ferris.edu/cp/home/loginf" />
+
+
+	<securecookie host="^(?!myfsu)\.ferris\.edu$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

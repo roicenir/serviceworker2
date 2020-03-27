@@ -1,0 +1,33 @@
+<!--
+	Active mixed content:
+		- cds.rsc.org
+
+	Connection closed:
+		- feeds.rsc.org
+
+	Empty response:
+		- pubs.rsc.org
+
+	Invalid certificate:
+		- blogs.rsc.org
+		- ilab.cds.rsc.org
+		- jobs.rsc.org
+		- prospect.rsc.org
+
+	Redirects to HTTP:
+		- rsc.org
+		- www.rsc.org
+		- spectraschool.rsc.org
+
+	Timed out:
+		- ebook.rsc.org
+		- my.rsc.org
+		- xlink.rsc.org
+-->
+
+<ruleset name="Royal Society of Chemistry">
+	<target host="eic.rsc.org" />
+	<target host="members.rsc.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

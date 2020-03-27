@@ -1,0 +1,12 @@
+<ruleset name="Halebop.se">
+	<target host="halebop.se" />
+	<target host="www.halebop.se" />
+	<target host="ibank.halebop.se" />
+	<target host="kundservice.halebop.se" />
+	<target host="kundservice-chat.halebop.se" />
+	<target host="shop.halebop.se" />
+	<target host="support.halebop.se" />
+	<target host="support-test.halebop.se" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

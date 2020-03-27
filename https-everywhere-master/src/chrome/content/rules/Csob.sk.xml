@@ -1,0 +1,8 @@
+<ruleset name="Csob.sk">
+  <target host="csob.sk" />
+  <target host="www.csob.sk" />
+  <target host="ib24.csob.sk" />
+  <target host="bb24.csob.sk" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

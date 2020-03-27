@@ -1,0 +1,17 @@
+<ruleset name="Weather.com (partial)">
+
+	<target host="weather.com" />
+	<target host="www.weather.com" />
+	<target host="careers.weather.com" />
+	<target host="feedback.weather.com" />
+	<target host="forecastfactor.weather.com" />
+	<target host="press.weather.com" />
+	<target host="preview.weather.com" />
+	<target host="profile.weather.com" />
+	<target host="redirector.weather.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

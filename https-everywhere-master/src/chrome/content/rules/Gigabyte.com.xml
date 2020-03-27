@@ -1,0 +1,153 @@
+<!--
+	NXDOMAIN: ^
+
+	Timeout:
+		- vga.cn
+		- gcenter
+		- gmx1
+		- grmapart
+		- log
+		- global.manage
+		- mbuws
+		- msoa3-cki
+		- mb.srm
+		- mb.srm
+		- peripheral.srm
+		- b2b.test
+		- cn.test
+		- fr.test
+		- global.test
+		- tw.test
+		- us.test
+		- vn.test
+		- websys
+
+	Mismatched:
+		- ar
+		- arabic
+		- au
+		- bd
+		- be
+		- br
+		- test.bsy
+		- ca
+		- cl
+		- cz
+		- de
+		- mb.download
+		- arabic.english
+		- manage.esupport
+		- faq
+		- manage.faq
+		- fr
+		- gamescom
+		- global
+		- gr.global
+		- hu.global
+		- pt.global
+		- ua.global
+		- grma
+		- id
+		- il
+		- in
+		- ir
+		- jp
+		- kr
+		- latam
+		- ldap
+		- lu
+		- md
+		- mx
+		- ni
+		- nl
+		- persian
+		- pl
+		- pop3
+		- ro
+		- ru
+		- se
+		- smtp
+		- th
+		- tr
+		- uk
+		- us
+		- uy
+		- vn
+		- za
+
+	Incomplete certificate chain:
+		- admin
+		- test.global
+		- m
+		- public
+		- public4
+		- tw
+
+	Refused:
+		- az
+		- ba
+		- bg
+		- cy
+		- dreamhack
+		- edi-test
+		- ee
+		- es
+		- ge
+		- gr
+		- gsq
+		- hu
+		- it
+		- kg
+		- me
+		- sk
+		- ua
+		- yu
+
+	SSL protocol error:
+		- forum.b2b
+		- partner.br
+
+	Connection reset:
+		- battlefield
+		- businesscenter.ca
+		- b2b.inside-test
+		- club
+		- member
+		- ud9
+		- usb3
+
+	Expired:
+		- computex
+		- smartchat
+
+	HTTP != HTTPS:
+		- ggts
+
+	Network is unreachable:
+		- forum.latam
+-->
+<ruleset name="Gigabyte.com">
+	<target host="www.gigabyte.com" />
+	<target host="autodiscover.gigabyte.com" />
+	<target host="b2b.gigabyte.com" />
+	<target host="reseller.b2b.gigabyte.com" />
+	<target host="csr.gigabyte.com" />
+	<target host="download.gigabyte.com" />
+	<target host="download1.gigabyte.com" />
+	<target host="e-service.gigabyte.com" />
+	<target host="eip.gigabyte.com" />
+	<target host="esupport.gigabyte.com" />
+	<target host="event.gigabyte.com" />
+	<target host="ggcs.gigabyte.com" />
+	<target host="ibpm.gigabyte.com" />
+	<target host="event.latam.gigabyte.com" />
+	<target host="marketing.gigabyte.com" />
+	<target host="passport.gigabyte.com" />
+	<target host="reseller.gigabyte.com" />
+	<target host="static.gigabyte.com" />
+	<target host="store.gigabyte.com" />
+	<target host="partner.uk.gigabyte.com" />
+	<target host="webmail.gigabyte.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

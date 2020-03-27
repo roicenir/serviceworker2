@@ -1,0 +1,10 @@
+<ruleset name="Cyberciti.org">
+
+	<target host="cyberciti.org" />
+	<target host="www.cyberciti.org" />
+	<target host="s0.cyberciti.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

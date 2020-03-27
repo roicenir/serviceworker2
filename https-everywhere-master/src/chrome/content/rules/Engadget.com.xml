@@ -1,0 +1,33 @@
+<!--
+	For other AOL coverage, see AOL.xml.
+
+
+	Nonfunctional hosts in *engadget.com:
+
+		- feeds ¹
+
+	¹ Refused
+
+-->
+<ruleset name="Engadget.com">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="engadget.com" />
+	<target host="www.engadget.com" />
+	<target host="chinese.engadget.com" />
+	<target host="cn.engadget.com" />
+	<target host="de.engadget.com" />
+	<target host="guce.engadget.com" />
+	<target host="japanese.engadget.com" />
+	<target host="live.engadget.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

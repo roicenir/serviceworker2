@@ -1,0 +1,17 @@
+<!--
+	Web bugs.
+
+	www doesn't exist.
+
+-->
+<ruleset name="De17a.com">
+
+	<target host="de17a.com" />
+
+
+	<securecookie host="^\.de17a\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

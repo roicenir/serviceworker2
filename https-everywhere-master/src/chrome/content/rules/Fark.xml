@@ -1,0 +1,31 @@
+<!--
+	Invalid certificate:
+		go.fark.net
+
+	See https://trac.torproject.org/projects/tor/ticket/15763
+
+-->
+<ruleset name="Fark">
+
+	<!-- Fark.com -->
+	<target host="fark.com" />
+	<target host="www.fark.com" />
+	<target host="app.fark.com" />
+	<target host="beerspill.fark.com" />
+	<target host="beta.fark.com" />
+	<target host="m.beta.fark.com" />
+	<target host="m.fark.com" />
+	<target host="total.fark.com" />
+	<target host="m.total.fark.com" />
+	<target host="totalbeta.fark.com" />
+	<target host="m.totalbeta.fark.com" />
+
+	<!-- Fark.net -->
+	<target host="img.fark.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

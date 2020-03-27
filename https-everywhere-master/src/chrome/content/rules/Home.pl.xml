@@ -1,0 +1,28 @@
+<!--
+	Targets solely for wildcard cookies:
+
+		- *.akcje.home.pl
+		- *.panel.home.pl
+		- *.m.poczta.home.pl
+
+-->
+<ruleset name="home.pl">
+
+	<target host="home.pl" />
+	<target host="akcje.home.pl" />
+	<target host="hq.home.pl" />
+	<target host="m.home.pl" />
+	<target host="panel.home.pl" />
+	<target host="poczta.home.pl" />
+	<target host="m.poczta.home.pl" />
+	<target host="pomoc.home.pl" />
+	<target host="rozwijaj.home.pl" />
+	<target host="www.home.pl" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

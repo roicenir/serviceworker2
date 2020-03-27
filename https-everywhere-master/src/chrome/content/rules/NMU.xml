@@ -1,0 +1,15 @@
+<ruleset name="NMU">
+
+	<target host="nmugroup.com" />
+	<target host="mail.nmugroup.com" />
+	<target host="portal.nmugroup.com" />
+	<target host="webmail.nmugroup.com" />
+	<target host="www.nmugroup.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

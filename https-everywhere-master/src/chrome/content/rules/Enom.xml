@@ -1,0 +1,11 @@
+<!--
+	For other Demand Media coverage, see Demand-Media.xml.
+-->
+<ruleset name="eNom.com (partial)">
+
+	<target host="enom.com" />
+	<target host="www.enom.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

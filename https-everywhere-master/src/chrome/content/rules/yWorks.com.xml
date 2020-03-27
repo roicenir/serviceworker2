@@ -1,0 +1,6 @@
+<ruleset name="yWorks.com">
+    <target host="www.yworks.com" />
+    <target     host="yworks.com" />
+
+    <rule from="^http:"	to="https:" />
+</ruleset>

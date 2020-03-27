@@ -1,0 +1,123 @@
+<!--
+	Other Sohu rulesets:
+		- Sohu.com-mixedcontent.xml
+		- Sohu.com.cn.xml
+		- Sohu.net.xml
+		- SohuCS.com.xml
+		- SohuSCE.com.xml
+
+	Different http/https content:
+		- add.sohu.com	(http redirect to fuwu.sohu.com ; https redirect to pay.sohu.com )
+		- app.auto.sohu.com
+		- dir.sohu.com	(http redirect to 123.sogou.com ; https redirect to pay.sohu.com )
+		- fuwu.sohu.com
+		- txt.go.sohu.com	( https://txt.go.sohu.com/ip/soip )
+		- mp.sohu.com	(https redirect to pay.sohu.com )
+		- quan.sohu.com	(https redirect to pay.sohu.com )
+
+	MCB:
+		- 0502.sohu.com
+		- 2008.sohu.com
+		- ad.sohu.com
+		- auto.sohu.com
+		- db.auto.sohu.com
+		- book.sohu.com
+		- business.sohu.com
+		- changyan.sohu.com
+		- corp.sohu.com
+		- cul.sohu.com
+		- fashion.sohu.com
+		- help.sohu.com
+		- history.sohu.com
+		- k.sohu.com	https://k.sohu.com/public.html
+		- mail.sohu.com
+		- mgame.sohu.com
+		- money.sohu.com
+		- s.sohu.com
+		- sports.sohu.com
+		- stock.sohu.com
+		- q.stock.sohu.com
+		- travel.sohu.com
+		- tv.sohu.com	( break the information below videos )
+		- my.tv.sohu.com	https://my.tv.sohu.com/us/274383673/86733219.shtml
+		- push.my.tv.sohu.com
+		- www.sohu.com
+
+	Mismatched:
+		- data.2018.sohu.com	get from sports.sohu.com
+		- 2se.sohu.com
+		- mobile.auto.sohu.com
+		- club.sohu.com
+		- login.mail.sohu.com
+		- comment.news.sohu.com
+
+	Refused:
+		scp.sohu.com
+		ldd.sohu.com
+
+	Non-2xx HTTP code:
+		txt.go.sohu.com
+
+	Strange:
+		photocdn.sohu.com
+		OK: https://photocdn.sohu.com/20161111/Img472968305.jpeg
+		Broken(test in Tor): https://photocdn.sohu.com/20060930/Img227840979.swf
+
+	Insecure cookies are set for these domains and hosts:
+		- .sohu.com
+		- mail.sohu.com
+		- passport.sohu.com
+		- pay.sohu.com
+		- sendcloud.sohu.com
+-->
+<ruleset name="Sohu.com (partial)">
+	<target host="sohu.com" />
+	<target host="www.sohu.com" />
+	<target host="v.aty.sohu.com" />
+	<target host="vstat.v.blog.sohu.com" />
+	<target host="assets.changyan.sohu.com" />
+		<test url="http://assets.changyan.sohu.com/upload/changyan.js" />
+	<target host="changyan.sohu.com" />
+		<test url="http://changyan.sohu.com/mdevp/extensions/cmt-notice/021/images/notice-close.png" />
+	<target host="css.sohu.com" />
+		<test url="http://css.sohu.com/upload/global1.4.1.css" />
+	<target host="english.sohu.com" />
+	<target host="film.sohu.com" />
+	<target host="game.sohu.com" />
+	<target host="pl.hd.sohu.com" />
+		<test url="http://pl.hd.sohu.com/videolist?playlistid=9174927" />
+	<target host="images.sohu.com" />
+		<test url="http://images.sohu.com/bill/s2015/yanchunzhang/richan/logo.png" />
+	<target host="js.sohu.com" />
+	<target host="api.k.sohu.com" />
+	<target host="cache.k.sohu.com" />
+	<target host="pic.k.sohu.com" />
+	<target host="m.sohu.com" />
+	<target host="s.m.sohu.com" />
+	<target host="mail.sohu.com" />
+	<target host="db.money.sohu.com" />
+		<test url="http://db.money.sohu.com/card/js/jquery-1.4.2.min.js" />
+	<target host="news.sohu.com" />
+		<test url="http://news.sohu.com/20161228/n477189660.shtml" />
+	<target host="passport.sohu.com" />
+	<target host="pay.sohu.com" />
+	<target host="photo.pic.sohu.com" />
+		<test url="http://photo.pic.sohu.com/images/chinaren/2005-08-02/10679ab6619.jpg" />
+		<test url="http://photo.pic.sohu.com/images/oldblog/person/11111.gif" />
+	<target host="pv.sohu.com" />
+	<target host="sendcloud.sohu.com" />
+	<target host="stock.sohu.com" />
+		<test url="http://stock.sohu.com/20161229/n477238585.shtml" />
+	<target host="t.sohu.com" />
+	<target host="tv.sohu.com" />
+		<test url="http://tv.sohu.com/20161229/n477242249.shtml" />
+	<target host="m.tv.sohu.com" />
+	<target host="ushq.stock.sohu.com" />
+	<target host="vip.sohu.com" />
+	<target host="count.vrs.sohu.com" />
+		<test url="http://count.vrs.sohu.com/count/query.action" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

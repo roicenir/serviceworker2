@@ -1,0 +1,25 @@
+<!--
+	Other Vodafone rulesets:
+
+		- Firsts.com.xml
+		- Vodafone.co.uk.xml
+		- Vodafone.co.nz.xml
+		- Vodafone.de.xml
+		- Vodafone.ie.xml
+
+	Nonfunctional hosts in *vodafone.com:
+
+		- ^ (mismatched)
+		- cms-vp (timeout)
+
+
+-->
+<ruleset name="Vodafone.com (partial)">
+
+	<target host="vodafone.com" />
+	<target host="www.vodafone.com" />
+
+	<rule from="^http://(www\.)?vodafone\.com/"
+		to="https://www.vodafone.com/" />
+
+</ruleset>

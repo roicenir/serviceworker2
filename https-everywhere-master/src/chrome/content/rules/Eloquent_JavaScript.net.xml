@@ -1,0 +1,13 @@
+<!--
+	Wildcard DNS:
+		https://www.eloquentjavascript.net/Eloquent_JavaScript.pdf
+-->
+<ruleset name="Eloquent_JavaScript.net">
+	<target host="eloquentjavascript.net" />
+	<target host="www.eloquentjavascript.net" />
+	<target host="fr.eloquentjavascript.net" />
+
+	<rule from="^http://www\.eloquentjavascript\.net/" to="https://eloquentjavascript.net/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

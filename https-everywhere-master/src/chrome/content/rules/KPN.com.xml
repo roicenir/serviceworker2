@@ -1,0 +1,45 @@
+<!--
+	For problematic rules, see KPN-expired.xml.
+
+
+	Nonfunctional domains:
+
+		- (www.)hetnet.nl
+		- (www.)kpnvandaag.nl	(times out)
+		- (www.)planet.nl	(times out)
+
+-->
+<ruleset name="KPN">
+
+	<target host="netmail.hetnet.nl" />
+	<target host="kpn.com" />
+	<target host="www.kpn.com" />
+	<target host="kpn.nl" />
+	<target host="www.kpn.nl" />
+	<target host="home.kpn.nl" />
+	<target host="www.kpnmail.nl" />
+	<target host="webmail.kpnmail.nl" />
+
+
+	<securecookie host="^.*\.hetnet\.nl$" name=".+" />
+	<securecookie host="^webmail\.kpnmail\.nl$" name=".+" />
+
+
+
+	<!--	- !www prints "The request did not specify a valid virtual host" over https
+		- !www redirects to www over http
+					-->
+	<rule from="^http://(?:www\.)?kpn\.(?:com|nl)/"
+		to="https://www.kpn.com/" />
+
+
+	<!--	- !www doesn't exist
+		- Cert only matches (www.)kpn
+		- Redirects like so
+				-->
+	<rule from="^http://www\.kpnmail\.nl/"
+		to="https://www.kpn.nl/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

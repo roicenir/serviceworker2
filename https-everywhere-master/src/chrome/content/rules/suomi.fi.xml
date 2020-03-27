@@ -1,0 +1,16 @@
+<ruleset name="Suomi.fi">
+
+	<!-- Has a few subdomains which have cookies too -->
+
+	<target host="suomi.fi" />
+	<target host="www.suomi.fi" />
+	<target host="asiointitili.suomi.fi" />
+	<target host="tunnistus.suomi.fi" />
+
+
+	<securecookie host="^[^@:/\.]+\.suomi\.fi" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

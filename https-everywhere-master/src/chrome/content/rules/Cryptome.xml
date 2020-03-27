@@ -1,0 +1,13 @@
+<!--
+	SSL error:
+		cryptome.info
+		www.cryptome.info
+-->
+<ruleset name="Cryptome.org" >
+	<target host="cryptome.org" />
+	<target host="www.cryptome.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

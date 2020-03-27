@@ -1,0 +1,12 @@
+<ruleset name="nocdirect.com">
+
+	<target host="ninja.nocdirect.com" />
+	<target host="radium.nocdirect.com" />
+
+
+	<securecookie host="^(?:ninja|radium)\.nocdirect\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

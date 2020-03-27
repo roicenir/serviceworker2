@@ -1,0 +1,75 @@
+<!--
+	Mismatched:
+		i7.17173.itc.cn	http://i7.17173.itc.cn/2010/dnf/2010/11/11/jiangsu001.jpg
+		i8.17173.itc.cn	http://i8.17173.itc.cn/2010/dnf/2010/11/11/jiangsu002.jpg
+
+	Server error:
+		i7.itc.cn
+		All images on i7.itc.cn get error: The requested URL '*' was not found on this server.
+		We can get some evidence from http://tl.cibmall.net/information_weapon_shengqi_1f.html :
+		<td align="center" bgcolor="#FFFFFF"><img width="510" height="350" src="images/weapon/information_weapon_shengqi_1f_clip_image001.jpg" alt="http://i7.itc.cn/20080722/688_b196b007_b0e1_4a9f_aa02_43b211cecf96_1.jpg" /></td>
+		http://tl.cibmall.net/images/weapon/information_weapon_shengqi_1f_clip_image001.jpg should be equal to http://i7.itc.cn/20080722/688_b196b007_b0e1_4a9f_aa02_43b211cecf96_1.jpg
+		We cannot get i7.itc.cn, however, https://i0.itc.cn/20080722/688_b196b007_b0e1_4a9f_aa02_43b211cecf96_1.jpg is equal to http://tl.cibmall.net/images/weapon/information_weapon_shengqi_1f_clip_image001.jpg.
+-->
+<ruleset name="Itc.cn">
+	<target host="001.img.qf.56.itc.cn" />
+	<target host="002.img.qf.56.itc.cn" />
+	<target host="003.img.qf.56.itc.cn" />
+	<target host="004.img.qf.56.itc.cn" />
+	<target host="005.img.qf.56.itc.cn" />
+	<target host="a1.itc.cn" />
+	<target host="a2.itc.cn" />
+	<target host="a3.itc.cn" />
+	<target host="a4.itc.cn" />
+	<target host="changyan.itc.cn" />
+		<test url="http://changyan.itc.cn/mdevp/extensions/cmt-box/052/images/face.png" />
+	<target host="d1.biz.itc.cn" />
+		<test url="http://d1.biz.itc.cn/q/cn/831/600831/tline2.png" />
+	<target host="d2.biz.itc.cn" />
+	<target host="d3.biz.itc.cn" />
+	<target host="d4.biz.itc.cn" />
+	<target host="s1.biz.itc.cn" />
+		<test url="http://s1.biz.itc.cn/cn/pic/sprite01.gif" />
+	<target host="s2.biz.itc.cn" />
+	<target host="s3.biz.itc.cn" />
+	<target host="s4.biz.itc.cn" />
+	<target host="i0.itc.cn" />
+	<target host="i1.itc.cn" />
+	<target host="i2.itc.cn" />
+	<target host="i3.itc.cn" />
+	<target host="i4.itc.cn" />
+	<target host="i5.itc.cn" />
+	<target host="i6.itc.cn" />
+	<target host="i7.itc.cn" /><!-- Mismatched: -->
+		<test url="http://i7.itc.cn/20150722/333f_5f592d6d_bf6f_a4eb_5604_58592af67c98_1.jpg" />
+	<target host="i8.itc.cn" />
+	<target host="i9.itc.cn" />
+	<target host="kzcdn.itc.cn" />
+		<test url="http://kzcdn.itc.cn/res/skin/js/uaredirect.js" />
+	<target host="s0.life.itc.cn" />
+	<target host="img.mp.itc.cn" />
+		<test url="http://img.mp.itc.cn/upload/20170712/6e1a8d46bf5041c8a5f6fd3edb079f49_th.jpg" />
+	<target host="n1.itc.cn" />
+		<test url="http://n1.itc.cn/img8/wb/recom/2016/12/10/148130195469287749.JPEG" />
+	<target host="s1.rr.itc.cn" />
+		<test url="http://s1.rr.itc.cn/qrcode/m/n/405819783.png" />
+	<target host="s2.rr.itc.cn" />
+	<target host="s3.rr.itc.cn" />
+		<test url="http://s3.rr.itc.cn/w/u/0/image_viewer.html" />
+	<target host="s4.rr.itc.cn" />
+	<target host="s5.rr.itc.cn" />
+	<target host="s6.rr.itc.cn" />
+	<target host="s7.rr.itc.cn" />
+	<target host="s8.rr.itc.cn" />
+	<target host="s9.rr.itc.cn" />
+	<target host="sucimg.itc.cn" />
+		<test url="http://sucimg.itc.cn/avatarimg/43f409052abb4842baed2c649d1b4737_1416293271456_c175" />
+	<target host="css.tv.itc.cn" />
+	<target host="js.tv.itc.cn" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http://i7\.itc\.cn/" to="https://i0.itc.cn/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

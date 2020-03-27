@@ -1,0 +1,12 @@
+<!--
+	Domains without SSL/TLS:
+		kbs-jobboerse.de
+		willkommen-im-job.de
+-->
+<ruleset name="Knappschaft-Bahn-See.de">
+<target host="www.knappschaft.de" />
+<target host="knappschaft.de" />
+
+<rule from="^http:"
+	to="https:" />
+</ruleset>

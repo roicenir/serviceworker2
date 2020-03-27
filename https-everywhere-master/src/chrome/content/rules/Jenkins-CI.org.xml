@@ -1,0 +1,36 @@
+<!--
+	Invalid certificate:
+		- ci.jenkins-ci.org
+		- demo.jenkins-ci.org
+		- lists.jenkins-ci.org
+		- meetings.jenkins-ci.org
+		- mirrors.jenkins-ci.org
+		- pkg.jenkins-ci.org
+		- puppet.jenkins-ci.org
+
+	Refused:
+		- archives.jenkins-ci.org
+		- ns3.jenkins-ci.org
+
+	Timeout:
+		- stacktrace.jenkins-ci.org
+		- svn.jenkins-ci.org
+-->
+<ruleset name="Jenkins-CI.org">
+
+	<target host="jenkins-ci.org" />
+	<target host="www.jenkins-ci.org" />
+	<target host="accounts.jenkins-ci.org" />
+	<target host="issues.jenkins-ci.org" />
+	<target host="javadoc.jenkins-ci.org" />
+	<target host="repo.jenkins-ci.org" />
+	<target host="stats.jenkins-ci.org" />
+	<target host="updates.jenkins-ci.org" />
+	<target host="usage.jenkins-ci.org" />
+	<target host="wiki.jenkins-ci.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

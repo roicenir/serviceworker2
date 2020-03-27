@@ -1,0 +1,30 @@
+<!--
+	Invalid certificate:
+		eskil.tcl.tk
+		jim.tcl.tk
+		tdbc.tcl.tk
+		tkhtml.tcl.tk
+		wfr.tcl.tk
+
+	Refused:
+		tkchat.tcl.tk
+
+	Redirect to http:
+		core3.tcl.tk
+
+-->
+<ruleset name="Tcl.tk (partial)">
+
+	<target host="tcl.tk" />
+	<target host="www.tcl.tk" />
+	<target host="3dcanvas.tcl.tk" />
+	<target host="core.tcl.tk" />
+	<target host="mirror1.tcl.tk" />
+	<target host="nikit.tcl.tk" />
+	<target host="tip.tcl.tk" />
+	<target host="wiki.tcl.tk" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

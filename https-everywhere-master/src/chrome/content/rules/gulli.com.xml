@@ -1,0 +1,9 @@
+<ruleset name="gulli.com (partial)">
+	<target host="gulli.com" />
+	<target host="www.gulli.com" />
+ 	<target host="board.gulli.com" />
+	
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

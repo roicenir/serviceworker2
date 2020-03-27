@@ -1,0 +1,32 @@
+<!--
+	Other Demand Media rulesets:
+		+ Cracked.com.xml
+		+ CrackedCDN.com.xml
+		+ DM_tracker.com.xml
+		+ DemandStudios.com.xml
+		+ ENomCentral.xml
+		+ Enom.xml
+		+ GolfLink.com.xml
+		+ GolfLink.net.xml
+		+ Registryrocket.com.xml
+		+ Trails.com.xml
+		+ glimg.net.xml
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- demandmedia.com
+		- cdn-www.demandmedia.com
+		- ir.demandmedia.com
+		- new.demandmedia.com
+		- photos.demandmedia.com
+		- photos1.demandmedia.com
+		- photos2.demandmedia.com
+		- rma.demandmedia.com
+-->
+<ruleset name="Demand Media (partial)">
+	<target host="www.demandmedia.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

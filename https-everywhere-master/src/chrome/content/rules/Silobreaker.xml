@@ -1,0 +1,37 @@
+<!--
+	CDN buckets:
+
+		- wrpx2.service.mirror-image.net
+			- cache.sbstatic.com
+			- cache.thumbs.sbstatic.com
+			- cache.silobreaker.com
+
+
+	Nonfunctional domains:
+
+		- cache.sbstatic.com
+		- cache.thumbs.sbstatic.com
+		- (www.)silobreaker.com		(valid cert; 404)
+		- info.silobreaker.com		(valid cert; 404)
+
+
+-->
+<ruleset name="Silobreaker (partial)">
+
+	<target host="thumbs.sbstatic.com" />
+	<target host="cache.thumbs.sbstatic.com" />
+	<target host="api.silobreaker.com" />
+	<target host="my.silobreaker.com" />
+	<target host="thumbs.silobreaker.com" />
+	<target host="cache.thumbs.silobreaker.com" />
+
+
+	<securecookie host="^my\.silobreaker\.com$" name=".+" />
+
+
+
+	<rule from="^http://(?:cache\.)?thumbs\.s(?:bstatic|ilobreaker)\.com/"
+		to="https://thumbs.silobreaker.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	CN: *.ssl.ucdn.com
+
+-->
+<ruleset name="nudevista.com (partial)" default_off="mismatched">
+
+	<target host="a97.nudevista.com" />
+	<target host="a98.nudevista.com" />
+	<target host="a99.nudevista.com" />
+
+
+	<rule from="^http://a9[789]\.nudevista\.com/"
+		to="https://a97-nudevista.clients.cdn13.com/" />
+
+</ruleset>

@@ -1,0 +1,36 @@
+<!--
+	Other Chitika rulesets:
+
+		- Chitika.net.xml
+
+
+	CDN buckets:
+
+		- chitika.assistly.com
+
+
+	Nonfunctional domains:
+
+		chitika.com subdomains:
+
+			- docs
+			- insights
+			- labs		(times out)
+			- support	(cert: *.assistly.com; 301s to http)
+
+-->
+<ruleset name="Chitika (partial)">
+
+	<target host="chitika.com" />
+	<target host="www.chitika.com" />
+	<target host="affiliate.chitika.com" />
+	<target host="blog.chitika.com" />
+	<target host="publishers.chitika.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

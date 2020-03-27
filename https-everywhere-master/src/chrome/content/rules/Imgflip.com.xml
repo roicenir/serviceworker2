@@ -1,0 +1,18 @@
+<ruleset name="Imgflip.com">
+
+	<target host="imgflip.com" />
+	<target host="i.imgflip.com" />
+	<target host="s.imgflip.com" />
+	<target host="www.imgflip.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?imgflip\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:\.|www\.)?imgflip\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

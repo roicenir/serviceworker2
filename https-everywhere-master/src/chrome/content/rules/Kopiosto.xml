@@ -1,0 +1,18 @@
+<!--
+Automatically by https-everywhere-checker because:
+Fetch error: http://kopiosto.fi/ => https://www.kopiosto.fi/: (6, 'Could not resolve host: kopiosto.fi')
+Working subdomains:
+	- serv3.
+	- www.
+-->
+<ruleset name="Kopiosto">
+	<target host="kopiosto.fi"/>
+	<target host="www.kopiosto.fi" />
+	<target host="serv3.kopiosto.fi" />
+
+	<!-- WWW works -->
+	<rule from="^http://(?:www\.)?kopiosto\.fi/"
+		to="https://www.kopiosto.fi/"/>
+
+	<rule from="^http:" to="https:" />
+</ruleset>

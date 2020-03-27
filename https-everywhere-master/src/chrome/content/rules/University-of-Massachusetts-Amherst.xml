@@ -1,0 +1,53 @@
+<!--
+	For problematic rules, see University-of-Massachusetts-Amherst-mismatches.xml.
+
+
+	Nonfunctional domains:
+
+		- umass.edu subdomains:
+
+			- www.geo	(valid cert; 404)
+			- www.housing	(valid cert; 403)
+			- (www.)library
+
+
+		- (www.)umassalumni.com		(cert: plesk5.hosting.crocker.com, expired; shows Plesk default page)
+
+
+	Problematic domains:
+
+			- www.peri.umass.edu	(works; expired 2010-06-15, self-signed, mismatched, CN: peri01.managed.fandotech.com)
+
+-->
+<ruleset name="University of Massachusetts Amherst (partial)">
+
+	<target host="umassathletics.cstv.com" />
+	<target host="umass.edu" />
+	<target host="blogs.umass.edu" />
+	<target host="moodle.umass.edu" />
+	<target host="oit.umass.edu" />
+	<target host="hds.oit.umass.edu" />
+	<target host="hds05.oit.umass.edu" />
+	<target host="spark.oit.umass.edu" />
+	<target host="udrive.oit.umass.edu" />
+	<target host="umail.oit.umass.edu" />
+	<target host="umweb-3.oit.umass.edu" />
+	<target host="www.oit.umass.edu" />
+	<target host="webapp.spire.umass.edu" />
+	<target host="www.spire.umass.edu" />
+	<target host="umii.umass.edu" />
+	<target host="www.umii.umass.edu" />
+	<!--	* for cross-domain cookie.	-->
+	<target host="umassulearn.net" />
+	<target host="www.umassulearn.net" />
+
+
+	<securecookie host="^.*\.umass\.edu$" name=".+" />
+	<securecookie host="^www\.umassulearn\.net$" name=".+" />
+
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

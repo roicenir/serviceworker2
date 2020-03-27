@@ -1,0 +1,9 @@
+<ruleset name="Charlotte Nature Museum.org" default_off="mismatched">
+
+	<target host="charlottenaturemuseum.org" />
+	<target host="www.charlottenaturemuseum.org" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

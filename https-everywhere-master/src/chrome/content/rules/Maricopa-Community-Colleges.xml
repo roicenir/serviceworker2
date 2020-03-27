@@ -1,0 +1,35 @@
+<!--
+	For problematic rules, see Maricopa-Community-Colleges-self-signed.xml.
+
+
+	Nonfunctional subdomains:
+
+		- classes.sis	(times out)
+
+-->
+<ruleset name="Maricopa Community Colleges (partial)">
+
+	<target host="maricopa.edu" />
+	<target host="www.maricopa.edu" />
+	<target host="ecourses.maricopa.edu" />
+	<target host="eims.maricopa.edu" />
+	<target host="google.maricopa.edu" />
+	<target host="memo.maricopa.edu" />
+	<target host="memo2.maricopa.edu" />
+	<target host="memo3.maricopa.edu" />
+	<target host="student.sis.maricopa.edu" />
+	<!--	* for cross-domain cookie.	-->
+
+
+	<securecookie host="^ecourses\.maricopa\.edu$" name=".+" />
+	<!--	classes.sis uses a dedicated PHPSESSID cookie.	-->
+	<securecookie host="^\.sis\.maricopa\.edu$" name="^PSJSESSIONID$" />
+
+
+	<!--	Cert only matches www.	-->
+	<rule from="^http://(?:www\.)?maricopa\.edu/"
+		to="https://www.maricopa.edu/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

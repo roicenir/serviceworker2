@@ -1,0 +1,9 @@
+<ruleset name="Rettighedsalliancen.dk">
+
+	<target host="rettighedsalliancen.dk" />
+	<target host="www.rettighedsalliancen.dk" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

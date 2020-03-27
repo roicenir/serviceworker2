@@ -1,0 +1,23 @@
+<ruleset name="ReadyHosting.com">
+
+	<target host="readyhosting.com" />
+	<target host="www.readyhosting.com" />
+	<target host="secure.readyhosting.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.readyhosting\.com$" name="^SESSION_ID$" /-->
+
+	<securecookie host="^\.readyhosting\.com$" name=".+" />
+
+
+	<!--	!www redirects to www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http://(?:www\.)?readyhosting\.com/"
+		to="https://www.readyhosting.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

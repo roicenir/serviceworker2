@@ -1,0 +1,30 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(dropped)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- mypins
+		- static
+
+-->
+<ruleset name="paysafecard.com">
+
+	<target host="paysafecard.com" />
+	<target host="www.paysafecard.com" />
+	<target host="mypins.paysafecard.com" />
+	<target host="static.paysafecard.com" />
+
+
+	<securecookie host="^(?:mypins|static|www)?\.paysafecard\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?paysafecard\.com/"
+		to="https://www.paysafecard.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(cert: ssl.charityweb.net; shows ssl's data)
+
+-->
+<ruleset name="CharityWeb (partial)">
+
+	<!--	* for cross-domain cookies.	-->
+	<target host="ssl.charityweb.net" />
+
+
+	<!--	Seems to be used only on ssl.	-->
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

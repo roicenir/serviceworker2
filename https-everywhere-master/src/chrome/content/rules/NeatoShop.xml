@@ -1,0 +1,19 @@
+<!--
+	!functional:
+		- (www.)neatorama.com
+-->
+<ruleset name="NeatoShop.com">
+
+	<target host="neatoshop.com"/>
+	<target host="static.neatoshop.com" />
+	<target host="www.neatoshop.com" />
+
+	<!--	observed cookies:
+			- PHPSESSID	-->
+	<securecookie host="^\.neatoshop\.com$" name=".+" />
+
+	<!--	static cert: static1.savingstar.com	-->
+	<rule from="^http://(?:static\.|(www\.))?neatoshop\.com/"
+		to="https://$1neatoshop.com/"/>
+
+</ruleset>

@@ -1,0 +1,43 @@
+<!--
+	Other CCH rulesets:
+
+		- Prosystemfx.com.xml
+
+
+	Problematic domains:
+
+		- www.support.cch.com	(cert only matches ^support)
+		- cchgroup.com		(cert only matches www)
+		- www.tax.cchgroup.com	(cert only matches ^tax)
+
+-->
+<ruleset name="CCH">
+
+	<target host="cch.com" />
+	<target host="www.cch.com" />
+	<target host="support.cch.com" />
+	<target host="www.support.cch.com" />
+	<target host="cchgroup.com" />
+	<target host="www.cchgroup.com" />
+	<target host="tax.cchgroup.com" />
+	<target host="www.tax.cchgroup.com" />
+	<target host="prosystemfxsupport.tax.cchgroup.com" />
+	<target host="stage.prosystemfxsupport.tax.cchgroup.com" />
+
+
+	<securecookie host=".*\.cch(?:group)?\.com$" name=".+" />
+
+
+
+	<rule from="^http://(?:www\.)?support\.cch\.com/"
+		to="https://support.cch.com/" />
+
+	<rule from="^http://(?:www\.)?cchgroup\.com/"
+		to="https://www.cchgroup.com/" />
+
+	<rule from="^http://(?:www\.)?tax\.cchgroup\.com/"
+		to="https://tax.cchgroup.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,75 @@
+<!--
+	For problematic rules, see University-of-Bern-expired.xml.
+
+
+	Nonfunctional subdomains:
+
+		- $				(times out)
+		- www.agenda			(cert matches, redirects to
+						https://wayf.switch.ch/SWITCHaai/WAYF?...)
+		- www				(times out)
+
+-->
+<ruleset name="University of Bern (partial)">
+
+	<target host="cmslive3.unibe.ch" />
+	<target host="www.kommunikation.unibe.ch" />
+	<target host="www.philhist.unibe.ch" />
+	<target host="www.philhum.unibe.ch" />
+	<target host="www.philnat.unibe.ch" />
+	<target host="www.psy.unibe.ch" />
+	<target host="www.rechtswissenschaft.unibe.ch" />
+	<target host="www.risiko.unibe.ch" />
+	<target host="www.uniaktuell.unibe.ch" />
+	<target host="www.vetsuisse.unibe.ch" />
+	<target host="www.wiso.unibe.ch" />
+	<target host="www.zuw.unibe.ch" />
+	<target host="id.unibe.ch" />
+	<target host="medizin.unibe.ch" />
+	<target host="ub.unibe.ch" />
+	<target host="www.id.unibe.ch" />
+	<target host="www.medizin.unibe.ch" />
+	<target host="www.ub.unibe.ch" />
+	<target host="www.medienmitteilungen.unibe.ch" />
+	<target host="www.unilink.unibe.ch" />
+	<target host="www.unipress.unibe.ch" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<!--	For domains within this nested atom, !www doesn't exist.
+			-->
+
+	<!--
+		//id & //medizin:
+			- Mismatch
+			- Work over http & https
+
+		//ub:
+
+			- Mismatch
+			- Cert: cmslive3
+			- Paths 404 over https
+			- /$ redirects to login page over https
+			- Redirects to www over http
+					-->
+	<rule from="^http://(?:www\.)?(id|medizin|ub)\.unibe\.ch/"
+		to="https://www.$1.unibe.ch/" />
+
+	<!--	For medianmitteilungen, unilink, & unipress:
+
+			- !www doesn't exist.
+			- Cert doesn't match.
+			- Redirects to login page over https.
+			- Redirects as so over http.
+				-->
+	<rule from="^http://www\.medienmitteilungen\.unibe\.ch/"
+		to="https://www.kommunikation.unibe.ch/content/medien/medienmitteilungen/index_ger.html" />
+
+	<!--	See comment above.	-->
+	<rule from="^http://www\.uni(link|press)\.unibe\.ch/"
+		to="https://www.kommunikation.unibe.ch/content/publikationen/uni$1/index_ger.html" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

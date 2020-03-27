@@ -1,0 +1,27 @@
+<!--
+	CDN buckets:
+
+		- a70.g.akamai.net/7/70/36744/v001/schneider2.download.akamai.com/
+
+		- sch.edgesuite.net
+
+			- www2
+
+		- schneiderele.taleo.net
+
+-->
+<ruleset name="Schneider-Electric.com (partial)">
+
+	<target host="schneider-electric.com" />
+	<target host="www.schneider-electric.com" />
+	<target host="download.schneider-electric.com" />
+
+
+	<!--	Tracking cookies:
+					-->
+	<securecookie host="^\.schneider-electric\.com$" name="^(?:__utm\w|xtvrn)$" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

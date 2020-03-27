@@ -1,0 +1,45 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)		(shows utk.edu; mismatched, CN: www.utk.edu)
+		- acctspayable *
+		- controller *
+		- flexiblebenefits *
+		- humanresources *
+		- insurance *
+		- iris *
+		- payroll *
+		- riskmanagement *
+		- purchasing *
+		- treasurer *
+
+	* Shows secure.utk.edu; mismatched, CN: secure.utk.edu
+
+
+	Fully covered subdomains:
+
+		- andi
+		- autodiscover
+		- irisweb
+		- its
+		- my
+		- security
+		- utap1
+
+-->
+<ruleset name="University of Tennessee System (partial)">
+
+	<target host="andi.tennessee.edu" />
+	<!--target host="autodiscover.tennessee.edu" /-->
+	<target host="irisweb.tennessee.edu" />
+	<target host="its.tennessee.edu" />
+	<target host="security.tennessee.edu" />
+	<target host="utap1.tennessee.edu" />
+
+
+	<securecookie host="^(?:autodiscover|irisweb|my)\.tennessee\.edu$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

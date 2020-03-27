@@ -1,0 +1,15 @@
+<!--
+	HTTP ≠ HTTPS:
+		- www
+-->
+<ruleset name="prnt.sc">
+	<target host="prnt.sc" />
+	<target host="www.prnt.sc" />
+	<target host="ads.prnt.sc" />
+	<target host="app.prnt.sc" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://www\.prnt\.sc/" to="https://prnt.sc/" />
+	<rule from="^http:" to="https:" />
+</ruleset>

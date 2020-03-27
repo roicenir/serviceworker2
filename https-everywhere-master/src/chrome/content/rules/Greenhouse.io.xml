@@ -1,0 +1,35 @@
+<!--
+	Other Greenhouse rulesets:
+
+		- Grnh.se.xml
+
+
+	CDN buckets:
+
+		- prod-greenhouse.herokuapp.com
+
+			- boards.greenhouse.io
+
+
+	Problematic domains:
+
+		- greenhouse.io ¹
+
+	¹ Dropped
+
+-->
+<ruleset name="Greenhouse.io">
+
+	<target host="greenhouse.io" />
+	<target host="www.greenhouse.io" />
+	<target host="blog.greenhouse.io" />
+	<target host="boards.greenhouse.io" />
+	<target host="info.greenhouse.io" />
+
+
+	<rule from="^http://(?:www\.)?greenhouse\.io/"
+		to="https://www.greenhouse.io/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,45 @@
+<!--
+	CDN buckets:
+
+		- d1raip7zazff6e.cloudfront.net
+
+			- 2.imimg.com
+
+		- d1wd2icune084.cloudfront.net
+
+			- im.gifbt.com
+
+		- d2y6cbvg1xh035.cloudfront.net
+
+			- 1.imimg.com
+
+		- d3p8pcjf51nlqw.cloudfront.net
+
+			- 4.imimg.com
+
+		- dypmusfs8hvdw.cloudfront.net
+
+			- 3.imimg.com
+
+
+	Nonfunctional domains:
+
+		- (www.)gifbt.com *
+		- hm.imimg.com *
+		- (www.)indiamart.com *
+
+	* Times out
+
+-->
+<ruleset name="IndiaMART (partial)">
+
+	<target host="1.imimg.com" />
+	<target host="2.imimg.com" />
+	<target host="3.imimg.com" />
+	<target host="4.imimg.com" />
+	<target host="im.gifbt.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

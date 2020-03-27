@@ -1,0 +1,38 @@
+<!--
+	Steganos Software
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- blog
+		- securestore
+
+
+	Observed cookie domains:
+
+		- .
+		- .blog
+
+
+	Mixed content:
+
+		- Image on blog from blog *
+
+	* Secured by us
+
+-->
+<ruleset name="Steganos.com">
+
+	<target host="steganos.com" />
+	<target host="blog.steganos.com" />
+	<target host="securestore.steganos.com" />
+	<target host="www.steganos.com" />
+
+
+	<securecookie host=".*\.steganos\.com$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

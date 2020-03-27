@@ -1,0 +1,85 @@
+<!--
+	Ruleset for Skyscanner (multiple domain names).
+	See <https://en.wikipedia.org/wiki/Skyscanner>.
+
+	Invalid certificate:
+		help.skyscanner.co.in
+		help.skyscanner.co.th
+		help.skyscanner.com.au
+		help.skyscanner.ie
+		help.skyscanner.jp
+		help.skyscanner.nl
+		skyscanner2024.com
+		www.skyscanner2024.com
+
+	Time out:
+		skyscanner.ae
+		m.skyscanner.ae
+		skyscanner.at
+		m.skyscanner.at
+		w.skyscanner.at
+		ww.skyscanner.at
+		wwww.skyscanner.at
+		skyscanner.ca
+		skyscanner.ch
+		m.skyscanner.ch
+		skyscanner.co.in
+		m.skyscanner.co.in
+		skyscanner.co.kr
+		skyscanner.co.th
+		skyscanner.com.au
+		skyscanner.com.my
+		m.skyscanner.com.my
+		skyscanner.de
+		m.skyscanner.de
+		skyscanner.dk
+		m.skyscanner.dk
+		skyscanner.es
+		m.skyscanner.es
+		skyscanner.fr
+		m.skyscanner.fr
+		skyscanner.ie
+		m.skyscanner.ie
+		skyscanner.it
+		m.skyscanner.it
+		skyscanner.jp
+		m.skyscanner.jp
+		skyscanneraffiliate.net
+		www.skyscanneraffiliate.net
+		skyscanner.nl
+		m.skyscanner.nl
+		skyscanner.no
+		m.skyscanner.no
+		skyscanner.ro
+		m.skyscanner.ro
+		skyscanner.se
+		m.skyscanner.se
+
+-->
+<ruleset name="Skyscanner">
+
+	<target host="www.skyscanner.at" />
+	<target host="www.skyscanner.ae" />
+	<target host="www.skyscanner.ca" />
+	<target host="www.skyscanner.ch" />
+	<target host="www.skyscanner.co.in" />
+	<target host="www.skyscanner.co.kr" />
+	<target host="www.skyscanner.co.th" />
+	<target host="www.skyscanner.com.au" />
+	<target host="www.skyscanner.com.my" />
+	<target host="www.skyscanner.de" />
+	<target host="www.skyscanner.dk" />
+	<target host="www.skyscanner.es" />
+	<target host="www.skyscanner.fr" />
+	<target host="www.skyscanner.ie" />
+	<target host="www.skyscanner.it" />
+	<target host="www.skyscanner.jp" />
+	<target host="www.skyscanner.nl" />
+	<target host="www.skyscanner.no" />
+	<target host="www.skyscanner.ro" />
+	<target host="www.skyscanner.se" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

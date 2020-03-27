@@ -1,0 +1,16 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+		- www1.indstate.edu
+
+		Mixed content blocking (MCB) triggered:
+		- library.indstate.edu
+-->
+<ruleset name="Indiana State University (partial)">
+	<target host="indstate.edu" />
+	<target host="www.indstate.edu" />
+	<target host="blackboard.indstate.edu" />
+	<target host="isuportal.indstate.edu" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

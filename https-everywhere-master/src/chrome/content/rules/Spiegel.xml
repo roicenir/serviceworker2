@@ -1,0 +1,52 @@
+<!--
+	Other Spiegel Group rulesets:
+
+		- Spiegel-QC.xml
+-->
+<ruleset name="Spiegel.de (partial)" >
+
+	<!--	Direct rewrites:
+				-->
+	<target host="spiegel.de" />
+	<target host="www.spiegel.de" />
+	<target host="cms.dev.www.spiegel.de" />
+	<target host="cdn.prod.www.spiegel.de" />
+	<target host="cdnsource.prod.www.spiegel.de" />
+	<target host="cdn.qs.www.spiegel.de" />
+	<target host="cdnsource.qs.www.spiegel.de" />
+	<target host="cdn.review.www.spiegel.de" />
+	<target host="cdnsource.review.www.spiegel.de" />
+	<target host="abo.spiegel.de" />
+	<target host="fsm2.spiegel.de" />
+	<target host="magazin.spiegel.de" />
+	<target host="spiegel-de.spiegel.de" />
+	<target host="tippspiel.spiegel.de" />
+
+	<!--	Complications:
+				-->
+	<target host="shop.spiegel.de" />
+
+	<!--	Redirect drops path and forward slash...:
+							-->
+
+	<rule from="^http://shop\.spiegel\.de/[^?]*\??$"
+		to="https://www.amazon.de/b?ie=UTF8&amp;node=2478999031" />
+
+		<test url="http://shop.spiegel.de/shop/action/productDetails" />
+		<test url="http://shop.spiegel.de/shop/action/productDetails?" />
+		<test url="http://shop.spiegel.de/shop/action/quickSearch" />
+		<test url="http://shop.spiegel.de/shop/action/quickSearch?" />
+
+	<!--	...but not args:-->
+
+	<rule from="^http://shop\.spiegel\.de/[^?]*\?"
+		to="https://www.amazon.de/b?ie=UTF8&amp;node=2478999031&amp;" />
+
+		<test url="http://shop.spiegel.de/shop/action/productDetails?foo" />
+		<test url="http://shop.spiegel.de/shop/action/productDetails?bar" />
+		<test url="http://shop.spiegel.de/shop/action/quickSearch?foo" />
+		<test url="http://shop.spiegel.de/shop/action/quickSearch?bar" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

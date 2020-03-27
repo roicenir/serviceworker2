@@ -1,0 +1,35 @@
+<!--
+	Chemnitz University of Technology
+
+
+	Problematic subdomains:
+
+		- ^	(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- www.bibliothek
+		- www-user
+
+
+	Mixed content:
+
+		- Image on www.bibliothek from global.ebsco-content.com *
+
+-->
+<ruleset name="TU-Chemnitz.de (partial)">
+
+	<target host="tu-chemnitz.de" />
+	<target host="www.tu-chemnitz.de" />
+	<target host="www.bibliothek.tu-chemnitz.de" />
+	<target host="www-user.tu-chemnitz.de" />
+
+
+	<rule from="^http://(?:www\.)?tu-chemnitz\.de/"
+		to="https://www.tu-chemnitz.de/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,20 @@
+<ruleset name="Consumer Reports">
+	<!-- consumerreports.org -->
+	<target host="consumerreports.org" />
+	<target host="www.consumerreports.org" />
+	<target host="custhelp.consumerreports.org" />
+	<target host="ec.consumerreports.org" />
+	<target host="news.consumerreports.org" />
+	<target host="web.consumerreports.org" />
+
+	<!-- consumerreportscdn.org -->
+	<target host="static1.consumerreportscdn.org" />
+	<target host="static2.consumerreportscdn.org" />
+	<target host="static3.consumerreportscdn.org" />
+	<target host="static4.consumerreportscdn.org" />
+	<target host="static5.consumerreportscdn.org" />
+
+	<securecookie host="^ec\.consumerreports\.org$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

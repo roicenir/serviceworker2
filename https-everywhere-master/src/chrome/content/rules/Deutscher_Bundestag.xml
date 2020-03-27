@@ -1,0 +1,28 @@
+<!--
+	Time-Out
+		bilderdienst.bundestag.de
+		pdok.bundestag.de
+		webarchiv.bundestag.de
+-->
+<ruleset name="Deutscher Bundestag (partial)">
+
+	<target host="bundestag.de" />
+	<target host="www.bundestag.de" />
+	<target host="adler.bundestag.de" />
+	<target host="dip.bundestag.de" />
+	<target host="dipbt.bundestag.de" />
+	<target host="dip21.bundestag.de" />
+	<target host="epetitionen.bundestag.de" />
+	<target host="forum.bundestag.de" />
+	<target host="opac.bundestag.de" />
+	<target host="schule.bundestag.de" />
+	<target host="statistik.bundestag.de" />
+	<target host="suche.bundestag.de" />
+	<target host="visite.bundestag.de" />
+	<target host="webtv.bundestag.de" />
+
+	<securecookie host="^.+\.bundestag\.de$" name=".+" />
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

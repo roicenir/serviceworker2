@@ -1,0 +1,46 @@
+<!--
+	Other Hang Seng Bank related rulesets:
+		+ HSI.com.hk.xml
+		+ HangSeng.com.cn.xml
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- hsp2gp1.hangseng.com
+		- hsp2gp2.hangseng.com
+-->
+<ruleset name="Hang Seng Bank">
+	<target host="hangseng.com" />
+	<target host="www.hangseng.com" />
+
+	<target host="bank.hangseng.com" />
+	<target host="biz-ebanking.hangseng.com" />
+	<target host="www.biz-ebanking.hangseng.com" />
+	<target host="www1.biz-ebanking.hangseng.com" />
+	<target host="www2.biz-ebanking.hangseng.com" />
+	<target host="e-banking.blp.hangseng.com" />
+
+	<target host="chatbot.hangseng.com" />
+	<target host="cms.hangseng.com" />
+
+	<target host="developer.hangseng.com" />
+
+	<target host="e-banking.hangseng.com" />
+	<target host="e-banking1.hangseng.com" />
+	<target host="e-banking2.hangseng.com" />
+	<target host="eba.hangseng.com" />
+	<target host="ebusiness.hangseng.com" />
+	<target host="evalue.hangseng.com" />
+
+	<target host="inv.hangseng.com" />
+	<target host="www.ipoonline.hangseng.com" />
+
+	<target host="fileupload.hangseng.com" />
+	<target host="fileupload1.hangseng.com" />
+	<target host="fileupload2.hangseng.com" />
+
+	<target host="realestate.hangseng.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

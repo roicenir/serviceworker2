@@ -1,0 +1,17 @@
+<!--
+	Invalid certificate:
+		dashninja.dashpay.io
+		explorer.dashpay.io
+
+-->
+<ruleset name="Dashpay.io">
+
+	<target host="dashpay.io" />
+	<target host="www.dashpay.io" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

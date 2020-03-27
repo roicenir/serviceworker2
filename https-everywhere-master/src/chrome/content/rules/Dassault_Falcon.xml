@@ -1,0 +1,38 @@
+<!--
+	Problematic domains:
+
+		- dassaultfalcon.com *
+		- (www.)falconjet.com *
+
+	* Cert only matches www.dassaultfalcon.com, expired
+
+-->
+<ruleset name="Dassault Falcon">
+
+	<target host="dassaultfalcon.com" />
+	<target host="customer.dassaultfalcon.com" />
+	<target host="insight.dassaultfalcon.com" />
+	<target host="sqr.dassaultfalcon.com" />
+	<target host="wtsdc.dassaultfalcon.com" />
+	<target host="www.dassaultfalcon.com" />
+	<target host="falconjet.com" />
+	<target host="www.falconjet.com" />
+	<target host="aht.falconjet.com" />
+	<target host="cats.falconjet.com" />
+	<target host="devworks.falconjet.com" />
+	<target host="qlik.falconjet.com" />
+	<target host="spares.falconjet.com" />
+	<target host="thebridge.falconjet.com" />
+	<target host="thin.falconjet.com" />
+
+
+	<securecookie host="^.+\.(?:dassaultfalcon|falconjet)\.com$" name=".+" />
+
+
+	<rule from="^http://(?:dassaultfalcon|(?:www\.)?falconjet)\.com/"
+		to="https://www.dassaultfalcon.com/" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

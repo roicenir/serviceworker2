@@ -1,0 +1,43 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)?
+		- chooseyourhallroom
+		- idpedir
+		- www.library
+		- password
+		- vle
+		- webmail
+
+
+	Insecure cookies are set for these domains:
+
+		- www.dmu.ac.uk
+
+
+	Would like to add hal.dmu.ac.uk, which is used on
+	the main site, but it uses a self signed cert.
+
+-->
+<ruleset name="DMU.ac.uk (partial)">
+
+	<target host="dmu.ac.uk" />
+	<target host="chooseyourhallroom.dmu.ac.uk" />
+	<target host="idpedir.dmu.ac.uk" />
+	<target host="www.library.dmu.ac.uk" />
+	<target host="password.dmu.ac.uk" />
+	<target host="vle.dmu.ac.uk" />
+	<target host="webmail.dmu.ac.uk" />
+	<target host="www.dmu.ac.uk" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.dmu\.ac\.uk$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host="^(?:(?:chooseyourhallroom|idpedir|www\.library|password|vle|webmail|www)\.)?dmu\.ac\.uk$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

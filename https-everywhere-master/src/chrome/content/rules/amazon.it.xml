@@ -1,0 +1,32 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .amazon.it
+		- .www.amazon.it
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Amazon.it">
+
+	<target host="amazon.it" />
+	<target host="advertising.amazon.it" />
+	<target host="fls-eu.amazon.it" />
+	<target host="sellercentral.amazon.it" />
+	<target host="services.amazon.it" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.amazon\.it$" name="^(?:session-id|session-id-time|ubid-acbe)$" /-->
+
+	<securecookie host=".+" name="^aps-trtmnt$" />
+	<securecookie host="^(?!\.amazon\.it$)." name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

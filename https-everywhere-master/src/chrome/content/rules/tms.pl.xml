@@ -1,0 +1,25 @@
+<!--
+	TMS Brokers S.A.
+
+	Non-functional hosts:
+		Expired:
+		- ct.tms.pl
+
+-->
+<ruleset name="TMS.pl">
+
+	<target host="tms.pl" />
+	<target host="connect.tms.pl" />
+	<target host="instalacja.tms.pl" />
+	<target host="konkurs.tms.pl" />
+	<target host="lp.tms.pl" />
+	<target host="nonstop.tms.pl" />
+	<target host="trader.tms.pl" />
+	<target host="www.tms.pl" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,13 @@
+<ruleset name="Vm.ag">
+
+	<target host="vm.ag" />
+	<target host="www.vm.ag" />
+	<target host="piwik.vm.ag" />
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

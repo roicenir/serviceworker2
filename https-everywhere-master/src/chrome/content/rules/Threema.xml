@@ -1,0 +1,11 @@
+<ruleset name="Threema">
+	<target host="three.ma" />
+	<target host="www.three.ma" />
+
+	<target host="threema.id" />
+	<target host="www.threema.id" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

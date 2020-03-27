@@ -1,0 +1,44 @@
+<!--
+	Tel-Aviv University
+
+
+	Nonfunctional subdomains:
+
+		- acgt.cs	(shows www.cs)
+		- delta-video-vm.cs *
+		- video.cs *
+
+	*Shows www.cs, expired 2009-10-26
+
+
+	Problematic subdomains:
+
+		- cs	(mismatched, CN: www.cs.tau.ac.il)
+
+
+	Mixed content:
+
+		- Images, on:
+
+			- course.cs from www.cs
+			- www.cs from www.cs *
+			- www.cs from www.w3.org *
+
+	* Secured by us
+
+-->
+<ruleset name="TAU.ac.il (partial)">
+
+	<target host="cs.tau.ac.il" />
+	<target host="www.cs.tau.ac.il" />
+	<target host="course.cs.tau.ac.il" />
+	<target host="forums.cs.tau.ac.il" />
+	<target host="svn.cs.tau.ac.il" />
+
+
+	<rule from="^http://(?:www\.)?cs\.tau\.ac\.il/"
+		to="https://www.cs.tau.ac.il/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

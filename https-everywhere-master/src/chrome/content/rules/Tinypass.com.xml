@@ -1,0 +1,26 @@
+<!--
+	Invalid certificate:
+		assets.tinypass.com
+		jobs.tinypass.com
+
+-->
+<ruleset name="Tinypass.com">
+
+	<target host="tinypass.com" />
+	<target host="www.tinypass.com" />
+	<target host="api.tinypass.com" />
+	<target host="buy.tinypass.com" />
+	<target host="cdn.tinypass.com" />
+	<target host="code.tinypass.com" />
+	<target host="dashboard.tinypass.com" />
+	<target host="experience.tinypass.com" />
+	<target host="fonts.tinypass.com" />
+	<target host="id.tinypass.com" />
+	<target host="market.tinypass.com" />
+	<target host="media.tinypass.com" />
+	<target host="play.tinypass.com" />
+	<target host="publisher.tinypass.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

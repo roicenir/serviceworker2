@@ -1,0 +1,9 @@
+<ruleset name="Firefox.net.cn">
+
+	<target host="firefox.net.cn" />
+	<target host="www.firefox.net.cn" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

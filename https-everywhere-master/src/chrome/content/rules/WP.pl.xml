@@ -1,0 +1,135 @@
+<!--
+	Wirtualna Polska SA
+
+	Other Wirtualna Polska rulesets:
+
+		- businessclick.com.xml
+		- wpimg.pl.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- kontakty.wp.pl
+		- muzyka.wp.pl
+		- outbox.wp.pl
+
+		SSL peer certificate was not OK:
+		- fantasyliga.wp.pl
+		- i.fantasyliga.wp.pl
+		- info.mini.wp.pl
+		- i.reklama.wp.pl
+
+		Status code mismatch:
+		- twojeip.wp.pl
+
+		Mixed content blocking (MCB) triggered:
+		- reklama.wp.pl
+
+		Some pages redirect to http:
+		- profil.wp.pl
+
+-->
+<ruleset name="WP.pl (partial)">
+
+	<target host="wp.pl" />
+	<target host="www.wp.pl" />
+	<target host="agito.wp.pl" />
+	<target host="banki.wp.pl" />
+	<target host="biznes.wp.pl" />
+	<target host="diety.wp.pl" />
+	<target host="dlaprasy.wp.pl" />
+	<target host="dzieci.wp.pl" />
+	<target host="ebiznes.wp.pl" />
+	<target host="ekstraklasa.wp.pl" />
+	<target host="erotyka.wp.pl" />
+	<target host="euro.wp.pl" />
+	<target host="facet.wp.pl" />
+	<target host="film.wp.pl" />
+	<target host="finanse.wp.pl" />
+	<target host="finansomat.wp.pl" />
+	<target host="fitness.wp.pl" />
+	<target host="i.fitness.wp.pl" />
+	<target host="get-2.wpapi.wp.pl" />
+	<target host="gielda.wp.pl" />
+	<target host="gry.wp.pl" />
+	<target host="horoskop.wp.pl" />
+	<target host="i.wp.pl" />
+	<target host="ir.i.wp.pl" />
+	<target host="kalendarz.wp.pl" />
+	<target host="kobieta.wp.pl" />
+	<target host="mobilna.wp.pl" />
+	<target host="moto.wp.pl" />
+	<target host="newsletter.wp.pl" />
+	<target host="ogloszenia.wp.pl" />
+	<target host="onas.wp.pl" />
+	<target host="pasazfin.wp.pl" />
+	<target host="poczta.wp.pl" />
+	<target host="m.poczta.wp.pl" />
+	<target host="pogoda.wp.pl" />
+	<target host="pomoc.wp.pl" />
+	<target host="prawnikonline.wp.pl" />
+	<target host="profil.wp.pl" />
+	<target host="przewodnik.wp.pl" />
+	<target host="adv.reklama.wp.pl" />
+	<target host="rekrutacja.wp.pl" />
+	<target host="rss.wp.pl" />
+	<target host="rtvagd.wp.pl" />
+	<target host="si.wp.pl" />
+	<target host="sport.wp.pl" />
+	<target host="tech.wp.pl" />
+	<target host="ticket.www.wp.pl" />
+	<target host="topnews.wp.pl" />
+	<target host="turystyka.wp.pl" />
+	<target host="tv.wp.pl" />
+	<target host="wiadomosci.wp.pl" />
+	<target host="wikipedia.wp.pl" />
+
+		<!--	Redirect to http:
+						-->
+		<!--exclusion pattern="^http://profil\.wp\.pl/(?:wizytowka\.html)?(?:$|\?)" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://profil\.wp\.pl/(?!css/|favicon\.ico|(?:login|obrazek|rejestracja)\.html)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://profil.wp.pl/loginbloog.html" />
+			<test url="http://profil.wp.pl/logout.html" />
+			<test url="http://profil.wp.pl/mlogin.html" />
+			<test url="http://profil.wp.pl/mlogin_poczta.html" />
+			<test url="http://profil.wp.pl/wizytowka.html" />
+
+			<!--	-ve:
+					-->
+			<test url="http://profil.wp.pl/css/nepal.css" />
+			<test url="http://profil.wp.pl/favicon.ico" />
+			<test url="http://profil.wp.pl/login.html" />
+			<test url="http://profil.wp.pl/obrazek.html" />
+			<test url="http://profil.wp.pl/rejestracja.html" />
+
+		<!--	404:
+				-->
+		<!--test url="http://agrobiznes.money.pl/artykul/produkty-tradycyjne-lista-z-woj,24,0,2018584.html" /-->
+		<!--
+			!404:
+				-->
+		<!--test url="http://agrobiznes.money.pl/" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.wp\.pl$" name="^(?:rekticket|sm\w+ticket|statid|wpdticket)$" /-->
+	<!--securecookie host="^\.(?:finanse|pasazfin|poczta)\.wp\.pl$" name="^(?:reksticket|wpsticket)$" /-->
+	<!--securecookie host="^\.poczta\.wp\.pl$" name="^s$" /-->
+	<!--securecookie host="^\.www\.wp\.pl$" name="^(?:reksticket|sm\w+dticket)$" /-->
+	<!--securecookie host="^ticket\.www\.wp\.pl$" name="^statid$" /-->
+
+	<securecookie host="^\.wp\.pl$" name="^statid$" />
+	<securecookie host="^(?!profil\.)\w" name=".+" />
+	<securecookie host="^\.pasazfin\." name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

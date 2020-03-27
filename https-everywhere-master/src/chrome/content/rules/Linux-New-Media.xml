@@ -1,0 +1,25 @@
+<!--
+	For problematic rules, see Linux-New-Media-mismatches.xml.
+
+
+	Other Linux New Media rulesets:
+
+		- Linux-Magazine.xml
+		- Linux-Magazin-Online.xml
+
+-->
+<ruleset name="Linux New Media (partial)">
+
+	<target host="rotation.linuxnewmedia.com" />
+	<target host="shop.linuxnewmedia.com" />
+	<target host="shop.linuxnewmedia.de" />
+	<!--	* for cross-domain cookie.	-->
+
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

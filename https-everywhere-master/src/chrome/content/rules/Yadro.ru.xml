@@ -1,0 +1,15 @@
+<!--
+	For other LiveInternet coverage, see LiveInternet.ru.xml.
+
+	Dropped:
+		- slinks
+-->
+<ruleset name="Yadro.ru">
+	<target host="counter.yadro.ru" />
+	<target host="sticker.yadro.ru" />
+		<test url="http://sticker.yadro.ru/i/logo_small.gif" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

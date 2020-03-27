@@ -1,0 +1,27 @@
+<!--
+	Expired:
+		- sidious.freeswitch.org
+-->
+<ruleset name="FreeSWITCH.org">
+
+	<target host="freeswitch.org" />
+	<target host="www.freeswitch.org" />
+	<target host="confluence.freeswitch.org" />
+	<target host="docs.freeswitch.org" />
+	<target host="files.freeswitch.org" />
+	<target host="jira.freeswitch.org" />
+	<target host="lists.freeswitch.org" />
+	<target host="pastebin.freeswitch.org" />
+	<target host="wiki.freeswitch.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^wiki\.freeswitch\.org$" name="^mediawiki_session$" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,7 @@
+<ruleset name="VOA_Chinese.com">
+	<target host="voachinese.com" />
+	<target host="m.voachinese.com" />
+	<target host="www.voachinese.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,27 @@
+<!--
+	Nonfunctional subdomains:
+
+	Connection refused:
+		- autodiscover.heacademy.ac.uk
+
+-->
+<ruleset name="Higher Education Academy (partial)">
+
+	<target host="heacademy.ac.uk" />
+	<target host="www.heacademy.ac.uk" />
+	<target host="anywhere.heacademy.ac.uk" />
+	<target host="groupspace.heacademy.ac.uk" />
+	<target host="heagateway.heacademy.ac.uk" />
+	<target host="heamysites.heacademy.ac.uk" />
+	<target host="my.heacademy.ac.uk" />
+	<target host="oma.heacademy.ac.uk" />
+	<target host="owa.heacademy.ac.uk" />
+	<target host="webmail.heacademy.ac.uk" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

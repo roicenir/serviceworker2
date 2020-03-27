@@ -1,0 +1,24 @@
+<!--
+	ERR_SSL_PROTOCOL_ERROR:
+		- cluster
+
+	Mismatched:
+		- cpanel
+		- ftp
+		- s3
+		- whm
+
+	Connection timed out:
+		- testing
+-->
+<ruleset name="DocumentCloud">
+	<target host="documentcloud.org" />
+	<target host="www.documentcloud.org" />
+	<target host="assets.documentcloud.org" />
+	<target host="assets2.documentcloud.org" />
+	<target host="blog.documentcloud.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

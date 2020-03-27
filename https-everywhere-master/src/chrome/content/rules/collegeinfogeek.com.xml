@@ -1,0 +1,13 @@
+<ruleset name="College Info Geek.com">
+
+	<target host="collegeinfogeek.com" />
+	<target host="www.collegeinfogeek.com" />
+	<target host="cdn.collegeinfogeek.com" />
+	<target host="courses.collegeinfogeek.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

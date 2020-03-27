@@ -1,0 +1,7 @@
+<ruleset name="N-ERGIE Aktiengesellschaft">
+<target host="www.n-ergie.de" />
+
+<rule from="^http:" to="https:" />
+
+
+</ruleset>

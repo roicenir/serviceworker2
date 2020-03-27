@@ -1,0 +1,63 @@
+<!--
+	NB: If a host ceases to exist, just remove the respective test.
+
+	For other Mozilla coverage, see Mozilla.xml.
+
+
+	Problematic hosts in *mozilla.com:
+
+		- air ¹
+		- labs ¹
+
+	¹ Refused
+	² Mismatched
+-->
+<ruleset name="Mozilla.com">
+
+	<target host="mozilla.com" />
+	<target host="*.mozilla.com" />
+
+		<exclusion pattern="^http://fxfeeds\.mozilla\.com/" />
+
+			<test url="http://fxfeeds.mozilla.com/" />
+
+		<!--	Direct rewrites:
+					-->
+		<test url="http://activations.mozilla.com/" />
+		<test url="http://addons.mozilla.com/" />
+		<test url="http://basket.mozilla.com/" />
+		<test url="http://blog.mozilla.com/" />
+		<test url="http://brasstacks.mozilla.com/" />
+		<test url="http://careers.mozilla.com/" />
+		<test url="http://crash-stats.mozilla.com/" />
+		<test url="http://data.mozilla.com/" />
+		<test url="http://fhr.data.mozilla.com/" />
+		<test url="http://hardware.metrics.mozilla.com/" />
+		<test url="http://input.mozilla.com/" />
+		<test url="http://phish-report.mozilla.com/" />
+		<test url="http://en-us.phish-report.mozilla.com/" />
+		<test url="http://snippets.mozilla.com/" />
+		<test url="http://support.mozilla.com/" />
+		<test url="http://tr.malware-error.mozilla.com/" />
+		<test url="http://v.mozilla.com/" />
+		<test url="http://www.mozilla.com/" />
+
+		<!--	Complications:
+					-->
+		<test url="http://air.mozilla.com/" />
+		<test url="http://labs.mozilla.com/" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://labs\.mozilla\.com/"
+		to="https://www.mozillalabs.com/" />
+
+	<rule from="^http://air\.mozilla\.com/"
+		to="https://air.mozilla.org/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

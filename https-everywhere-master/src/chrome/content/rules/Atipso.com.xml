@@ -1,0 +1,29 @@
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://atipso.com/ => https://atipso.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+	Mixed content:
+
+		- css on www from fonts.googleapis.com *
+
+		- Images on www from $self *
+
+		- Web bugs on app from piwik *
+
+	* Secured by us
+
+-->
+<ruleset name="atipso.com">
+
+	<target host="atipso.com" />
+	<target host="app.atipso.com" />
+	<target host="piwik.atipso.com" />
+	<target host="static.atipso.com" />
+	<target host="www.atipso.com" />
+
+
+	<securecookie host="^\.app\.atipso\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<ruleset name="Trove.com">
+	<target host="trove.com" />
+	<target host="www.trove.com" />
+	<target host="api.trove.com" />
+	<target host="app.trove.com" />
+	<target host="blog.trove.com" />
+	<target host="help.trove.com" />
+	<target host="status.trove.com" />
+
+	<rule from="^http:"
+		    to="https:" />
+</ruleset>

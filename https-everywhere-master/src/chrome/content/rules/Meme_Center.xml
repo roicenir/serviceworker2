@@ -1,0 +1,19 @@
+<!--
+	Nonfunctional subdomains:
+
+		- m	(shows ovh)
+
+-->
+<ruleset name="Meme Center (partial)">
+
+	<target host="scdn.memecdn.com" />
+	<target host="memecenter.com" />
+	<target host="www.memecenter.com" />
+
+
+	<securecookie host="^\.memecenter\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

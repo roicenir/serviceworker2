@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see Fender.com.xml.
+
+-->
+<ruleset name="Fender.com (problematic)" default_off="mismatched">
+
+	<target host="customcare.fender.com" />
+
+
+	<securecookie host="^\.customcare\.fender\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

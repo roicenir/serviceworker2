@@ -1,0 +1,15 @@
+<!--
+
+	For more UNICEF.org related ruleset, see UNICEF.org.xml
+
+-->
+<ruleset name="UNICEF.fi" >
+	<target host="unicef.fi" />
+	<target host="www.unicef.fi" />
+	<target host="kampanja.unicef.fi" />
+	<target host="oma.unicef.fi" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

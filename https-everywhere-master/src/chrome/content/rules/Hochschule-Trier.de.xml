@@ -1,0 +1,52 @@
+<!--
+	Trier University of Applied Sciences
+
+
+	Nonfunctional subdomains:
+
+		- blog ¹
+		- firmenkontaktmesse ²
+
+	¹ Shows webserver-3.umwelt-campus.de
+	² Shows king.fh-trier.de
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- autodiscover		(→ autodiscover.fh-trier.de)
+		- (www.)?asta
+		- fht
+		- fsi
+		- lists
+		- (www.)?protron
+		- rft
+		- rz
+		- rzshop
+
+-->
+<ruleset name="Hochschule-Trier.de (partial)">
+
+	<target host="hochschule-trier.de" />
+	<target host="autodiscover.hochschule-trier.de" />
+	<target host="asta.hochschule-trier.de" />
+	<target host="www.asta.hochschule-trier.de" />
+	<target host="fht.hochschule-trier.de" />
+	<target host="fsi.hochschule-trier.de" />
+	<target host="lists.hochschule-trier.de" />
+	<target host="protron.hochschule-trier.de" />
+	<target host="www.protron.hochschule-trier.de" />
+	<target host="rft.hochschule-trier.de" />
+	<target host="rz.hochschule-trier.de" />
+	<target host="rzshop.hochschule-trier.de" />
+	<target host="www.hochschule-trier.de" />
+
+
+	<!--	Redirect preserves path and args:
+							-->
+	<rule from="^http://autodiscover\.hochschule-trier\.de/"
+		to="https://autodiscover.fh-trier.de/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

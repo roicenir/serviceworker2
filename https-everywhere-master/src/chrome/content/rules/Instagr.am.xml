@@ -1,0 +1,13 @@
+<!--
+	Other Instragram rulesets:
+		- CDN_Instagram.com.xml
+		- Instagrampartners.com.xml
+-->
+<ruleset name="Instagr.am (partial)">
+
+	<target host="instagr.am" />
+	<target host="www.instagr.am" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

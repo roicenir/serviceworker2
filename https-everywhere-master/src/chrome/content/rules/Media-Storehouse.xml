@@ -1,0 +1,32 @@
+<!--
+	Non-functional hosts in *.mediastorehouse.com
+		SSL peer certificate was not OK:
+		- mediastorehouse.com
+
+	Non-functional hosts in *.mediastorehouse.net
+		Timeout was reached:
+		- mediastorehouse.net
+
+		SSL peer certificate was not OK:
+		- images.mediastorehouse.net
+		- www.mediastorehouse.net
+-->
+<ruleset name="Media Storehouse (partial)">
+	<!-- *.mediastorehouse.com -->
+	<target host="mediastorehouse.com" />
+	<target host="www.mediastorehouse.com" />
+	<target host="secure.mediastorehouse.com" />
+	<target host="static.mediastorehouse.com" />
+
+	<!-- *.mediastorehouse.net -->
+	<target host="mediastorehouse.net" />
+	<target host="www.mediastorehouse.net" />
+
+	<rule from="^http://mediastorehouse\.com/"
+		to="https://www.mediastorehouse.com/" />
+
+	<rule from="^http://(www\.)?mediastorehouse\.net/"
+		to="https://www.mediastorehouse.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

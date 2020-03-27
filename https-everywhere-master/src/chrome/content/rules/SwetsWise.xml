@@ -1,0 +1,12 @@
+<ruleset name="SwetsWise">
+
+	<target host="www.swetswise.com" />
+	<target host="shibboleth.swetswise.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

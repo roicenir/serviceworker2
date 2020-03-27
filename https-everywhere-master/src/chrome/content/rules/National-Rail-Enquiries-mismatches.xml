@@ -1,0 +1,15 @@
+<!--
+	For rules that are on by default, see National-Rail-Enquires.xml.
+
+-->
+<ruleset name="National Rail Enquiries (mismatches)" default_off="mismatched">
+
+	<target host="hotels.nationalrail.co.uk" />
+
+
+	<securecookie host="^\.hotels\.nationalrail\.co\.uk$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

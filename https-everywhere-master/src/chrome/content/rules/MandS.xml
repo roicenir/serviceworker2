@@ -1,0 +1,60 @@
+<!--
+	CDN buckets:
+
+		- amazonwebstore.122.2o7.net
+		- s3-eu-west-1.amazonaws.com/mnsassets/
+		- d17gtsunf2431g.cloudfront.net
+		- amazonms.d2.sc.omtrdc.net
+
+
+	Nonfunctional subdomains:
+
+		- bank *
+		- corporate **
+		- outlet *
+		- social **
+
+	* Dropped
+	** Refused
+
+
+	Problematic subdomains:
+
+		- ^	(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- asset[12]
+		- help
+		- m
+		- plana
+		- www7
+		- www10
+		- www11
+
+-->
+<ruleset name="Marks &amp; Spencer" platform="mixedcontent">
+
+	<target host="marksandspencer.com" />
+	<target host="www.marksandspencer.com" />
+	<target host="www7.marksandspencer.com" />
+	<target host="www10.marksandspencer.com" />
+	<target host="www11.marksandspencer.com" />
+	<target host="asset1.marksandspencer.com" />
+	<target host="asset2.marksandspencer.com" />
+	<target host="help.marksandspencer.com" />
+	<target host="m.marksandspencer.com" />
+	<target host="plana.marksandspencer.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http://(?:www(7|10|11)?\.)?marksandspencer\.com/"
+		to="https://www$1.marksandspencer.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

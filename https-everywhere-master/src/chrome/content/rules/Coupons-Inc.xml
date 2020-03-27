@@ -1,0 +1,15 @@
+<ruleset name="Coupons, Inc (partial)">
+
+	<!-- *.coupons.com -->
+	<target host="coupons.com"/>
+	<target host="www.coupons.com"/>
+	<target host="brandcaster.coupons.com"/>
+	<target host="insight.coupons.com" />
+		<test url="http://insight.coupons.com/COS20/PrintEngine.asmx" />
+
+	<!-- *.cpnscdn.com -->
+	<target host="cdn.cpnscdn.com"/>
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

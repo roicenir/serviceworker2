@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(times out)
+
+-->
+<ruleset name="Razor Servers (partial)" default_off="timeout">
+
+	<target host="manage.razorservers.com" />
+	<target host="secure.razorservers.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

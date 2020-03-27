@@ -1,0 +1,19 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- subscriptions.inc.com
+
+		Mixed content blocking (MCB) triggered:
+		- mediakit.inc.com
+-->
+<ruleset name="Inc.com">
+	<target host="inc.com" />
+	<target host="www.inc.com" />
+	<target host="conference.inc.com" /><!-- Note: MCB issues but server redirect to https -->
+	<target host="magazine.inc.com" />
+	<target host="store.inc.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	Problematic subdomains:
+
+		- static
+
+-->
+<ruleset name="WebStarts">
+
+	<target host="webstarts.com" />
+	<target host="static.webstarts.com" />
+	<target host="www.webstarts.com" />
+
+
+	<securecookie host="^(?:www\.)?webstarts\.com$" name=".+" />
+
+
+	<rule from="^http://(?:static\.|(www\.))?webstarts\.com/"
+		to="https://$1webstarts.com/" />
+
+</ruleset>

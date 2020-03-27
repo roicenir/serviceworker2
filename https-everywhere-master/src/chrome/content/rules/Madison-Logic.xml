@@ -1,0 +1,32 @@
+<!--
+	Other Madison Logic rulesets:
+
+		- MLno6.com.xml
+
+
+	Problematic domains:
+
+		- (www|blog.)madisonlogic.com	SSL certificate problem: unable to get local issuer certificate
+
+	Fully covered domains:
+
+		- madisonlogic.com subdomains:
+
+			- clk
+			- jsc
+			- st
+
+-->
+<ruleset name="Madison Logic (partial)">
+
+	<target host="clk.madisonlogic.com" />
+	<target host="jsc.madisonlogic.com" />
+	<target host="st.madisonlogic.com" />
+
+
+	<!--	Included on 3rd-party websites.
+						-->
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,8 @@
+[submodule "translations"]
+	path = translations
+	url = https://git.torproject.org/translation.git
+	branch = https_everywhere
+
+[submodule "lib-wasm"]
+	path = lib-wasm
+	url = https://github.com/EFForg/https-everywhere-lib-wasm.git

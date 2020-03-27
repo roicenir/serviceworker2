@@ -1,0 +1,7 @@
+<ruleset name="SternKom GmbH">
+<target host="www.sternkom.de" />
+
+<rule from="^http:" to="https:" />
+
+
+</ruleset>

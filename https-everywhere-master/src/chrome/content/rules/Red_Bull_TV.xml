@@ -1,0 +1,24 @@
+<!--
+	For other Red Bull coverage, see Red_Bull.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)
+
+			- ^: mismatched
+			- www: refused
+			- ^ redirects to www
+
+-->
+<ruleset name="Red Bull TV (partial)">
+
+	<target host="live.redbull.tv" />
+
+
+	<securecookie host="^live\.redbull\.tv$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

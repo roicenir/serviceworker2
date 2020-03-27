@@ -1,0 +1,55 @@
+<!--
+	Other Demandware rulesets:
+
+		- cquotient.com.xml
+		- Demandware.net.xml
+
+
+	bucket: demandware.edgesuite.net/aabl_prd/on/demandware.static/
+
+
+	Nonfunctional hosts in *demandware.com:
+
+		- calendar: Invalid certificate
+
+
+	Insecure cookies are set for these hosts: ᶜ
+
+		- demandware.com
+		- www.demandware.com
+		- xchange.demandware.com
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+
+	Mixed content:
+
+		- Images on (www.)? from www.demandware.com *
+
+	* Secured by us, see https://www.paulirish.com/2010/the-protocol-relative-url/
+
+-->
+<ruleset name="Demandware.com (partial)">
+
+	<target host="demandware.com" />
+	<target host="www.demandware.com" />
+		<test url="http://www.demandware.com/contact" />
+		<test url="http://www.demandware.com/events" />
+	<target host="account.demandware.com" />
+	<target host="blog.demandware.com" />
+	<target host="documentation.demandware.com" />
+	<target host="investors.demandware.com" />
+	<target host="solutions.demandware.com" />
+	<target host="xchange.demandware.com"/>
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.)?demandware\.com$" name="^(PHPSESSID|exp_csrf_token|exp_last_activity|exp_last_visit|exp_stashid|exp_tracker)$" /-->
+	<!--securecookie host="^xchange\.demandware\.com$" name="^(BIGipServerpool\w.]+|JSESSIONID|jive\.security\.context)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

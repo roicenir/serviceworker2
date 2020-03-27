@@ -1,0 +1,71 @@
+<!--
+	Other Free Software Foundation rulesets:
+
+		- GMP_Lib.org.xml
+		- GNU.org.xml
+		- GnuPG.org.xml
+
+
+	Nonfunctional domains:
+
+		- specialk.nongnu.org (m)
+		- bugs.gnewsense.org (m)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+-->
+<ruleset name="Free Software Foundation">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="fsf.org" />
+	<target host="www.fsf.org" />
+	<target host="cas.fsf.org" />
+	<target host="crm.fsf.org" />
+	<target host="directory.fsf.org" />
+	<target host="donate.fsf.org" />
+	<target host="emailselfdefense.fsf.org" />
+	<target host="my.fsf.org" />
+	<target host="mirror.fsf.org" />
+	<target host="patron.fsf.org" />
+	<target host="piwik.fsf.org" />
+	<target host="shop.fsf.org" />
+	<target host="static.fsf.org" />
+	<target host="status.fsf.org" />
+	<target host="u.fsf.org" />
+
+	<target host="nongnu.org" />
+	<target host="www.nongnu.org" />
+	<target host="lists.nongnu.org" />
+	<target host="savannah.nongnu.org" />
+	<target host="download.savannah.nongnu.org" />
+
+	<!--	Complications:
+				-->
+	<target host="bugs.gnewsense.org" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^my\.fsf\.org$" name="^_ZopeId$" /-->
+
+	<!--	There's a cross-domain session cookie, which is not
+		handled in case it's used on unsecurable pages.
+			In particular, shop.fsf.org is not fully
+		securable, and seems to share a login system with www.
+		-->
+	<securecookie host="^(?:\.crm|my|status)\.fsf\.org$" name=".+" />
+
+	<!--	Redirects like so.
+					-->
+	<rule from="^http://bugs\.gnewsense\.org/.*"
+		to="https://savannah.nongnu.org/bugs/?group=gnewsense" />
+
+		<test url="http://bugs.gnewsense.org//" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

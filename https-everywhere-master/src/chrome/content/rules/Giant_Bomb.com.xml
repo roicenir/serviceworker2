@@ -1,0 +1,15 @@
+<!--
+	For other CBS coverage, see CBS.xml.
+-->
+<ruleset name="Giant Bomb.com (partial)">
+
+	<target host="giantbomb.com" />
+	<target host="www.giantbomb.com" />
+	<target host="auth.giantbomb.com" />
+	<target host="store.giantbomb.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,41 @@
+<!--
+	Empty reply:
+		- connexity.net
+		- cse.connexity.net
+		- pxl.connexity.net
+
+	Cert mismatch:
+		- www.connexity.net
+		- cse.prod.connexity.net
+		- link.connexity.net
+		- s.connexity.net
+		- t.connexity.net
+		- u.connexity.net
+
+	Cert expired:
+		- pm-rtb-fkb.connexity.net
+
+	Timeout:
+		- ax-rtb-fkb.connexity.net
+		- cm-rtb-fkb.connexity.net
+		- ox-rtb-fkb.connexity.net
+		- pp-rtb-fkb.connexity.net
+		- rtb.connexity.net
+		- yax-rtb-fkb.connexity.net
+-->
+<ruleset name="Connexity.net (partial)" >
+
+	<target host="api.connexity.net" />
+	<target host="cpa.connexity.net" />
+	<target host="dude.connexity.net" />
+	<target host="mxl.connexity.net" />
+	<target host="rd.connexity.net" />
+	<target host="rd2.connexity.net" />
+	<target host="up.connexity.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

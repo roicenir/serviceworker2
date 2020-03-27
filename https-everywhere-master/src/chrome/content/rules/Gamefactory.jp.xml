@@ -1,0 +1,13 @@
+<!--
+	^gamefactory.jp doesn't exist.
+
+-->
+<ruleset name="Gamefactory.jp">
+
+	<target host="www.gamefactory.jp" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

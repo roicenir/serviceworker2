@@ -1,0 +1,31 @@
+<!--
+	Other HKEX related rulesets:
+		+ hkexgroup.com.xml
+		+ lme.com.xml
+		+ hkexnews.hk.xml
+
+	Invalid certificate:
+		en-rules.hkex.com.hk
+		www.iporesults.hkex.com.hk
+
+	Time out:
+		hkex.com.hk
+		m.hkex.com.hk
+-->
+<ruleset name="Hong Kong Exchanges and Clearing Limited">
+
+	<target host="hkex.com.hk" />
+	<target host="www.hkex.com.hk" />
+	<target host="www.ecp.hkex.com.hk" />
+	<target host="www.esubmission.hkex.com.hk" />
+	<target host="sc.hkex.com.hk" />
+	<target host="sdinotice.hkex.com.hk" />
+		<test url="http://sdinotice.hkex.com.hk/Home/Login" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://hkex\.com\.hk/"
+		to="https://www.hkex.com.hk/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,15 @@
+<!--
+	^cta-observatory.org doesn't exist
+
+-->
+<ruleset name="Cherenkov Telescope Array">
+
+	<target host="www.cta-observatory.org" />
+
+
+	<securecookie host="^\.www\.cta-observatory\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

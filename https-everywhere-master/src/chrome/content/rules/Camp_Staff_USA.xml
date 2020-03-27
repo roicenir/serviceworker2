@@ -1,0 +1,24 @@
+<!--
+	Problematic subdomains:
+
+		- www	(record_too_long)
+
+-->
+<ruleset name="Camp Staff USA">
+
+	<target host="campstaffusa.com" />
+	<target host="www.campstaffusa.com" />
+	<target host="jorsika.com" />
+	<target host="www.jorsika.com" />
+
+
+	<securecookie host="^\.campstaffusa\.com$" name=".+" />
+	<securecookie host="^\.?jorsika\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?campstaffusa\.com/"
+		to="https://campstaffusa.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

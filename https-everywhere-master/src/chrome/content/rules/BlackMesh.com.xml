@@ -1,0 +1,40 @@
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://blackmesh.com/ => https://www.blackmesh.com/: Cycle detected - URL already encountered: https://www.blackmesh.com/
+	Fully covered subdomains:
+
+		- (www.)	(^ → www)
+		- autodiscover
+		- mail
+		- portal
+		- webmail
+
+-->
+<ruleset name="BlackMesh.com">
+
+	<target host="blackmesh.com" />
+	<target host="www.blackmesh.com" />
+	<target host="mail.blackmesh.com" />
+	<target host="autodiscover.blackmesh.com" />
+	<target host="portal.blackmesh.com" />
+	<target host="webmail.blackmesh.com" />
+
+
+	<securecookie host="^(?:mail|portal|webmail|www)\.blackmesh\.com$" name=".+" />
+
+
+	<!--	^ redirects to www over http,
+		so copy that behavior:
+					-->
+	<rule from="^http://(?:www\.)?blackmesh\.com/"
+		to="https://www.blackmesh.com/" />
+
+	<!--	Server redirects like so over
+		http, without dropping path:
+						-->
+	<rule from="^http://mail\.blackmesh\.com/"
+		to="https://mail.blackmesh.com/zimbra/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

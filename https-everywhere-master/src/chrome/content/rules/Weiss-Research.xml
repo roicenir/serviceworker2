@@ -1,0 +1,25 @@
+<!--
+Automatically by https-everywhere-checker because:
+Fetch error: http://moneyandmarkets.com/ => https://moneyandmarkets.com/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+	Nonfunctional domains:
+
+		- a.weissinc.com
+
+-->
+<ruleset name="Weiss Research">
+
+	<target host="moneyandmarkets.com" />
+	<target host="www.moneyandmarkets.com" />
+	<target host="weissinc.com" />
+	<target host="cdn.weissinc.com" />
+	<target host="images.weissinc.com" />
+	<target host="www.weissinc.com" />
+
+
+	<securecookie host="^.*\.moneyandmarkets\.com$" name=".+" />
+
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,49 @@
+<!--
+	Other naukri.com related rulesets:
+		+ naukimg.com.xml
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- w6.naukri.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+		- careers.naukri.com
+		- mideast.naukri.com
+		- www.mideast.naukri.com
+		- w2.naukri.com
+		- w3.naukri.com
+		- w4.naukri.com
+		- w7.naukri.com
+
+-->
+<ruleset name="Naukri.com (partial)">
+	<target host="naukri.com" />
+	<target host="www.naukri.com" />
+	<target host="apply.naukri.com" />
+	<target host="blogs.naukri.com" />
+	<target host="careernavigator.naukri.com" />
+	<target host="companies.naukri.com" />
+	<target host="company.naukri.com" />
+		<test url="http://company.naukri.com/banners2016/kpit-ns-65x45-292016.gif" />
+	<target host="demoresdex.naukri.com" />
+	<target host="e-learning.naukri.com" />
+	<target host="engineering.naukri.com" />
+	<target host="freesearch.naukri.com" />
+	<target host="jobsearch.naukri.com" />
+	<target host="learning.naukri.com" />
+	<target host="lg.naukri.com" />
+		<test url="http://lg.naukri.com/nLogger/boomLogger.php" />
+	<target host="login.naukri.com" />
+	<target host="naukrirecruiter.naukri.com" />
+	<target host="login.recruit.naukri.com" />
+	<target host="recruit.naukri.com" />
+	<target host="recruiterzone.naukri.com" />
+	<target host="resume.naukri.com" />
+	<target host="static.naukri.com" />
+	<target host="w1.naukri.com" />
+	<target host="w5.naukri.com" />
+	<target host="w28.naukri.com" />
+		<test url="http://w28.naukri.com/advertiser/bms_logimpressions.php?banlist=1,1,1,1,1" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

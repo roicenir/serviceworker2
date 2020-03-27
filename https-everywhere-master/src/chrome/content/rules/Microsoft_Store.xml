@@ -1,0 +1,17 @@
+<!--
+	For other Microsoft coverage, see Microsoft.xml.
+
+	Invalid certificate:
+		- content.microsoftstore.com
+-->
+
+<ruleset name="Microsoft Store (partial)">
+	<target host="microsoftstore.com" />
+	<target host="www.microsoftstore.com" />
+	<target host="answerdesk.microsoftstore.com" />
+	<target host="lobby.microsoftstore.com" />
+	<target host="surface.microsoftstore.com" />
+	<target host="xbox.microsoftstore.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

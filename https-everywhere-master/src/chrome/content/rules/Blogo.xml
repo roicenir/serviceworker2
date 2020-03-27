@@ -1,0 +1,14 @@
+<!--
+	Non-functional hosts:
+		Timeout:
+		- s.blogo.it
+
+		Certificate mismatched:
+		- static-a.blogo.it
+
+-->
+<ruleset name="blogo (partial)">
+	<target host="static-q.blogo.it" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

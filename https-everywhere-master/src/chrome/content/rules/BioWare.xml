@@ -1,0 +1,21 @@
+<!--
+	For other Electronic Arts coverage, see Electronic-Arts.xml.
+
+	CDN buckets:
+		- ea-039.vo.llnwd.net
+			- na.llnet.bioware.cdn.ea.com
+			- ea-039.hs doesn't exist
+
+	Connection refused:
+		- na.llnet.bioware.cdn.ea.com
+-->
+
+<ruleset name="BioWare (partial)">
+	<target host="social.bioware.com" />
+	<target host="biowarestore.com" />
+	<target host="www.biowarestore.com" />
+
+	<securecookie host="^\.biowarestore\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

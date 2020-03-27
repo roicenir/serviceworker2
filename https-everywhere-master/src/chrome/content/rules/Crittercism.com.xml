@@ -1,0 +1,18 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(redirects to http, valid cert)
+
+-->
+<ruleset name="Crittercism.com (partial)">
+
+	<target host="api.crittercism.com" />
+	<target host="app.crittercism.com" />
+
+
+	<securecookie host="^ap[ip]\.crittercism\.com" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

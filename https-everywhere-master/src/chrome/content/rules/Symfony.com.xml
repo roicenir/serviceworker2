@@ -1,0 +1,13 @@
+<!--
+    More SensioLabs rulesets:
+	    - Sensiolabs.com.xml
+-->
+<ruleset name="Symfony.com">
+    <target host="symfony.com" />
+    <target host="www.symfony.com" />
+
+    <securecookie host="^(www\.)?symfony\.com" name=".+" />
+
+    <rule from="^http:"
+            to="https:" />
+</ruleset>

@@ -1,0 +1,167 @@
+<!--
+	Other Symantec rulesets:
+		- Norton.xml
+		- Norton_Online_Backup.xml
+		- Verisign.xml
+
+
+	Non-functional subdomains:
+
+		- accenture	(m)
+		- apidocs	(i)
+		- careers	(SSL connection error)
+		- clicktime	(t)
+		- connect	(m)
+		- click.connect	(m)
+		- cpe	(t)
+		- customersupport	(m)
+		- dell	(SSL handshake failed)
+		- developer	(m)
+		- email	(m)
+		- enterprisesecurity	(m)
+		- entsupport	(m)
+		- seer.entsupport	(m)
+		- et	(i)
+		- esdownload	(m)
+		- eval	(m)
+		- email.everyonesocial	(t)
+		- fujitsu	(m)
+		- gsc	(SSL handshake failed)
+		- buy.norton.com.gtm	(m)
+		- help	(i)
+		- investor	(m)
+		- jp-registry	(e)
+		- know	(m)
+		- lrc	(t)
+		- mft	(i)
+		- app.mktgassets	(m)
+		- images.mktgassets	(m)
+		- mysort	(m)
+		- norton	(m)
+		- nortonshoppingguarantee	(m)
+		- safeweb.norton.com.ntn	(m)
+		- om	(m)
+		- partnerlocator	(m)
+		- app.partnermktg	(m)
+		- pcd	(m)
+		- peering	(i)
+		- psc	(t)
+		- resource	(m)
+		- safeweb	(t)
+		- securityresponse	(m)
+		- service1	(t)
+		- www.ses	(m)
+		- sfdoccentral	(m)
+		- sigs	(t)
+		- ipremoval.sms	(t)
+		- sort	(m)
+		- store	(m)
+		- techcenter	(r)
+		- threat-protection	(m)
+		- veritas	(m)
+		- http.websecurity	(m)
+		- app.website-security	(m)
+		- evcs-crl.ws	(m)
+		- sha1timestamp.ws	(t)
+		- sha256timestamp.ws	(t)
+		- ts-crl.ws	(m)
+		- ts-ocsp.ws	(m)
+
+	e: expired certificate
+	h: http redirect
+	i: invalid certificate chain
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+-->
+<ruleset name="Symantec">
+
+	<target host="symantec.com" />
+	<target host="www.symantec.com" />
+	<target host="bcportal.symantec.com" />
+	<target host="btsp-portal.symantec.com" />
+	<target host="buy.symantec.com" />
+	<target host="api.connect.symantec.com" />
+	<target host="content.connect.symantec.com" />
+	<target host="cynic.symantec.com" />
+	<target host="deepsight.symantec.com" />
+	<target host="definitions.symantec.com" />
+	<target host="digitalhubshare.symantec.com" />
+	<target host="know.elq.symantec.com" />
+	<target host="resource.elq.symantec.com" />
+	<target host="www.emea.symantec.com" />
+	<target host="entced.symantec.com" />
+	<target host="fileconnect.symantec.com" />
+	<target host="go.symantec.com" />
+	<target host="itchat.symantec.com" />
+	<target host="jp-businessstore.symantec.com" />
+	<target host="k9.symantec.com" />
+	<target host="knowledge.symantec.com" />
+	<target host="lcdls.symantec.com" />
+	<target host="learn-partner.symantec.com" />
+	<target host="licensing.symantec.com" />
+	<target host="liveupdate.symantec.com" />
+	<target host="login.symantec.com" />
+	<target host="mss.symantec.com" />
+	<target host="my.symantec.com" />
+	<target host="nsg.symantec.com" />
+	<target host="origin-symwisedownload.symantec.com" />
+	<target host="osgonlineordering.symantec.com" />
+	<target host="partnernet.symantec.com" />
+	<target host="benefits.partnernet.symantec.com" />
+	<target host="phoenix.symantec.com" />
+	<target host="sice.enc.protect.symantec.com" />
+	<target host="sice.stage.enc.protect.symantec.com" />
+	<target host="eu.quarantine.symantec.com" />
+	<target host="us.quarantine.symantec.com" />
+	<target host="symc.sam.symantec.com" />
+	<target host="vrts.sam.symantec.com" />
+	<target host="searchg.symantec.com" />
+	<target host="security.symantec.com" />
+	<target host="securitycloud.symantec.com" />
+	<target host="sep.securitycloud.symantec.com" />
+	<target host="sepc.securitycloud.symantec.com" />
+	<target host="sitedirector.symantec.com" />
+	<target host="ssaw.symantec.com" />
+	<target host="status.symantec.com" />
+	<target host="email.status.symantec.com" />
+	<target host="submit.symantec.com" />
+	<target host="support.symantec.com" />
+	<target host="symbeta.symantec.com" />
+	<target host="symwisedownload.symantec.com" />
+	<target host="tms.symantec.com" />
+	<target host="trial.symantec.com" />
+	<target host="sso.trm.symantec.com" />
+	<target host="vip.symantec.com" />
+	<target host="idprotect.vip.symantec.com" />
+	<target host="manager.vip.symantec.com" />
+	<target host="vpn-us-east.symantec.com" />
+	<target host="vs.symantec.com" />
+	<target host="webdl.symantec.com" />
+	<target host="websecurity.symantec.com" />
+	<target host="www.websecurity.symantec.com" />
+	<target host="cbc.websecurity.symantec.com" />
+	<target host="cryptoreport.websecurity.symantec.com" />
+	<target host="dcv.websecurity.symantec.com" />
+	<target host="enterprise-ssl-admin.websecurity.symantec.com" />
+	<target host="enterprise-ssl-adminmanager.websecurity.symantec.com" />
+	<target host="evcs.websecurity.symantec.com" />
+	<target host="www.jp.websecurity.symantec.com" />
+	<target host="coupon.jp.websecurity.symantec.com" />
+	<target host="enterprise-ssl-admin.jp.websecurity.symantec.com" />
+	<target host="estimate.jp.websecurity.symantec.com" />
+	<target host="storefront.jp.websecurity.symantec.com" />
+	<target host="securesigning.websecurity.symantec.com" />
+	<target host="trustcenter.websecurity.symantec.com" />
+	<target host="website-security.symantec.com" />
+	<target host="wspp.symantec.com" />
+	<target host="www-secure.symantec.com" />
+	<target host="www4.symantec.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

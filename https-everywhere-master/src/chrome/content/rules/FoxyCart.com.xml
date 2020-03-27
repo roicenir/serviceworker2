@@ -1,0 +1,56 @@
+<!--
+	CDN buckets:
+
+		- wac.1d78.edgecastcdn.net/??1D78/
+
+			- cdn
+			- static.www
+
+
+	Nonfunctional subdomains:
+
+		- ui *
+		- www *
+		- files.www3 *
+		- ui.www3 *
+
+	* Dropped
+
+
+	Problematic subdomains:
+
+		- ^		(.+ redirects to www...$)
+		- static.www	(works; mismatched, CN: gp1.wac.edgecastcdn.net)
+
+
+	Fully covered subdomains:
+
+		- ^
+		- admin
+		- cdn
+		- docs
+		- forum
+		- wiki
+
+
+	Mixed content:
+
+		- Images on forum from static.www *
+		- Images on forum from www *
+
+-->
+<ruleset name="FoxyCart.com (partial)">
+
+	<target host="admin.foxycart.com" />
+	<target host="cdn.foxycart.com" />
+	<target host="docs.foxycart.com" />
+	<target host="forum.foxycart.com" />
+	<target host="wiki.foxycart.com" />
+
+
+	<securecookie host="^(?:admin|docs|forum|wiki)\.foxycart\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

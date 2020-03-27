@@ -1,0 +1,59 @@
+<ruleset name="Steam">
+	<target host="community.steam-api.com" />
+	<target host="partner.steam-api.com" />
+
+	<target host="steamcommunity.com" />
+	<target host="www.steamcommunity.com" />
+	<target host="api.steamcommunity.com" />
+	<target host="cdn.steamcommunity.com" />
+
+	<target host="steamgames.com" />
+	<target host="www.steamgames.com" />
+	<target host="partner.steamgames.com" />
+
+	<target host="steampowered.com" />
+	<target host="www.steampowered.com" />
+	<target host="api.steampowered.com" />
+	<target host="cdn.steampowered.com" />
+	<target host="help.steampowered.com" />
+	<target host="media.steampowered.com" />
+	<target host="partner.steampowered.com" />
+	<target host="store.steampowered.com" />
+	<target host="cdn.store.steampowered.com" />
+	<target host="storefront.steampowered.com" />
+	<target host="support.steampowered.com" />
+
+	<target host="cdn.akamai.steamstatic.com" />
+	<target host="cdn.edgecast.steamstatic.com" />
+	<target host="community.akamai.steamstatic.com" />
+	<target host="community.edgecast.steamstatic.com" />
+	<target host="store.akamai.steamstatic.com" />
+	<target host="store.edgecast.steamstatic.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://(www\.)?steamgames\.com/"
+			to="https://store.steampowered.com/" />
+
+	<test url="http://storefront.steampowered.com/v/gfx/apps/210950/capsule_467x181.jpg" />
+	<rule from="^http://storefront\.steampowered\.com/v/gfx/"
+			to="https://steamcdn-a.akamaihd.net/steam/" />
+
+	<rule from="^http://((cdn|storefront|www)\.)?steampowered\.com/"
+			to="https://store.steampowered.com/" />
+
+	<rule from="^http://www\.steamcommunity\.com/"
+			to="https://steamcommunity.com/" />
+
+	<rule from="^http://(cdn\.steamcommunity|community\.akamai\.steamstatic|community\.edgecast\.steamstatic)\.com/"
+		to="https://steamcommunity-a.akamaihd.net/" />
+
+	<rule from="^http://(media\.steampowered|cdn\.akamai\.steamstatic|cdn\.edgecast\.steamstatic)\.com/"
+		to="https://steamcdn-a.akamaihd.net/" />
+
+	<rule from="^http://(cdn\.store\.steampowered|store\.akamai\.steamstatic|store\.edgecast\.steamstatic)\.com/"
+		to="https://steamstore-a.akamaihd.net/" />
+
+	<rule from="^http:"
+			to="https:" />
+</ruleset>

@@ -1,0 +1,26 @@
+<!--
+	For other Migros coverage, see Migros.xml.
+
+	Mismatch:
+		- blog.bancamigros.ch
+		- blog.banquemigros.ch
+-->
+<ruleset name="Migros Bank">
+	<target host="migrosbank.ch" />
+	<target host="www.migrosbank.ch" />
+	<target host="blog.migrosbank.ch" />
+	<target host="boerse.migrosbank.ch" />
+	<target host="lieferanten.migrosbank.ch" />
+	<target host="onlinesupport.migrosbank.ch" />
+	<target host="secure.migrosbank.ch" />
+	<target host="standorte.migrosbank.ch" />
+	<target host="stats.migrosbank.ch" />
+
+	<target host="bancamigros.ch" />
+	<target host="www.bancamigros.ch" />
+
+	<target host="banquemigros.ch" />
+	<target host="www.banquemigros.ch" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

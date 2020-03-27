@@ -1,0 +1,25 @@
+<!--
+	Nonfunctional subdomains:
+
+		- feed	(refused)
+
+
+	Problematic subdomains:
+
+		- (www.)	(mismatched, CN: secure.voodoo.com)
+
+-->
+<ruleset name="Voodoo.com (partial)">
+
+	<target host="voodoo.com" />
+	<target host="secure.voodoo.com" />
+	<target host="www.voodoo.com" />
+
+
+	<securecookie host="^\.voodoo\.com$" name=".+" />
+
+
+	<rule from="^http://(?:secure\.|www\.)?voodoo\.com/"
+		to="https://secure.voodoo.com/" />
+
+</ruleset>

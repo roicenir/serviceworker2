@@ -1,0 +1,49 @@
+<!--
+	Other Dell rulesets:
+		- Idea_Storm.com.xml
+-->
+<ruleset name="Dell.com (partial)">
+	<target host="dell.com" />
+	<target host="www.dell.com" />
+	<target host="accessories.dell.com" />
+	<target host="channels.ap.dell.com" />
+	<target host="channelslb.ap.dell.com" />
+	<target host="channelspro.ap.dell.com" />
+	<target host="chat1.ap.dell.com" />
+	<target host="chatpro.ap.dell.com" />
+	<target host="cs.ap.dell.com" />
+	<target host="dellchat.ap.dell.com" />
+	<target host="b2bservices.dell.com" />
+	<target host="ec2.cdn.dell.com" />
+	<target host="si.cdn.dell.com" />
+	<target host="snp.cdn.dell.com" />
+	<target host="deals.dell.com" />
+	<target host="dellupdater.dell.com" />
+	<target host="downloads.dell.com" />
+	<target host="ecomm.dell.com" />
+	<target host="ecomm2.dell.com" />
+	<target host="support.euro.dell.com" />
+	<target host="fcs.dell.com" />
+	<target host="financing.dell.com" />
+	<target host="i.dell.com" />
+	<target host="img.dell.com" />
+	<target host="jpstore.dell.com" />
+	<target host="m.dell.com" />
+	<target host="marketing.dell.com" />
+	<target host="partnerdirect.dell.com" />
+	<target host="paymentsportal.dell.com" />
+	<target host="premier.dell.com" />
+	<target host="signin.dell.com" />
+	<target host="sso.dell.com" />
+	<target host="support.dell.com" />
+	<target host="supportapj.dell.com" />
+	<target host="topics-cdn.dell.com" />
+	<target host="channels.us.dell.com" />
+	<target host="lists.us.dell.com" />
+	<target host="pbar.us.dell.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

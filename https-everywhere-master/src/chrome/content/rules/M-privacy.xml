@@ -1,0 +1,18 @@
+<ruleset name="m-privacy">
+
+	<target host="m-privacy.de" />
+	<target host="git.m-privacy.de" />
+	<target host="rsbac.m-privacy.de" />
+	<target host="www.m-privacy.de" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^rsbac\.m-privacy\.de$" name="^DokuWiki$" /-->
+
+	<securecookie host="^(?:rsbac|www)\.m-privacy\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

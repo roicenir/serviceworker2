@@ -1,0 +1,13 @@
+<ruleset name="FoldingCoin.net" >
+
+	<target host="foldingcoin.net" />
+	<target host="www.foldingcoin.net" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

@@ -1,0 +1,17 @@
+<!--
+	Non-functional hosts:
+		Certificate mismatched:
+		- f.metro.co.uk
+		- img.metro.co.uk
+		- s.metro.co.uk
+-->
+<ruleset name="Metro.co.uk">
+
+	<target host="metro.co.uk" />
+	<target host="www.metro.co.uk" />
+	<target host="static.metro.co.uk" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

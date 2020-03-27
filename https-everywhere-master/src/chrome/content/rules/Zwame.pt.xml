@@ -1,0 +1,28 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- mailsrv.zwame.pt
+
+		SSL peer certificate was not OK:
+		- go.zwame.pt
+-->
+<ruleset name="Zwame.pt">
+	<target host="zwame.pt" />
+	<target host="www.zwame.pt" />
+	<target host="cdn.zwame.pt" />
+	<target host="comparador.zwame.pt" />
+	<target host="comparador-click.zwame.pt" />
+	<target host="forum.zwame.pt" />
+	<target host="img.zwame.pt" />
+	<target host="jogos.zwame.pt" />
+	<target host="magazine.zwame.pt" />
+	<target host="nperf.zwame.pt" />
+	<target host="podcast.zwame.pt" />
+	<target host="portal.zwame.pt" />
+	<target host="pr.zwame.pt" />
+	<target host="showcasept.zwame.pt" />
+	<target host="static.zwame.pt" />
+	<target host="zcp.zwame.pt" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

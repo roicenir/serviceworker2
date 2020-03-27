@@ -1,0 +1,28 @@
+<!--
+	Nonfunctional subdomains:
+
+		- log		(tumblr)
+		- podcast	(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- lists
+		- wiki
+
+-->
+<ruleset name="RaumZeitLabor.de (partial)">
+
+	<target host="raumzeitlabor.de" />
+	<target host="lists.raumzeitlabor.de" />
+	<target host="wiki.raumzeitlabor.de" />
+	<target host="www.raumzeitlabor.de" />
+
+
+	<securecookie host="^wiki\.raumzeitlabor\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

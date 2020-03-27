@@ -1,0 +1,14 @@
+<ruleset name="nginx.org">
+
+	<target host="nginx.org" />
+	<target host="www.nginx.org" />
+	<target host="forum.nginx.org" />
+	<target host="hg.nginx.org" />
+	<target host="mailman.nginx.org" />
+	<target host="trac.nginx.org" />
+	<target host="unit.nginx.org" />
+	<target host="wiki.nginx.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

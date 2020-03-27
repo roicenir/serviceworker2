@@ -1,0 +1,25 @@
+<!--
+	Informational Democracy Foundation
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- css
+		- js
+
+-->
+<ruleset name="ROI.ru">
+
+	<target host="roi.ru" />
+	<target host="css.roi.ru" />
+	<target host="js.roi.ru" />
+	<target host="www.roi.ru" />
+
+
+	<securecookie host="^\.roi\.ru$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,49 @@
+<!--
+	For other Baidu coverage, see Baidu.xml.
+
+	Dropped:
+		- en
+		- tuan
+		- tw
+
+	Mismatched:
+		- ^
+		- ae
+		- img[0-6]?
+		- music
+		- static.book
+
+	Redirect to HTTP:
+		- live
+		- tejia
+		- topic
+
+	Mixed content:
+		- djyx
+		- lady
+		- pic
+		- soft
+		- tianqi
+		- vip
+		- xyx
+-->
+<ruleset name="Hao123.com (partial)">
+	<target host="hao123.com" />
+	<target host="www.hao123.com" />
+	<target host="book.hao123.com" />
+	<target host="common.hao123.com" />
+	<target host="dl.hao123.com" />
+	<target host="feedback.hao123.com" />
+	<target host="game.hao123.com" />
+	<target host="life.hao123.com" />
+	<target host="m.hao123.com" />
+	<target host="moe.hao123.com" />
+	<target host="qipai.hao123.com" />
+	<target host="user.hao123.com" />
+	<target host="wyyx.hao123.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://hao123\.com/" to="https://www.hao123.com/" />
+	<rule from="^http:" to="https:" />
+</ruleset>

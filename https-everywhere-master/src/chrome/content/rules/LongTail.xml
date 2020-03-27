@@ -1,0 +1,94 @@
+<!--
+	Other LongTail rulesets:
+		- Bitsontherun.com.xml
+		- JW_Platform.com.xml
+
+	Cert expired:
+		- dev.jwpltx.com
+		- i.dev.jwpltx.com
+		- stg.jwpltx.com
+
+	Cert mismatch:
+		- code.longtailvideo.com
+		- developer.longtailvideo.com
+		- go.longtailvideo.com
+		- secure.longtailvideo.com
+		- www2.longtailvideo.com
+		- ltvimg.com
+		- s0-www.ltvimg.com
+		- s1-www.ltvimg.com
+		- www.ltvimg.com
+		- a.jwpcdn.com
+		- p.jwpcdn.com, equivalent to ssl.p.jwpcdn.com
+		- go.jwplayer.com
+		- ovp.jwplayer.com
+		- i.n.jwpltx.com
+	Timeout:
+		- demo.longtailvideo.com
+		- design.longtailvideo.com
+		- bob.jwplayer.com
+		- demo.jwplayer.com
+		- jw7.jwplayer.com
+		- jw7beta.jwplayer.com
+		- qa.jwplayer.com
+		- recommendations.jwplayer.com
+		- sdk.jwplayer.com
+
+
+	TLS error:
+		- g5bmawnx.cdn.jwplayer.com
+-->
+<ruleset name="LongTail (partial)" >
+
+	<target host="p.jwpcdn.com" />
+	<target host="ssl.p.jwpcdn.com" />
+
+	<target host="jwpltx.com" />
+	<target host="s.c.jwpltx.com" />
+	<target host="s.n.jwpltx.com" />
+	<target host="s.jwpltx.com" />
+
+	<target host="longtailvideo.com" />
+	<target host="www.longtailvideo.com" />
+	<target host="account.longtailvideo.com" />
+	<target host="api.longtailvideo.com" />
+	<target host="l.longtailvideo.com" />
+	<target host="lp.longtailvideo.com" />
+	<target host="ova.longtailvideo.com" />
+	<target host="playertest.longtailvideo.com" />
+	<target host="plugins.longtailvideo.com" />
+	<target host="securel.longtailvideo.com" />
+	<target host="securelp.longtailvideo.com" />
+	<target host="secureplugins.longtailvideo.com" />
+	<target host="static-account.longtailvideo.com" />
+	<target host="www3.longtailvideo.com" />
+
+	<target host="jwplayer.com" />
+	<target host="www.jwplayer.com" />
+	<target host="account.jwplayer.com" />
+	<target host="api.jwplayer.com" />
+	<target host="apidocs.jwplayer.com" />
+	<target host="cdn.jwplayer.com" />
+	<target host="checkout.jwplayer.com" />
+	<target host="dashboard.jwplayer.com" />
+	<target host="developer.jwplayer.com" />
+	<target host="entitlements.jwplayer.com" />
+	<target host="icons.jwplayer.com" />
+	<target host="insights.jwplayer.com" />
+	<target host="mvn.jwplayer.com" />
+	<target host="portal-api.jwplayer.com" />
+	<target host="staging-icons.jwplayer.com" />
+	<target host="status.jwplayer.com" />
+	<target host="support-static.jwplayer.com" />
+	<target host="support.jwplayer.com" />
+	<target host="tv.jwplayer.com" />
+	<target host="vr.jwplayer.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://p\.jwpcdn\.com/"
+		  to="https://ssl.p.jwpcdn.com/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

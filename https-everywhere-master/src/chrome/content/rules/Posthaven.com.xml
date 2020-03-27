@@ -1,0 +1,20 @@
+<!--
+	Wildcard certificate and DNS records:
+ 		- posthaven.com
+-->
+
+<ruleset name="Posthaven.com">
+	<target host="posthaven.com" />
+	<target host="*.posthaven.com" />
+		<test url="http://www.posthaven.com/" />
+		<test url="http://alex.posthaven.com/" />
+		<test url="http://blog.posthaven.com/" />
+		<test url="http://geekomotion.posthaven.com/" />
+
+	<securecookie host="^posthaven\.com$" name=".+" />
+
+	<!-- posthaven.com -->
+	<!-- *.posthaven.com -->
+	<rule from="^http://([\w-]+\.)?posthaven\.com/"
+		to="https://$1posthaven.com/" />
+</ruleset>

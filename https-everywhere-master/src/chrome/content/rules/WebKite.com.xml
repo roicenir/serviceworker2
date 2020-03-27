@@ -1,0 +1,32 @@
+<!--
+	CDN buckets:
+
+		- s3.amazonaws.com/iago.webkite.org/
+		- s3.amazonaws.com/jafar.webkite.org/
+
+
+	Problematic subdomains:
+
+		- support *
+
+	* Uservoice
+
+-->
+<ruleset name="WebKite.com (partial)">
+
+	<target host="webkite.com" />
+	<target host="auth.webkite.com" />
+	<target host="errors.webkite.com" />
+	<target host="fb.webkite.com" />
+	<target host="iago.webkite.com" />
+	<target host="jafar.webkite.com" />
+	<target host="results.webkite.com" />
+	<target host="www.webkite.com" />
+
+
+	<securecookie host="^\.admin\.webkite\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

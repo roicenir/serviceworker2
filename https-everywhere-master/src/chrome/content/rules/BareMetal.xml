@@ -1,0 +1,19 @@
+<!--
+	Other BareMetal rulesets:
+
+		- Domain-DNS.com.xml
+
+-->
+<ruleset name="BareMetal" platform="mixedcontent">
+
+	<target host="baremetal.com" />
+	<target host="www.baremetal.com" />
+	<target host="swww.baremetal.com" />
+
+
+	<securecookie host="^swww\.baremetal\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,61 @@
+<!--
+	Other Süddeutsche Zeitung rulesets:
+
+		- Suddeutsche_Zeitung_Tickets.xml
+
+	Problematic domains:
+
+		- jetzt.sueddeutsche.de				(Timeout)
+		- sportergebnisse.sueddeutsche.de 	(Invalid certificate)
+		- sz-shop 							(Refused)
+		- tickets.sueddeutsche.de			(Plaintext reply)
+-->
+<ruleset name="Süddeutsche Zeitung (partial)" >
+
+	<target host="sueddeutsche.de" />
+	<target host="www.sueddeutsche.de" />
+	<target host="anzeigen.sueddeutsche.de" />
+	<target host="anzeigen-buchen.sueddeutsche.de" />
+	<target host="archiv.sueddeutsche.de" />
+	<target host="bildung.sueddeutsche.de" />
+	<target host="englisch.sueddeutsche.de" />
+	<target host="epaper.sueddeutsche.de" />
+	<target host="finanzen.sueddeutsche.de" />
+	<target host="geoservice.sueddeutsche.de" />
+	<target host="gfx.sueddeutsche.de" />
+	<target host="global.sueddeutsche.de" />
+		<test url="http://global.sueddeutsche.de/assets/img/header/sprite_header.png" />
+	<target host="id.sueddeutsche.de" />
+	<target host="ladenwelten.sueddeutsche.de" />
+	<target host="llm.sueddeutsche.de" />
+	<target host="immobilienmarkt.sueddeutsche.de" />
+	<target host="international.sueddeutsche.de" />
+	<target host="maerkte.sueddeutsche.de" />
+		<test url="http://maerkte.sueddeutsche.de/esi/content-modul/muenchen.html" />
+	<target host="maps.sueddeutsche.de" />
+	<target host="media-cdn.sueddeutsche.de" />
+		<test url="http://media-cdn.sueddeutsche.de/globalassets/img/unsprited/placeholder_16_9.png" />
+		<test url="http://media-cdn.sueddeutsche.de/globalassets/components/szfonts/fonts/SZSans/SZSans-Bold.woff2" />
+	<target host="medienberufe.sueddeutsche.de" />
+	<target host="motormarkt.sueddeutsche.de" />
+	<target host="reiseangebote.sueddeutsche.de" />
+	<target host="paybox-ui.sueddeutsche.de" />
+		<test url="http://paybox-ui.sueddeutsche.de/assets/css/paybox.css" />
+	<target host="pix.sueddeutsche.de" />
+	<target host="projekte.sueddeutsche.de" />
+	<target host="service.sueddeutsche.de" />
+	<target host="stellenmarkt.sueddeutsche.de" />
+	<target host="sz-media.sueddeutsche.de" />
+	<target host="sz-veranstaltungen.sueddeutsche.de" />
+	<target host="szshop.sueddeutsche.de" />
+	<target host="trauer.sueddeutsche.de" />
+	<target host="weiterbildung.sueddeutsche.de" />
+
+	<target host="jetzt.de" />
+	<target host="www.jetzt.de" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

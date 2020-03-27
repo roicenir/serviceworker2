@@ -1,0 +1,209 @@
+<!--
+	Connection closed:
+		- broadband
+		- faq
+		- m
+		- msupport
+		- mumimo
+		- prod
+		- store
+		- store-ca
+		- support-origin
+		- uat-www-origin
+		- www-ae
+		- www-ar
+		- www-at
+		- www-au
+		- www-be
+		- www-bh
+		- www-bo
+		- www-br
+		- www-ca
+		- www-ch
+		- www-cn
+		- www-co
+		- www-cr
+		- www-cs
+		- www-cz
+		- www-de
+		- www-dk
+		- www-dz
+		- www-ee
+		- www-eg
+		- www-es
+		- www-fi
+		- www-fr
+		- www-gh
+		- www-hk
+		- www-hu
+		- www-id
+		- www-ie
+		- www-in
+		- www-is
+		- www-it
+		- www-jo
+		- www-ke
+		- www-kr
+		- www-kw
+		- www-lb
+		- www-lt
+		- www-lv
+		- www-ma
+		- www-mk
+		- www-mu
+		- www-mx
+		- www-my
+		- www-nl
+		- www-no
+		- www-nz
+		- www-om
+		- www-origin
+		- www-pa
+		- www-ph
+		- www-pk
+		- www-pl
+		- www-pt
+		- www-py
+		- www-qa
+		- www-ro
+		- www-ru
+		- www-sa
+		- www-se
+		- www-sg
+		- www-si
+		- www-sk
+		- www-th
+		- www-tn
+		- www-tr
+		- www-uk
+		- www-uy
+		- www-ve
+		- www-vn
+		- www-za
+		- www1
+
+	Connection timed out:
+		- alert
+		- alert-stage
+		- auth
+		- client1s
+		- client1s-stage
+		- client2s
+		- client2s-stage
+		- commerce-stage
+		- connect-stage
+		- csr
+		- directory
+		- downloads
+		- downloads-auth2
+		- downloads-qa
+		- extender
+		- hcsetup-stage
+		- homecentral-stage
+		- jira-external
+		- ld
+		- nmreports
+		- nmreports-stage
+		- pg
+		- ra
+		- ra-stage
+		- ras
+		- ras-stage
+		- redirect
+		- redirect-stage
+		- resources-www
+		- search
+		- search-auth2
+		- search-qa
+		- secure
+		- services
+		- services-stage
+		- smoke
+		- start
+		- support-auth2
+		- support-qa
+		- var
+		- vendors
+		- vendors-stage
+		- websearch
+		- websearch-stage
+		- websearch1
+		- ws
+		- ws-auth2
+		- ws-qa
+		- www-auth2
+
+	Mismatched:
+		- beta
+		- cache-www
+		- cdn-www
+		- download
+		- forums
+		- forums-tac
+		- lyncdiscover
+		- msoid
+		- router
+		- sip
+		- wnc
+		- eu.wnc
+		- wnc-eu
+		- wnc-event
+		- wnc-event-eu
+		- wnc-server
+
+	Operation timed out:
+		- connect
+		- developers
+		- go
+		- go-stage
+		- remote
+		- st-aws
+		- tac
+		- ui
+		- us-firmware
+
+	Incomplete certificate chain:
+		- qa
+		- update
+		- update-qa
+		- update-stage
+
+	Expired:
+		- support-stg
+		- www-stg
+
+	Connection refused:
+		- autodiscover
+
+	SSL handshake error:
+		- wnc-server-eu
+-->
+<ruleset name="Linksys.com">
+	<target host="linksys.com" />
+	<target host="www.linksys.com" />
+	<target host="business.linksys.com" />
+	<target host="community.linksys.com" />
+	<target host="community-stage.linksys.com" />
+	<target host="csc.linksys.com" />
+	<target host="friends.linksys.com" />
+	<target host="hybris1.linksys.com" />
+	<target host="hybris2.linksys.com" />
+	<target host="hybris3.linksys.com" />
+	<target host="hybris4.linksys.com" />
+	<target host="hybris5.linksys.com" />
+	<target host="hybris6.linksys.com" />
+	<target host="kb.linksys.com" />
+	<target host="partnerportal.linksys.com" />
+	<target host="promotions.linksys.com" />
+	<target host="rewards.linksys.com" />
+	<target host="sociallogin.linksys.com" />
+	<target host="support.linksys.com" />
+	<target host="uat-www.linksys.com" />
+	<target host="update1.linksys.com" />
+	<target host="update1-stage.linksys.com" />
+	<target host="varsite.linksys.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

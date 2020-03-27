@@ -1,0 +1,14 @@
+<ruleset name="Asciinema.org">
+
+	<target host="asciinema.org" />
+	<target host="www.asciinema.org" />
+	<target host="blog.asciinema.org" />
+	<target host="discourse.asciinema.org" />
+	<target host="staging.asciinema.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

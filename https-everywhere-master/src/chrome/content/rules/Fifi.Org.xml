@@ -1,0 +1,15 @@
+<!--
+	Nonfunctional subdomains:
+
+		- www	(shows secure)
+
+-->
+<ruleset name="Fifi.Org (partial)" default_off="self-signed">
+
+	<target host="secure.fifi.org" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

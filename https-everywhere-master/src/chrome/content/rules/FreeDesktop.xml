@@ -1,0 +1,55 @@
+<!--
+	Mismatched:
+		- download.freedesktop.org
+		- sitewranglers.freedesktop.org
+		- swfdec.freedesktop.org
+		- tango.freedesktop.org
+-->
+<ruleset name="freedesktop.org (partial)">
+	<target host="freedesktop.org" />
+	<target host="www.freedesktop.org" />
+	<target host="apoc.freedesktop.org" />
+	<target host="bugs.freedesktop.org" />
+	<target host="bugzilla.freedesktop.org" />
+	<target host="cgit.freedesktop.org" />
+	<target host="dbus.freedesktop.org" />
+	<target host="dri.freedesktop.org" />
+	<target host="fontconfig.freedesktop.org" />
+	<target host="freetype.freedesktop.org" />
+	<target host="gitlab.freedesktop.org" />
+	<target host="gstreamer.freedesktop.org" />
+	<target host="gypsy.freedesktop.org" />
+	<target host="hal.freedesktop.org" />
+	<target host="icon-theme.freedesktop.org" />
+	<target host="ldtp.freedesktop.org" />
+	<target host="libbsd.freedesktop.org" />
+	<target host="libdlo.freedesktop.org" />
+	<target host="liboil.freedesktop.org" />
+	<target host="libopenraw.freedesktop.org" />
+	<target host="libspectre.freedesktop.org" />
+	<target host="lists.freedesktop.org" />
+	<target host="mesa.freedesktop.org" />
+	<target host="nice.freedesktop.org" />
+	<target host="nouveau.freedesktop.org" />
+	<target host="patchwork.freedesktop.org" />
+	<target host="people.freedesktop.org" />
+	<target host="piglit.freedesktop.org" />
+	<target host="planet.freedesktop.org" />
+	<target host="pm-utils.freedesktop.org" />
+	<target host="poppler.freedesktop.org" />
+	<target host="portland.freedesktop.org" />
+	<target host="secure.freedesktop.org" />
+	<target host="specifications.freedesktop.org" />
+	<target host="standards.freedesktop.org" />
+	<target host="telepathy.freedesktop.org" />
+	<target host="wayland.freedesktop.org" />
+	<target host="wiki.freedesktop.org" />
+	<target host="xcb.freedesktop.org" />
+	<target host="xorg.freedesktop.org" />
+
+	<test url="http://people.freedesktop.org/~airlied/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

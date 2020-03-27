@@ -1,0 +1,46 @@
+<!--
+	For other Gannett Company coverage, see Gannett-Company.xml.
+
+	Non-functional hosts:
+		Timeout was reached:
+		- classifieds.floridatoday.com
+		- classifieds-prod.floridatoday.com
+
+		SSL peer certificate was not OK:
+		- findnsave.floridatoday.com
+
+		Incomplete certificate chain error:
+		- local.floridatoday.com
+
+		Mixed content blocking (MCB) triggered:
+		- blogs.floridatoday.com
+		- events.floridatoday.com
+		- realestate.floridatoday.com
+		- solutions.floridatoday.com
+-->
+<ruleset name="Florida Today">
+	<target host="floridatoday.com" />
+	<target host="www.floridatoday.com" />
+	<target host="account.floridatoday.com" />
+	<target host="amp.floridatoday.com" />
+	<target host="archive.floridatoday.com" />
+	<target host="cm.floridatoday.com" />
+	<target host="content-static.floridatoday.com" />
+	<target host="data.floridatoday.com" />
+	<target host="help.floridatoday.com" />
+	<target host="jobs.floridatoday.com" />
+	<target host="mocux.floridatoday.com" />
+	<target host="offers.floridatoday.com" />
+	<target host="phxux.floridatoday.com" />
+	<target host="profile.floridatoday.com" />
+	<target host="rssfeeds.floridatoday.com" />
+	<target host="static.floridatoday.com" />
+		<test url="http://static.floridatoday.com/privacy/" />
+	<target host="tickets.floridatoday.com" />
+	<target host="uw-media.floridatoday.com" />
+	<target host="ux.floridatoday.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

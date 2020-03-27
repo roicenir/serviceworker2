@@ -1,0 +1,7 @@
+<ruleset name="Noembed.com" >
+	<target host="noembed.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

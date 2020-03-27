@@ -1,0 +1,21 @@
+<!--
+	^uni-weimar.de doesn't exist.
+
+
+	Targets solely for wildcard cookies:
+
+		- *.webmail.uni-weimar.de
+
+-->
+<ruleset name="Bauhaus-University Weimar (partial)">
+
+	<target host="webmail.uni-weimar.de" />
+	<target host="www.uni-weimar.de" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

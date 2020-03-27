@@ -1,0 +1,15 @@
+<!--
+	!www does not exist
+
+-->
+<ruleset name="ESI">
+
+	<target host="www.esi.dz" />
+
+
+	<securecookie host="^(?:www)?\.esi\.dz$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

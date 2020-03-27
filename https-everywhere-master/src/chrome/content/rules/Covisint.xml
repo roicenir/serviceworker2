@@ -1,0 +1,24 @@
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://covisint.com/ (200) => https://covisint.com/ (500)
+	See Compuware.xml for other Compuware coverage.
+
+-->
+<ruleset name="Covisint">
+
+	<target host="covisint.com" />
+	<target host="portal.covisint.com" />
+	<target host="www.covisint.com" />
+	<target host="support.covisint.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+
+	<!--	reset, redirects like so over http.	-->
+	<rule from="^http://support\.covisint\.com/"
+		to="https://portal.covisint.com/web/support/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

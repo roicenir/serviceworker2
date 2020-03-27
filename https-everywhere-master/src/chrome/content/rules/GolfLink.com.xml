@@ -1,0 +1,14 @@
+<!--
+	For other Demand Media coverage, see Demand-Media.xml.
+
+	Non-functional hosts
+		Timeout was reached:
+		- blog.golflink.com
+-->
+<ruleset name="GolfLink.com (partial)">
+	<target host="golflink.com" />
+	<target host="www.golflink.com" />
+	<target host="cdn-www.golflink.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,24 @@
+<!--
+	Mixed content:
+
+		- Images on www from files *
+
+	* Secured by us
+
+-->
+<ruleset name="Vogel.de">
+
+	<target host="vogel.de" />
+	<target host="files.vogel.de" />
+	<target host="images.vogel.de" />
+	<target host="www.vogel.de" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^(?:www\.)?vogel\.de$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

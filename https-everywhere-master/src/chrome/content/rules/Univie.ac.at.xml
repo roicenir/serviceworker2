@@ -1,0 +1,120 @@
+<!--
+	University of Vienna
+
+
+	Nonfunctional subdomains:
+
+		- rna.tbi *
+
+	* Refused
+
+
+	Partially covered subdomains:
+
+		- blog ¹
+		- data ²
+
+	¹ Avoiding false/broken MCB
+	² index.html redirects to http
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- aufnahmeverfahren
+		- bibliothek
+		- www.bpc
+		- chemie
+		- cs
+		- ctl
+		- forschungsnewsletter
+		- informatik
+		- international
+		- intra
+		- kalender
+		- medienportal
+		- online
+		- public
+		- sbterminals
+		- studentpoint
+		- studien-lehrwesen
+		- studienservice-lehrwesen
+		- www.tbi
+		- univis
+		- weblogin
+		- webmail
+		- zid
+
+
+	Mixed content:
+
+		- css on blog from $self *
+
+		- Images, on:
+
+			- bibliothek from $self *
+			- blog from $self *
+			- www from $self *
+
+		- favicons, on:
+
+			- www.bpc from $self *
+			- forschungsnewsletter from $self *
+			- international from $self *
+			- kalender from $self *
+			- public and univis from public *
+
+	* Secured by us
+
+-->
+<ruleset name="Univie.ac.at (partial)">
+
+	<target host="univie.ac.at" />
+	<target host="aufnahmeverfahren.univie.ac.at" />
+	<target host="bibliothek.univie.ac.at" />
+	<target host="blog.univie.ac.at" />
+	<target host="www.bpc.univie.ac.at" />
+	<target host="cs.univie.ac.at" />
+	<target host="ctl.univie.ac.at" />
+	<target host="data.univie.ac.at" />
+	<target host="forschungsnewsletter.univie.ac.at" />
+	<target host="informatik.univie.ac.at" />
+	<target host="international.univie.ac.at" />
+	<target host="intra.univie.ac.at" />
+	<target host="kalender.univie.ac.at" />
+	<target host="medienportal.univie.ac.at" />
+	<target host="online.univie.ac.at" />
+	<target host="public.univie.ac.at" />
+	<target host="sbterminals.univie.ac.at" />
+	<target host="studentpoint.univie.ac.at" />
+	<target host="studien-lehrwesen.univie.ac.at" />
+	<target host="studienservice-lehrwesen.univie.ac.at" />
+	<target host="www.tbi.univie.ac.at" />
+	<target host="univis.univie.ac.at" />
+	<target host="weblogin.univie.ac.at" />
+	<target host="webmail.univie.ac.at" />
+	<target host="www.univie.ac.at" />
+	<target host="zid.univie.ac.at" />
+		<!--
+			Avoid false/broken MCB:
+						-->
+		<exclusion pattern="^http://blog\.univie\.ac\.at/+(?!backend/|favicon\.ico)" />
+		<!--
+			Redirect to http:
+						-->
+		<exclusion pattern="^http://data\.univie\.ac\.at/index\.html" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(aufnahmeverfahren|www\.bpc|chemie|cs|ctl|forschungsnewsletter|informatik|international|kalender|medienportal|public|sbterminals|studentpoint|studien-lehrwesen|studienservice-lehrwesen|www|zid)\.univie\.ac\.at$" name="^fe_typo_user$" /-->
+	<!--securecookie host="^univis\.univie\.ac\.at$" name="^(JSESSIONID|aceid-\d+)$" /-->
+	<!--securecookie host="^weblogin\.univie\.ac\.at$" name="^(_idp_authn_lc_key|JSESSIONID)$" /-->
+
+	<securecookie host="^(?:aufnahmeverfahren|www\.bpc|chemie|cs|ctl|forschungsnewsletter|informatik|international|kalender|medienportal|public|sbterminals|studentpoint|studien(?:service)?-lehrwesen|univis|weblogin|www|zid)\.univie\.ac\.at$" name=".+" />
+
+
+	<rule from="^http://((?:aufnahmeverfahren|bibliothek|blog|www\.bpc|cs|ctl|data|forschungsnewsletter|informatik|international|intra|kalender|medienportal|online|public|sbterminals|studentpoint|studien(?:service)?-lehrwesen|www\.tbi|univis|weblogin|webmail|www|zid)\.)?univie\.ac\.at//"
+		to="https://$1univie.ac.at/" />
+
+</ruleset>

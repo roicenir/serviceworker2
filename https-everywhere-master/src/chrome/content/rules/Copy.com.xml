@@ -1,0 +1,37 @@
+<!--
+	Nonfunctional subdomains:
+
+		- blog	(dropped)
+
+
+	Problematic subdomains:
+
+		- support	(mismatched, CN: *.zendesk.com)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- apiweb
+		- next
+		- support	(→ copy.zendesk.com)
+
+-->
+<ruleset name="Copy.com (partial)">
+
+	<target host="copy.com" />
+	<target host="apiweb.copy.com" />
+	<target host="next.copy.com" />
+	<target host="www.copy.com" />
+	<target host="support.copy.com" />
+
+
+	<securecookie host="^(?:next|www)?\.copy\.com$" name=".+" />
+
+
+
+	<rule from="^http://support\.copy\.com/"
+		to="https://copy.zendesk.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

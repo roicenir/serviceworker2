@@ -1,0 +1,58 @@
+<!--
+	Self-signed certificate:
+		adopt.nature.org
+		change.nature.org
+		dr.nature.org
+		earthday.nature.org
+		help.nature.org
+		m.nature.org
+		my.nature.org
+		origin-stage.nature.org
+		origin-www.nature.org
+		search.nature.org (http redirects to www.nature.org)
+		shop.nature.org
+		m.support.nature.org (http redirects to www.nature.org)
+
+	Mismatched:
+		blog.nature.org
+		giftplanning.nature.org
+		jobs.nature.org
+
+	Expired certificate:
+		future.nature.org
+		secure.nature.org (http redirects to www.nature.org)
+
+	Broken chain cert:
+		nature.org
+		voice.nature.org
+
+	Different content http/https
+		magazine.nature.org
+		magazinestage.nature.org
+		naturerocksstage.nature.org
+
+	Mixed content:
+		water.nature.org
+
+	Problematic:
+		support.nature.org (see https://github.com/EFForg/https-everywhere/issues/14523)
+
+-->
+<ruleset name="Nature.org">
+
+	<target host="nature.org" />
+	<target host="www.nature.org" />
+	<target host="blog.nature.org" />
+	<target host="careers.nature.org" />
+	<target host="gift.nature.org" />
+	<target host="gifts.nature.org" />
+	<target host="global.nature.org" />
+	<target host="global.staging.nature.org" />
+	<target host="stage.nature.org" />
+
+	<rule from="^http://nature\.org/"
+		to="https://www.nature.org/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,30 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)
+		- auto
+		- cars
+		- coches
+		- media
+		- static
+		- voitures
+
+-->
+<ruleset name="Volotea.com">
+
+	<target host="volotea.com" />
+	<target host="auto.volotea.com" />
+	<target host="cars.volotea.com" />
+	<target host="coches.volotea.com" />
+	<target host="media.volotea.com" />
+	<target host="static.volotea.com" />
+	<target host="voitures.volotea.com" />
+	<target host="www.volotea.com" />
+
+
+	<securecookie host="^(?:www)?\.volotea\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

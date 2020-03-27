@@ -1,0 +1,35 @@
+<!--
+	Nonfunctional domains:
+
+		- ir.mandtbank.com
+
+
+	Problematic domains:
+
+		- (www.)mandtbank.com	(mismatched, CN: www.mtb.com)
+		- mtb.com		(cert only matches www)
+
+-->
+<ruleset name="M&amp;T Bank (partial)">
+
+	<target host="onlinebanking.mandtbank.com" />
+	<target host="mtb.com" />
+	<target host="www.mtb.com" />
+	<target host="applynow.mtb.com" />
+	<target host="services.mtb.com" />
+	<target host="webmail.mtb.com" />
+	<target host="mandtbank.spatialpoint.com" />
+
+
+	<securecookie host="^onlinebanking\.mandtbank\.com$" name=".+" />
+	<securecookie host="^.*\.mtb\.com$" name=".+" />
+
+
+
+	<rule from="^http://(?:www\.)?mtb\.com/"
+		to="https://www.mtb.com/" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

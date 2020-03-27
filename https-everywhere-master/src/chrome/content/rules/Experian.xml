@@ -1,0 +1,18 @@
+<!--
+	Other Experian rulesets:
+
+		- Audience_IQ.com.xml
+		- CheetahMail.xml
+		- Chtah.net.xml
+		- Fagms.net.xml
+
+-->
+<ruleset name="Experian (partial)">
+
+	<target host="experian.com" />
+	<target host="www.experian.com" />
+	<target host="experian.experiandirect.com" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

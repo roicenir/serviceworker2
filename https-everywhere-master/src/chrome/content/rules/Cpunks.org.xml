@@ -1,0 +1,9 @@
+<ruleset name="Cpunks.org" >
+	<target host="cpunks.org" />
+	<target host="www.cpunks.org" />
+	<target host="lists.cpunks.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

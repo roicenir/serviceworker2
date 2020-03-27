@@ -1,0 +1,25 @@
+<!--
+	For other UK government coverage, see GOV.UK.xml.
+
+	Cherwell District Council
+
+	Non-functional hosts
+		Timeout was reached:
+		- npa.cherwell.gov.uk
+		- your.cherwell.gov.uk
+
+		SSL peer certificate was not OK:
+		- consult.cherwell.gov.uk
+
+		Different content:
+		- modgov.cherwell.gov.uk
+		- revenuesbenefits.cherwell.gov.uk
+-->
+<ruleset name="Cherwell.gov.uk">
+	<target host="cherwell.gov.uk" />
+	<target host="www.cherwell.gov.uk" />
+	<target host="portal.cherwell.gov.uk" />
+	<target host="www.publicaccess.cherwell.gov.uk" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

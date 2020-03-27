@@ -1,0 +1,19 @@
+<!--
+	Related:
+		CDNetworks.com.xml
+		CDNetworks.com.sg.xml
+
+	Customer specific subdomains:*.sslcs.cdngc.net
+
+	409:
+		avatrade.sslcs.cdngc.net	https://avatrade.sslcs.cdngc.net/index_files/avatrade.jpg
+-->
+<ruleset name="cdngc.net">
+	<target host="ssl.cdngc.net" />
+	<target host="ssl2.cdngc.net" />
+	<target host="lagentprofailover.sslcs.cdngc.net" />
+	<target host="luxa.sslcs.cdngc.net" />
+	<target host="voyagin.sslcs.cdngc.net" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

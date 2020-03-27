@@ -1,0 +1,16 @@
+<ruleset name="Safe-mail.net">
+
+	<target host="safe-mail.net" />
+	<target host="www.safe-mail.net" />
+	<target host="apple.safe-mail.net" />
+	<target host="dekel.safe-mail.net" />
+	<target host="mail.safe-mail.net" />
+	<target host="mango.safe-mail.net" />
+	<target host="orange.safe-mail.net" />
+	<target host="pitango.safe-mail.net" />
+	<target host="pop.safe-mail.net" />
+	<target host="tamar.safe-mail.net" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

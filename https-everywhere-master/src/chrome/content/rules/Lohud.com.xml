@@ -1,0 +1,19 @@
+<!--
+	For other Gannett Company coverage, see Gannett-Company.xml.
+
+	Non-functional hosts
+		Mismatched:
+		- cmsimg.lohud.com
+-->
+<ruleset name="lohud.com (partial)">
+
+	<target host="lohud.com" />
+	<target host="www.lohud.com" />
+	<target host="user.lohud.com" />
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<ruleset name="Performance Horizon Group" platform="mixedcontent">
+
+	<target host="performancehorizon.com" />
+	<target host="www.performancehorizon.com" />
+	<target host="prf.hn" />
+	<!--	* for cross-domain cookie.	-->
+	<target host="www.prf.hn" />
+
+
+	<securecookie host="^\.prf\.hn$" name=".+" />
+
+
+
+	<!--	Cert doesn't match www.
+		Included on 3rd-party websites.	-->
+	<rule from="^http://(?:www\.)?prf\.hn/"
+		to="https://prf.hn/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

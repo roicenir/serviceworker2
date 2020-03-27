@@ -1,0 +1,27 @@
+<!--
+	Invalid certificate:
+		getdeb.megaglest.org
+		snapshots.megaglest.org
+		softcoder.megaglest.org
+
+	Secure connection failed:
+		changelog.megaglest.org
+		faq.megaglest.org
+		paste.megaglest.org
+		readme.megaglest.org
+		transifex.megaglest.org
+		wiki.megaglest.org
+
+-->
+<ruleset name="MegaGlest.org">
+	<target host="megaglest.org" />
+	<target host="www.megaglest.org" />
+	<target host="archer.megaglest.org" />
+	<target host="ci.megaglest.org" />
+	<target host="docs.megaglest.org" />
+	<target host="filux.megaglest.org" />
+	<target host="forum.megaglest.org" />
+	<target host="titi.megaglest.org" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

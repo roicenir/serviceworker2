@@ -1,0 +1,28 @@
+<!--
+	Invalid certificate:
+		- kigbg
+		- policespiesoutoflives
+
+	Expired:
+		- lagrandeourse
+-->
+<ruleset name="Potager.org">
+	<target host="potager.org" />
+	<target host="www.potager.org" />
+	<target host="awasmifee.potager.org" />
+	<target host="bla.potager.org" />
+	<target host="community.potager.org" />
+	<target host="coquelicot.potager.org" />
+	<target host="help.potager.org" />
+	<target host="jardindesmaraichers.potager.org" />
+	<target host="lentilleres.potager.org" />
+	<target host="leschouxlents.potager.org" />
+	<target host="mail.potager.org" />
+	<target host="mire.potager.org" />
+	<target host="pad.potager.org" />
+
+	<rule from="^http://www\.potager\.org/"
+		to="https://potager.org/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

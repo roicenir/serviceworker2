@@ -1,0 +1,17 @@
+<!-- This ruleset is experimental. If you experience problems please
+	 open an issue at https://github.com/kargig/https-everywhere-greek-rules -->
+
+<ruleset name="Greek-gov">
+  <target host="lists.grnet.gr" />
+  <target host="lists.noc.grnet.gr" />
+  <target host="www.noc.grnet.gr" />
+  <target host="www1.gsis.gr" />
+  <target host="login.gsis.gr" />
+  <target host="service.eudoxus.gr" />
+
+	<securecookie host="^(?:lists|noc|.*\.noc)\.grnet\.gr$" name=".+" />
+	<securecookie host="^(?:.*\.)?gsis\.gr$" name=".+" />
+	<securecookie host="^service\.eudoxus\.gr$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

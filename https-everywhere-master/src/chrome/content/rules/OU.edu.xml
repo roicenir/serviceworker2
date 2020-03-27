@@ -1,0 +1,35 @@
+<!--
+	Non-functional hosts
+		Couldn't connect to server:
+		- tulsa.ou.edu
+
+		SSL peer certificate was not OK:
+		- forms.ou.edu
+		- heapofbirds.ou.edu
+		- platform.ou.edu
+-->
+<ruleset name="OU.edu (partial)">
+	<target host="ou.edu" />
+	<target host="www.ou.edu" />
+	<target host="account.ou.edu" />
+	<target host="benefitsenrollment.ou.edu" />
+	<target host="canvas.ou.edu" />
+	<target host="cceit.ou.edu" />
+	<target host="checksheets.ou.edu" />
+	<target host="financialaid.ou.edu" />
+	<target host="guides.ou.edu" />
+	<target host="hr.ou.edu" />
+	<target host="apps.hr.ou.edu" />
+	<target host="www.hr.ou.edu" />
+	<target host="janux.ou.edu" />
+	<target host="jobs.ou.edu" />
+	<target host="learn.ou.edu" />
+	<target host="market.ou.edu" />
+	<target host="meteorology.ou.edu" />
+	<target host="ozone.ou.edu" />
+	<target host="sso.ou.edu" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

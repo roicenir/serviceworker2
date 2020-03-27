@@ -1,0 +1,30 @@
+<!--
+	CDN buckets:
+
+		- s3.amazonaws.com/production.mediajoint.prx.org/
+
+		- d11pcyef3meeu9.cloudfront.net
+
+			- assets1.prx.org
+
+		- prx.zendesk.com
+
+
+	Nonfunctional subdomains:
+
+		- count		(shows RHEL test page)
+
+-->
+<ruleset name="PRX (partial)">
+
+	<target host="prx.org" />
+	<target host="www.prx.org" />
+	<target host="assets1.prx.org" />
+
+
+	<securecookie host="^\.prx\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

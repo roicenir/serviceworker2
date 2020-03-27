@@ -1,0 +1,30 @@
+<!--
+	Invalid certificate:
+		rbdownload.haxx.se
+		rockbox.haxx.se
+		rockbuild.haxx.se
+		spindly.haxx.se
+
+-->
+<ruleset name="Haxx.se">
+
+	<target host="haxx.se" />
+	<target host="www.haxx.se" />
+	<target host="anja.haxx.se" />
+	<target host="bjorn.haxx.se" />
+	<target host="bookcurl.haxx.se" />
+	<target host="c-ares.haxx.se" />
+	<target host="cool.haxx.se" />
+	<target host="curl.haxx.se" />
+	<target host="daniel.haxx.se" />
+	<target host="ec.haxx.se" />
+	<target host="kjell.haxx.se" />
+	<target host="linus.haxx.se" />
+	<target host="svn.haxx.se" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

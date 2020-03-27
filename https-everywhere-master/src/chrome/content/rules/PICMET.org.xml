@@ -1,0 +1,8 @@
+<ruleset name="PICMET.org">
+	<target host="picmet.org" />
+	<target host="www.picmet.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

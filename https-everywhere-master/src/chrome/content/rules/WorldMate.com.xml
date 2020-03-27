@@ -1,0 +1,22 @@
+<!--
+	^: cert only matches www
+
+-->
+<ruleset name="WorldMate.com">
+
+	<target host="worldmate.com" />
+	<target host="www.worldmate.com" />
+	<target host="cdn.worldmate.com" />
+
+
+	<!--	Secured by server:
+					-->
+	<!--securecookie host="^www\.worldmate\.com$" name="^NSC_Xfc-\w+_\w+$" /-->
+
+
+	<rule from="^http://(?:www\.)?worldmate\.com/"
+		to="https://www.worldmate.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

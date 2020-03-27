@@ -1,0 +1,15 @@
+<!--
+	(www.): 403
+
+-->
+<ruleset name="Waeckerlin.org">
+
+	<target host="waeckerlin.org" />
+	<target host="marc.waeckerlin.org" />
+	<target host="www.waeckerlin.org" />
+
+
+	<rule from="^http://(?:marc\.|www\.)?waeckerlin\.org/"
+		to="https://marc.waeckerlin.org/" />
+
+</ruleset>

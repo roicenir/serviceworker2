@@ -1,0 +1,23 @@
+<!--
+	Nonfunctional:
+
+		- blog.rememberthemilk.com	(cert: *.medialayer.net; shows status message)
+		- status.rememberthemilk.com	(times out)
+		- blog.rememberthemilk.jp	(cert: *.medialayer.net; shows status message)
+
+-->
+<ruleset name="Remember the Milk">
+	<target host="rememberthemilk.com" />
+	<target host="api.rememberthemilk.com" />
+	<target host="rememberthemilk.jp" />
+	<target host="www.rememberthemilk.jp" />
+	<target host="s1.rtmcdn.net" />
+	<target host="s2.rtmcdn.net" />
+	<target host="s3.rtmcdn.net" />
+	<target host="s4.rtmcdn.net" />
+
+	<securecookie host="^\.rememberthemilk\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>
+

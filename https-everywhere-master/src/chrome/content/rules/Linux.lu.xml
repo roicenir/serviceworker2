@@ -1,0 +1,31 @@
+<!--
+	For other Linux User Group Luxembourg coverage, see LiLux.nl.xml.
+
+
+	Problematic subdomains:
+
+		- (www.)	(works; mismatched, CN: www.lilux.lu)
+
+
+	Fully covered subdomains:
+
+		- (www.)	(→ www.lilux.lu)
+		- (www.)udpcast
+
+-->
+<ruleset name="Linux.lu (partial)">
+
+	<target host="linux.lu" />
+	<target host="www.linux.lu" />
+	<target host="udpcast.linux.lu" />
+	<target host="www.udpcast.linux.lu" />
+
+
+	<!--	Server does not drop path:
+						-->
+	<rule from="^http://(?:www\.)?linux\.lu/"
+		to="https://www.lilux.lu/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

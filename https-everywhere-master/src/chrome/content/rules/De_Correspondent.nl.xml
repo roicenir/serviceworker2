@@ -1,0 +1,18 @@
+<ruleset name="De Correspondent.nl">
+
+	<target host="decorrespondent.nl" />
+	<target host="dynamic.decorrespondent.nl" />
+	<target host="static.decorrespondent.nl" />
+	<target host="www.decorrespondent.nl" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^decorrespondent\.nl$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^decorrespondent\.nl$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,29 @@
+<!--
+	Invalid certificate:
+		mailer.heatmap.me
+		shopify-app.heatmap.it
+
+	Refused:
+		eu7.heatmap.it
+-->
+<ruleset name="Heatmap">
+
+	<target host="heatmap.me" />
+	<target host="www.heatmap.me" />
+
+	<target host="heatmap.it" />
+	<target host="www.heatmap.it" />
+	<target host="eu1.heatmap.it" />
+	<target host="eu4.heatmap.it" />
+	<target host="eu5.heatmap.it" />
+	<target host="eu6.heatmap.it" />
+	<target host="eu8.heatmap.it" />
+	<target host="eu9.heatmap.it" />
+	<target host="us2.heatmap.it" />
+	<target host="us4.heatmap.it" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"	to="https:" />
+
+</ruleset>

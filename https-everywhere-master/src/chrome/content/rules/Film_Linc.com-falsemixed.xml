@@ -1,0 +1,15 @@
+<!--
+	For rules not causing false/broken MCB, see Film_Linc.com.xml.
+
+-->
+<ruleset name="Film Linc.com (false MCB)" platform="mixedcontent">
+
+	<target host="www.filmlinc.com" />
+
+
+	<securecookie host="^(?:www)?\.filmlinc\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

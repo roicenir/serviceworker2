@@ -1,0 +1,73 @@
+<!--
+	Other related rulesets:
+		- Fool-CDN.com.xml
+		- Motley-Fool-Australia.xml
+		- Motley-Fool-Canada.xml
+		- Motley-Fool-Germany.xml
+		- Motley-Fool-Singapore.xml
+		- Motley-Fool-UK.xml
+
+
+	Non-functional subdomains:
+		- autodiscover	(r)
+		- bbnvoting	(t)
+		- boards	(h)
+		- caps		(h)
+		- staging.fool-iq	(m)
+		- insight	(e)
+		- test.investigator	(m)
+		- m		(h)
+		- mockup.m	(m)
+		- my	(h)
+		- offers	(m)
+		- passwordreset	(m)
+		- social	(m)
+		- staging.tmf-mobile-api	(m)
+		- staging.www	(t)
+
+	e: expired certificate
+	h: http redirect
+	i: invalid certificate chain
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+
+	Host has wildcard dns.
+-->
+<ruleset name="The Motley Fool">
+
+	<target host="fool.com" />
+	<target host="www.fool.com" />
+	<target host="api.fool.com" />
+	<target host="beta.fool.com" />
+	<target host="careers.fool.com" />
+	<target host="cms.fool.com" />
+	<target host="consenter-center-de.fool.com" />
+	<target host="staging.consenter-center-de.fool.com" />
+	<target host="consenter-center-uk.fool.com" />
+	<target host="staging.consenter-center-uk.fool.com" />
+	<target host="culture.fool.com" />
+	<target host="disclosure.fool.com" />
+	<target host="farmteam.fool.com" />
+	<target host="feeds.fool.com" />
+	<target host="g.fool.com" />
+	<target host="infotron.fool.com" />
+	<target host="infotron-admin.fool.com" />
+	<target host="infotron-splitter.fool.com" />
+	<target host="infotron-track.fool.com" />
+	<target host="iq.fool.com" />
+	<target host="newsletters.fool.com" />
+	<target host="onesupport.fool.com" />
+	<target host="scorecard.fool.com" />
+	<target host="supernovasupport.fool.com" />
+	<target host="support.fool.com" />
+	<target host="tmf-mobile-api.fool.com" />
+	<target host="wiki.fool.com" />
+	<target host="preview.www.fool.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

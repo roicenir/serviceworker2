@@ -1,0 +1,8 @@
+<ruleset name="FooFighters">
+  <target host="foofighters.com" />
+  <target host="www.foofighters.com" />
+
+  <securecookie host=".+" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

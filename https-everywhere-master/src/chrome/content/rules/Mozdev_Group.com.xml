@@ -1,0 +1,48 @@
+<!--
+	Nonfunctional subdomains:
+
+		- openkiosk *
+
+	* Refused
+
+
+	Problematic subdomains:
+
+		- jslib *
+
+	* Mismatched, CN: www.mozdev.org
+
+
+	Mixed content:
+
+		- Bug on jslib from www.google.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Mozdev Group.com (partial)">
+
+	<target host="mozdevgroup.com" />
+	<target host="air.mozdevgroup.com" />
+	<target host="emory.mozdevgroup.com" />
+	<target host="fresenius.mozdevgroup.com" />
+	<target host="ipcache.mozdevgroup.com" />
+	<target host="measurement.mozdevgroup.com" />
+	<target host="okcd.mozdevgroup.com" />
+	<target host="vantage.mozdevgroup.com" />
+	<target host="www.mozdevgroup.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(air|emory|fresenius|ipcache|measurement|okcd|vantage)\.mozdevgroup\.com$" name="^PHPSESSID$" /-->
+
+	<securecookie host="^(?:air|emory|fresenius|ipcache|measurement|okcd|vantage)\.mozdevgroup\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+	<!--rule from="^http://jslib\.mozdevgroup\.com/"
+		to="https://jslib.mozdev.org/" /-->
+
+</ruleset>

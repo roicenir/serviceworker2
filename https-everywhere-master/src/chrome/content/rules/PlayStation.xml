@@ -1,0 +1,122 @@
+<!--
+	For other Sony coverage, see Sony.xml.
+
+
+	CDN buckets:
+
+		- a248.e.akamai.net/=/4111/272091/1d/sceastorage.download.akamai.com/263133/
+
+			- cdn.us.playstation.com
+
+		- playstation.custhelp.com
+		- playstationna.i.lithium.com
+
+
+	Nonfunctional hosts in *playstation.com:
+
+		- blog.eu ᵈ
+		- community.us (refused)
+		- mypsn.eu ᵈ
+		- on.us (timeout)
+		- fp.profiles.us ᵈ
+
+	ᵈ Dropped
+
+
+	Problematic hosts in *playstation.com:
+
+		- ^ (mismatched)
+		- metrics.aem ᵐ
+		- uk ᵐ
+		- cdn.us ³
+		- service1.us ᵉ
+		- www.us ᵐ
+
+	ᵐ Mismatched
+	ᴬ Akamai
+	³ 403
+	ᵉ Expired
+
+
+	These altnames don't exist:
+
+		- www.hardware.support.eu.playstation.com
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .playstation.com
+		- io.playstation.com
+
+
+	Mixed content:
+
+		- css, on:
+
+			- community.us from fonts.googleapis.com *
+
+		- Images, on:
+
+			- community.us from playstationna.i.lithium.com *
+			- community.us from cdn.us.playstation.com *
+			- community.us from $self *
+			- support.us.playstation.com from us.playstation.com
+
+		- Bugs, on:
+
+			- community.us from sonycomputerentertainmentofamerica.122.2o7.net *
+			- www from metrics.aem.playstation.com *
+
+	* Secured by us
+
+-->
+<ruleset name="PlayStation.com (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="playstation.com" />
+	<target host="smetrics.aem.playstation.com" />
+	<target host="asia.playstation.com" />
+	<target host="static.blog.playstation.com" />
+	<target host="docs.playstation.com" />
+
+	<target host="secure.eu.playstation.com" />
+	<target host="assets.software.eu.playstation.com" />
+	<target host="hardware.support.eu.playstation.com" />
+
+	<target host="io.playstation.com" />
+	<target host="www.jp.playstation.com" />
+	<target host="media.playstation.com" />
+	<target host="psmedia.playstation.com" />
+	<target host="status.playstation.com" />
+	<target host="store.playstation.com" />
+
+	<target host="us.playstation.com" />
+	<target host="blog.us.playstation.com" />
+	<target host="secure.cdn.us.playstation.com" />
+	<target host="secure.us.playstation.com" />
+	<!--target host="service1.us.playstation.com" /-->
+	<target host="support.us.playstation.com" />
+
+	<target host="www.playstation.com" />
+
+	<!--	Complications:
+				-->
+	<target host="metrics.aem.playstation.com" />
+	<target host="cdn.us.playstation.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://playstation\.com/"
+		to="https://www.playstation.com/" />
+
+	<rule from="^http://metrics\.aem\.playstation\.com/"
+		to="https://smetrics.aem.playstation.com/" />
+
+	<rule from="^http://cdn\.us\.playstation\.com/"
+		to="https://secure.cdn.us.playstation.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

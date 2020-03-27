@@ -1,0 +1,9 @@
+<ruleset name="SkateMall (partial)" default_off="timeout">
+
+	<target host="skatemall.com" />
+	<target host="www.skatemall.com" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

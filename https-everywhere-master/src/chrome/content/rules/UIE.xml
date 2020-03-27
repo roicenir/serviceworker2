@@ -1,0 +1,8 @@
+<ruleset name="UIE">
+  <target host="uie.com" />
+  <target host="www.uie.com" />
+
+  <securecookie host=".+" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

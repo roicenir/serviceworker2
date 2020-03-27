@@ -1,0 +1,53 @@
+<!--
+	Cert mismatch:
+		- content.zemanta.com
+		- help.zemanta.com
+		- prefs.zemanta.com
+		- reports.zemanta.com
+		- rsscloud.zemanta.com
+
+	Redirect to plain:
+		- (www.)zemanta.com
+
+	Timeout:
+		- dev.zemanta.com
+
+	TLS error:
+		- ada.zemanta.com
+		- adoops.zemanta.com
+		- edward.zemanta.com
+-->
+<ruleset name="Zemanta.com">
+
+	<target host="api.zemanta.com" />
+	<target host="b1-apac1.zemanta.com" />
+	<target host="b1-euc1.zemanta.com" />
+	<target host="b1-lsw-euc1.zemanta.com" />
+	<target host="b1-lsw-use1.zemanta.com" />
+	<target host="b1-us-west-1.zemanta.com" />
+	<target host="b1-use1.zemanta.com" />
+	<target host="b1-use2.zemanta.com" />
+	<target host="b1-usw1.zemanta.com" />
+	<target host="b1.zemanta.com" />
+	<target host="b1t-use1.zemanta.com" />
+	<target host="cookiepixie.zemanta.com" />
+	<target host="fstatic.zemanta.com" />
+	<target host="i.zemanta.com" />
+	<target host="images2.zemanta.com" />
+	<target host="one.zemanta.com" />
+	<target host="oneapi.zemanta.com" />
+	<target host="p1.zemanta.com" />
+	<target host="paid.zemanta.com" />
+	<target host="r1.zemanta.com" />
+	<target host="sapi.zemanta.com" />
+	<target host="static.zemanta.com" />
+	<target host="testr1.zemanta.com" />
+	<target host="thumbs.zemanta.com" />
+	<target host="videos.zemanta.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

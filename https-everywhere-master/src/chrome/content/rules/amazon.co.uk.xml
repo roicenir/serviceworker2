@@ -1,0 +1,48 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+
+
+	Problematic hosts in *amazon.co.uk:
+
+		- m ʳ
+
+	ʳ Refused, preemptable redirect
+-->
+
+<ruleset name="Amazon.co.uk">
+	<target host="amazon.co.uk" />
+	<target host="aan.amazon.co.uk" />
+	<target host="advertising.amazon.co.uk" />
+	<target host="affiliate-program.amazon.co.uk" />
+	<target host="associates.amazon.co.uk" />
+	<target host="ams.amazon.co.uk" />
+	<target host="completion.amazon.co.uk" />
+	<target host="fls-eu.amazon.co.uk" />
+	<target host="kindle.amazon.co.uk" />
+	<target host="local.amazon.co.uk" />
+	<target host="m.amazon.co.uk" />
+	<target host="payments.amazon.co.uk" />
+	<target host="rcm-uk.amazon.co.uk" />
+	<target host="sellercentral.amazon.co.uk" />
+	<target host="services.amazon.co.uk" />
+	<target host="tickets.amazon.co.uk" />
+	<target host="ws.amazon.co.uk" />
+	<target host="www1.amazon.co.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<!--
+		Redirect drops path and forward
+		slash, but not args:
+	-->
+
+	<rule from="^http://m\.amazon\.co\.uk/[^?]*" to="https://www.amazon.co.uk/gp/aw" />
+
+	<test url="http://m.amazon.co.uk/index.htm" />
+
+	<rule from="^http:"	to="https:" />
+
+	<exclusion pattern="^http://associates\.amazon\.co\.uk/$" />
+
+	<test url="http://associates.amazon.co.uk/gp/advertising/api/detail/agreement.html" />
+</ruleset>

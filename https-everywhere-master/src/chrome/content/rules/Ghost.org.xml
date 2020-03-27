@@ -1,0 +1,46 @@
+<!--
+	No working URL known:
+		casper.ghost.org
+		streams.ghost.org
+
+	Invalid certificate:
+		cdn.ghost.org
+		email.ghost.org
+
+	Refused:
+		desktop-updates.ghost.org
+
+-->
+<ruleset name="Ghost.org">
+
+	<target host="ghost.org" />
+	<target host="www.ghost.org" />
+	<target host="academy.ghost.org" />
+	<target host="api.ghost.org" />
+	<target host="apps.ghost.org" />
+	<target host="auth.ghost.org" />
+	<target host="blog.ghost.org" />
+	<target host="count.ghost.org" />
+	<target host="dev.ghost.org" />
+	<target host="docs.ghost.org" />
+	<target host="en.ghost.org" />
+	<target host="forum.ghost.org" />
+	<target host="gscan.ghost.org" />
+	<target host="help.ghost.org" />
+	<target host="ideas.ghost.org" />
+	<target host="marketplace.ghost.org" />
+	<target host="my.ghost.org" />
+	<target host="offline.ghost.org" />
+	<target host="shop.ghost.org" />
+	<target host="slack.ghost.org" />
+	<target host="status.ghost.org" />
+	<target host="support.ghost.org" />
+	<target host="themes.ghost.org" />
+	<target host="updates.ghost.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

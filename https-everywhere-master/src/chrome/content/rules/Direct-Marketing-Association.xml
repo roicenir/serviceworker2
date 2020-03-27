@@ -1,0 +1,10 @@
+<ruleset name="Direct Marketing Association">
+
+	<target host="dma.org.uk" />
+	<target host="www.dma.org.uk" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	!www times out.
+
+-->
+<ruleset name="Dirxion">
+
+	<target host="dirxion.com" />
+	<target host="www.dirxion.com" />
+	<target host="blogs.dirxion.com" />
+
+
+	<securecookie host="^.*\.dirxion\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?dirxion\.com/"
+		to="https://www.dirxion.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

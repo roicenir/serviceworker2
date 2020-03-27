@@ -1,0 +1,13 @@
+<ruleset name="photoprintit.com">
+
+	<target host="as.photoprintit.com" />
+	<target host="cs.photoprintit.com" />
+
+
+	<!--	Tracking cookies:
+					-->	<securecookie host="^as\.photoprintit\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

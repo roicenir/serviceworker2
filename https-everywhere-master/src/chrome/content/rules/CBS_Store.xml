@@ -1,0 +1,20 @@
+<!--
+	For other CBS coverage, see CBS.xml.
+
+	Non-functional hosts:
+		SSL error:
+		- cbsstore.com
+-->
+<ruleset name="CBS Store">
+	<target host="cbsstore.com" />
+	<target host="www.cbsstore.com" />
+	<target host="secure.cbsstore.com" />
+
+	<securecookie host="^\.cbsstore\.com$" name=".+" />
+
+	<rule from="^http://cbsstore\.com/"
+		to="https://www.cbsstore.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

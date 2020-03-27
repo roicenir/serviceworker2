@@ -1,0 +1,13 @@
+<!--
+	^tyndall.ie doesn't exist.
+
+-->
+<ruleset name="Tyndall.ie">
+
+	<target host="www.tyndall.ie" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

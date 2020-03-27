@@ -1,0 +1,76 @@
+<!--
+	Cert expired:
+		- alpha.nmc.exelate.com
+		- externalgw.alpha.nmc.exelate.com
+		- appgw.alpha.nmc.exelate.com
+
+	Connection refused:
+		- 2013awards.exelate.com
+		- bdx2016.exelate.com
+		- bdx2017.exelate.com
+
+	TLS error:
+		- www.exelator.com
+		- action.exelator.com
+		- load.exelator.com
+		- loadan.exelator.com
+		- loadeu.exelator.com
+		- loadm.exelator.com
+		- loadpm.exelator.com
+		- loadr.exelator.com
+		- loadus.exelator.com
+		- mydmp.exelator.com
+		- optout.exelator.com
+		- static.exelator.com
+		- vdna.exelator.com
+		- smart.exelator.com
+		- sandbox.exelator.com
+		- exelate.com
+		- www.exelate.com
+		- partners.exelate.com
+
+	Timeout:
+		- exelator.com
+
+	Cert mismatch:
+		- load.amexp.exelator.com
+		- eu-west.load.exelator.com
+		- eu-static.load.exelator.com
+		- us-east.load.exelator.com
+		- us-central.load.exelator.com
+		- global.load.exelator.com
+		- us-west.load.exelator.com
+		- insight-s3.exelator.com
+		- loadus.tm.ssl.exelator.com
+		- west.us.tm.exelator.com
+		- load.njexp.exelator.com
+		- load.scexp.exelator.com
+		- smart.scexp.exelator.com
+		- load.txexp.exelator.com
+		- smart.txexp.exelator.com
+		- ad.exelate.com
+		- resources.exelate.com
+
+-->
+<ruleset name="eXelate">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="cdn.exelator.com" />
+	<target host="load77.exelator.com" />
+
+	<target host="alpha.cdn.exelate.com" />
+	<target host="ad.exelate.com" />
+	<target host="nmc1.cdn.nmc.exelate.com" />
+	<target host="resources.cdn.nmc.exelate.com" />
+	<target host="nmc.exelate.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://ad\.exelate\.com/"
+		to="https://ad.yieldmanager.com/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

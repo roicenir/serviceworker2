@@ -1,0 +1,42 @@
+<!--
+	IMPORTANT INFORMATION:
+
+	Sites, developed by the public, created on the Enjin Network have the ability to force
+	HTTP or HTTPS themselves. If they enable HTTPS, the site will automatically force a
+	HTTPS connection. You cannot add a rule to force HTTPS for sites that specifically
+	request to force the HTTP protocol, doing so will cause a redirect loop
+	(between the HTTP and HTTPS protocols) to occur.
+
+	This functionality may be altered in the near future to ensure all sites use HTTPS and proxy
+	insecure material (such as scripts, stylesheets and images) through a HTTPS-enabled proxy.
+-->
+
+<ruleset name="Enjin" platform="mixedcontent">
+	<!-- Enjin Network -->
+	<target host="enjin.com" />
+	<target host="www.enjin.com" />
+	<target host="support.enjin.com" />
+	<target host="id.enjin.com" />
+	<target host="api.enjin.com" />
+
+	<!--
+		CDN Rules:
+			- CDNs serve mismatching certificates. Thus, should use a different URL to properly support HTTPS.
+	-->
+	<target host="assets-cloud.enjin.com" />
+	<target host="files-cloud.enjin.com" />
+	<target host="images-cloud.enjin.com" />
+	<target host="assets.enjin.com" />
+	<target host="files.enjin.com" />
+	<target host="images.enjin.com" />
+
+	<test url="http://assets-cloud.enjin.com/ext/test.html" />
+	<test url="http://assets.enjin.com/ext/test.html" />
+	<test url="http://files-cloud.enjin.com/ext/test.html" />
+	<test url="http://files.enjin.com/ext/test.html" />
+	<test url="http://images-cloud.enjin.com/ext/test.html" />
+	<test url="http://images.enjin.com/ext/test.html" />
+
+	<rule from="^http://(files|assets|images)\.enjin\.com/" to="https://s3.amazonaws.com/$1.enjin.com/" />
+	<rule from="^http:" to="https:" />
+</ruleset>

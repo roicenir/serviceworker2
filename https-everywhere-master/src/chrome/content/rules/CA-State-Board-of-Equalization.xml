@@ -1,0 +1,11 @@
+<!--
+	Non-functional hosts
+		Incomplete certificate chain error:
+		- boe.ca.gov
+		- www.boe.ca.gov
+-->
+<ruleset name="California State Board of Equalization">
+	<target host="efile.boe.ca.gov" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

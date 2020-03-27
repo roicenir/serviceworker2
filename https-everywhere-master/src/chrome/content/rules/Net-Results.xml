@@ -1,0 +1,22 @@
+<!--
+	Problematic domains:
+
+		- (www.)net-results.com		(redirects to secure; mismatched, CN: secure.net-results.com)
+
+-->
+<ruleset name="Net-Results (partial)">
+
+	<target host="cdnma.com" />
+	<target host="sc.cdnma.com" />
+	<target host="apps.net-results.com" />
+	<target host="secure.net-results.com" />
+	<target host="nr7.us" />
+
+
+	<!--	Tracking cookies:
+					-->	<securecookie host="^(?:apps|\.?secure)\.net-results\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,20 @@
+<!--
+	Domains expired
+
+	Problematic subdomains:
+
+		- ^ ¹
+		- www.poll ²
+
+	¹ Mismatched, CN: *.askadmissions.net
+	² Mismatched, CN: liveleader.com
+
+-->
+<ruleset name="Intelliworks Chat.com" default_off="expired">
+
+	<target host="intelliworkschat.com" />
+	<target host="poll.intelliworkschat.com" />
+
+	<rule from="^http:"
+		to="https:" />
+</ruleset>

@@ -1,0 +1,57 @@
+<!--
+	Nonfunctional subdomains:
+
+		- lists *
+
+	* Refused
+
+
+	Partially covered subdomains:
+
+		- tracker
+
+			- These paths 500:
+
+				- plugins/servlet/gadgets/dashboard-diagnostics$
+
+			- These don't:
+
+				- $
+				- plugins/servlet/gadgets/js/
+				- rest/
+				- s/
+				- secure/
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- area51
+		- bamboo
+		- blog
+		- camo
+		- download
+		- tracker
+		- wiki
+
+-->
+<ruleset name="phpBB (partial)">
+
+	<target host="phpbb.com" />
+	<target host="area51.phpbb.com" />
+	<target host="bamboo.phpbb.com" />
+	<target host="blog.phpbb.com" />
+	<target host="camo.phpbb.com" />
+	<target host="download.phpbb.com" />
+	<target host="tracker.phpbb.com" />
+	<target host="wiki.phpbb.com" />
+	<target host="www.phpbb.com" />
+		<exclusion pattern="^http://tracker\.phpbb\.com/plugins/servlet/gadgets/dashboard-diagnostics" />
+
+
+	<securecookie host="^(?:bamboo|wiki)?\.phpbb\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

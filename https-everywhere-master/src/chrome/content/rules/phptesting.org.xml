@@ -1,0 +1,8 @@
+<ruleset name="phptesting.org">
+
+	<target host="phptesting.org" />
+	<target host="www.phptesting.org" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

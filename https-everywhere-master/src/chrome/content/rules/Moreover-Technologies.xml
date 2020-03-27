@@ -1,0 +1,17 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(times out)
+
+-->
+<ruleset name="Moreover Technologies (partial)">
+
+	<target host="newsdesk4.moreover.com" />
+
+
+	<securecookie host="^newsdesk4\.moreover\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

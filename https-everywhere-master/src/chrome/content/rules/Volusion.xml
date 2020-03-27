@@ -1,0 +1,66 @@
+<!--
+	CDN buckets:
+
+		- a248.e.akamai.net/origin-cdn.volusion.com/
+		- a248.e.akamai.net/www.volusion.com/
+
+
+	Nonfunctional domains:
+
+		- volusion.com subdomains:
+
+			- apps *
+			- devwiki		(500; mismatched, CN: vchangedesign.volusion.com)
+			- experts **
+			- onlinebusiness *
+			- status **
+			- support		(prints domain name; mismatched, CN: aus01gpweb008.volprod.volroot.com)
+
+	* Replies with http
+	* No https
+
+
+	Problematic domains:
+
+		- volusion.com		(cert only matches www)
+
+
+	Fully covered domains:
+
+		- (www.)volusion.co.uk
+		- store.volusion.co.uk
+
+		- volusion.com subdomains:
+
+			- (www.)	(^ → www)
+			- cdn3
+			- forums
+			- my
+			- store
+			- vchngedesign
+
+-->
+<ruleset name="Volusion (partial)">
+
+	<target host="volusion.co.uk" />
+	<target host="store.volusion.co.uk" />
+	<target host="www.volusion.co.uk" />
+	<target host="volusion.com" />
+	<target host="cdn3.volusion.com" />
+	<target host="forums.volusion.com" />
+	<target host="my.volusion.com" />
+	<target host="store.volusion.com" />
+	<target host="vchangedesign.volusion.com" />
+	<target host="www.volusion.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+
+	<rule from="^http://volusion\.com/"
+		to="https://www.volusion.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

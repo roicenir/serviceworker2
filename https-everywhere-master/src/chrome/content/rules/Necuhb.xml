@@ -1,0 +1,12 @@
+<ruleset name="Northeast Credit Union" platform="mixedcontent">
+  <!--
+    Failed to connect port 443
+
+    <target host="necuhb.org" />
+  -->
+  <target host="necu.org" />
+  <target host="www.necu.org" />
+
+  <rule from="^http:"
+		to="https:" />
+</ruleset>

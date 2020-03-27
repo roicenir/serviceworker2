@@ -1,0 +1,41 @@
+<!--
+	Other CBS rulesets:
+		- CBS-Sports-Network.xml
+		- CBSInteractive.co.uk.xml
+		- CBSInteractive.com.au.xml
+		- CBSInteractive.com.xml
+		- CBSIstatic.net.xml
+		- CBSNews.com.xml
+		- CBSStatic.com.xml
+		- CBS_Store.xml
+		- CBSimg.net.xml
+		- CBSi.com.au.xml
+		- CNETFrance.fr.xml
+		- CNET_content.com.xml
+		- GameSpot.com.xml
+		- Giant_Bomb.com.xml
+		- Last.fm.xml
+		- TechRepublic.com.xml
+		- ZDNet.xml
+
+	Non-functional hosts
+		Timeout was reached:
+		- mads.cbs.com
+
+		SSL peer certificate was not OK:
+		- cbsnews.cbs.com
+		- ecomedia.cbs.com
+		- investors.cbs.com
+		- multimedia.cbs.com
+		- promonet.cbs.com
+		- syndication.cbs.com
+		- wwwimage.cbs.com
+-->
+<ruleset name="CBS.com (partial)">
+	<target host="cbs.com" />
+	<target host="www.cbs.com" />
+	<target host="audienceservices.cbs.com" />
+	<target host="wap.cbs.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

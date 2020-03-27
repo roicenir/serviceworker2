@@ -1,0 +1,21 @@
+<!--
+	Invalid certificate:
+		sublimegit.net
+		docs.sublimegit.net
+
+	Secure connection failed:
+		release.sublimegit.net
+		www.sublimegit.net
+
+-->
+<ruleset name="SublimeGit.net" default_off="other">
+
+	<target host="sublimegit.net" />
+	<target host="docs.sublimegit.net" />
+	<target host="release.sublimegit.net" />
+	<target host="www.sublimegit.net" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

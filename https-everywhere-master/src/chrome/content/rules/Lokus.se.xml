@@ -1,0 +1,25 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.)	(shows login; mismatched, CN: *.citygate.se)
+		- webimages	(shows secure; mismatched, CN: secure.lokus.se)
+
+-->
+<ruleset name="Lokus.se (partial)">
+
+	<target host="secure.lokus.se" />
+	<target host="sifomedia.lokus.se" />
+
+
+	<!--	Tracking cookies:
+					-->
+	<securecookie host="^\.lokus\.se$" name="^(?:NXCLICK2|OAX)" />
+	<securecookie host="^secure\.lokus\.se$" name=".+" />
+
+
+
+	<rule from="^http://sifomedia\.lokus\.se/"
+		to="https://oasc07.247realmedia.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

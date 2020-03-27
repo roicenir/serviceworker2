@@ -1,0 +1,43 @@
+<!--
+	Other Serato rulesets:
+
+		- Whitelabel.net.xml
+
+
+	CDN buckets:
+
+		- d3hrfuxypomrcm.cloudfront.net
+
+			- s.store
+
+
+	Nonfunctional subdomains:
+
+		- store		(refused)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- auth
+		- manage
+		- playlists
+		- s.store	(→ d3hrfuxypomrcm.cloudfront.net)
+
+-->
+<ruleset name="Serato.com (partial)">
+
+	<target host="serato.com" />
+	<target host="auth.serato.com" />
+	<target host="manage.serato.com" />
+	<target host="playlists.serato.com" />
+	<target host="www.serato.com" />
+	<target host="s.store.serato.com" />
+
+
+
+	<rule from="^http://s\.store\.serato\.com/"
+		to="https://d3hrfuxypomrcm.cloudfront.net/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

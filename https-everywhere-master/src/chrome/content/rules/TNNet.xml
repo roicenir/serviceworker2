@@ -1,0 +1,21 @@
+<ruleset name="TNNet">
+	<!--
+	https://tnnet.fi is not responding without www
+	-->
+
+	<target host="tnnet.fi" />
+	<target host="hostcontrol.tnnet.fi" />
+	<target host="mail.tnnet.fi" />
+	<target host="oma.tnnet.fi" />
+	<target host="wm.tnnet.fi" />
+	<target host="www.tnnet.fi" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http://tnnet\.fi/"
+		to="https://www.tnnet.fi/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

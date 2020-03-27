@@ -1,0 +1,65 @@
+<!--
+	Reporters Without Borders
+
+	Other Reporters Without Borders rulesets:
+
+		- Reporter-ohne-Grenzen.de.xml
+
+	Connection refused:
+		www.rsf.org
+		en.rsf.org
+		es.rsf.org
+		fr.rsf.org
+		index.rsf.org
+
+	Invalid certificate:
+		agir.rsf.org
+		campaign2014.rsf.org
+		deadtweet.rsf.org
+
+	Timeout:
+		12march.rsf.org
+		12mars.rsf.org
+		20juin.rsf.org
+		album.rsf.org
+		albums.rsf.org
+		ar.rsf.org
+		archives.rsf.org
+		blogs.rsf.org
+		campaign2015.rsf.org
+		dosh.rsf.org
+		freeaustintice.rsf.org
+		heroes.rsf.org
+		inscription.rsf.org
+		jamesfoley.rsf.org
+		journalmission.rsf.org
+		lankaenews.rsf.org
+		march12.rsf.org
+		membership.rsf.org
+		pacte2012.rsf.org
+		predators.rsf.org
+		questionaire.rsf.org
+		respublika-kz.rsf.org
+		rio2016.rsf.org
+		slides.rsf.org
+		surveillance.rsf.org
+		thejournalistsmemorial.rsf.org
+		vzglyad.rsf.org
+		wiki.rsf.org
+		wikileaks.rsf.org
+		zambiareports.rsf.org
+-->
+<ruleset name="RSF.org (partial)">
+
+	<target host="rsf.org" />
+	<target host="boutique.rsf.org" />
+	<target host="charlie.rsf.org" />
+	<target host="donate.rsf.org" />
+	<target host="old-fr.rsf.org" />
+
+	<securecookie host="^\." name="^__utm" />
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

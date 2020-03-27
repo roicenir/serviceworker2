@@ -1,0 +1,26 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Non-2xx HTTP code: http://vegaspartnerlounge.com/ (200) => https://vegaspartnerlounge.com/ (400)
+
+	Fully covered subdomains:
+
+		- (www.)
+		- secure
+		- starpartner
+
+-->
+<ruleset name="Vegas Partner Lounge" default_off="failed ruleset test">
+
+	<target host="vegaspartnerlounge.com" />
+	<target host="secure.vegaspartnerlounge.com" />
+	<target host="starpartner.vegaspartnerlounge.com" />
+	<target host="www.vegaspartnerlounge.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

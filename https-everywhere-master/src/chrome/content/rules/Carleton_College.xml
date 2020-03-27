@@ -1,0 +1,23 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+
+-->
+<ruleset name="Carleton College">
+
+	<target host="carleton.edu" />
+	<target host="webapps.acs.carleton.edu" />
+	<target host="apps.carleton.edu" />
+	<target host="www.carleton.edu" />
+
+
+	<securecookie host="^apps\.carleton\.edu$" name=".+" />
+
+
+	<rule from="^http://carleton\.edu/"
+		to="https://www.carleton.edu/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

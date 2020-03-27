@@ -1,0 +1,23 @@
+<!--	ToDo: Find Akamai buckets
+
+Some buckets:
+- cdn.cloudfiles.mosso.com
+- c34122.r22.cf0.rackcdn.com
+-->
+<ruleset name="E. W. Scripps Company (mismatches)" default_off="mismatched" platform="mixedcontent">
+
+	<target host="m.andersonvalleypost.com"/>
+	<target host="media.andersonvalleypost.com"/>
+	<target host="blogs.commercialappeal.com" />
+	<target host="media.commercialappeal.com" />
+	<target host="web.commercialappeal.com" />
+	<target host="homes.redding.com"/>
+	<target host="web.redding.com"/>
+
+
+
+	<rule from="^http://(homes|web)\.redding\.com/"
+		to="https://$1web.redding.com/"/>
+
+	<rule from="^http:" to="https:" />
+</ruleset>

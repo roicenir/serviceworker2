@@ -1,0 +1,24 @@
+<!--
+	Redirect to HTTP:
+		rredc.nrel.gov
+
+	Time out:
+		pvwatts.nrel.gov
+
+-->
+<ruleset name="NREL.gov (partial)">
+
+	<target host="nrel.gov" />
+	<target host="www.nrel.gov" />
+	<target host="atb.nrel.gov" />
+	<target host="pvrw.nrel.gov" />
+	<target host="remdb.nrel.gov" />
+	<target host="reopt.nrel.gov" />
+	<target host="resstock.nrel.gov" />
+	<target host="sam.nrel.gov" />
+	<target host="sws.nrel.gov" />
+
+	<rule from="^http:"
+		to="https:"/>
+
+</ruleset>

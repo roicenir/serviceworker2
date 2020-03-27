@@ -1,0 +1,39 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+
+	* Plaintext reply
+
+
+	Fully covered subdomains:
+
+		- cdsusa
+		- config1
+		- configusa
+		- rcs
+		- drs2
+		- mail
+		- vecapture
+		- vecontact
+		- vemerchant
+
+-->
+<ruleset name="Ve Interactive.com (partial)">
+
+	<target host="cdsusa.veinteractive.com" />
+	<target host="config1.veinteractive.com" />
+	<target host="configusa.veinteractive.com" />
+	<target host="drs2.veinteractive.com" />
+	<target host="mail.veinteractive.com" />
+	<target host="rcs.veinteractive.com" />
+	<target host="vecapture.veinteractive.com" />
+	<target host="vemerchant.veinteractive.com" />
+
+
+	<securecookie host="^(?:mail|vecapture|vecontact|vemerchant)\.veinteractive\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

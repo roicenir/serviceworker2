@@ -1,0 +1,31 @@
+<!--
+	Other Vox rulesets:
+
+		- Cstatic.net.xml
+		- Curbed.cc.xml
+		- Curbed.com.xml
+		- Eater.xml
+		- Racked.com.xml
+		- Recode.net.xml
+		- The-Verge.xml
+		- Vox-CDN.com.xml
+		- Vox_Media.com.xml
+
+
+	Nonfunctional hosts in *vox.com:
+
+		- tiffany ʳ
+
+	ʳ Refused
+
+-->
+<ruleset name="Vox.com">
+
+	<target host="vox.com" />
+	<target host="www.vox.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

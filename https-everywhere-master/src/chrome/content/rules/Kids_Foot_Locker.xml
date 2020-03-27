@@ -1,0 +1,33 @@
+<!--
+	For other Foot Locker coverage, see Foot_Locker_Inc.xml.
+
+
+	Problematic subdomains:
+
+		- ^	(mismatched)
+
+
+	Targets solely for wildcard cookies:
+
+		- *.www.kidsfootlocker.com
+
+
+	Mixed data are only images and so shouldn't be a problem.
+
+-->
+<ruleset name="Kids Foot Locker">
+
+	<target host="kidsfootlocker.com" />
+	<target host="www.kidsfootlocker.com" />
+	<target host="m.kidsfootlocker.com" />
+
+
+	<securecookie host="^.*\.kidsfootlocker\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?kidsfootlocker\.com/"
+		to="https://www.kidsfootlocker.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

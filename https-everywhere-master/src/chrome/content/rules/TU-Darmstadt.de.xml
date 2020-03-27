@@ -1,0 +1,52 @@
+<!--
+	Technische Universitaet Darmstadt
+
+
+	Fully covered subdomains:
+
+		- www.cs
+		- idm-bi01.hrz
+		- sso.hrz
+		- www.hrz
+		- www.idm
+		- wiki.cdc.informatik
+		- www.cdc.informatik
+		- www.informatik
+		- www.ulb
+		- www
+
+
+	^tu-darmstadt.de doesn't exist.
+
+
+	These altnames don't exist:
+
+		- cs.tu-darmstadt.de
+		- cdc.cs.tu-darmstadt.de
+		- www.cdc.cs.tu-darmstadt.de
+		- informatik.tu-darmstadt.de
+		- cdc.informatik.tu-darmstadt.de
+
+-->
+<ruleset name="TU-Darmstadt.de (partial)">
+
+	<target host="www.cs.tu-darmstadt.de" />
+	<target host="idm-bi01.hrz.tu-darmstadt.de" />
+	<target host="sso.hrz.tu-darmstadt.de" />
+	<target host="www.hrz.tu-darmstadt.de" />
+	<target host="www.idm.tu-darmstadt.de" />
+	<target host="wiki.cdc.informatik.tu-darmstadt.de" />
+	<target host="www.cdc.informatik.tu-darmstadt.de" />
+	<target host="www.informatik.tu-darmstadt.de" />
+	<target host="www.ulb.tu-darmstadt.de" />
+	<target host="www.tu-darmstadt.de" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(www\.cdc|www)\.informatik\.tu-darmstadt\.de$" name="^fe_typo_user$" /-->
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

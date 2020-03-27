@@ -1,0 +1,42 @@
+<!--
+	Other Pearson rulesets:
+		- InformIT.com.xml
+
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- thelearningcurve.pearson.com
+		- pearsoncmg.com
+		- www.pearsoncmg.com
+		- vue.com
+		- www.vue.com
+		- www8.vue.com
+
+		Incomplete certificate chain error:
+		- pearson.com
+
+		Redirects to HTTP:
+		- developer.pearson.com
+-->
+<ruleset name="Pearson (partial)">
+	<!-- *.pearson.com -->
+	<target host="pearson.com" />
+	<target host="www.pearson.com" />
+	<target host="cr2012.pearson.com" />
+	<target host="neo.pearson.com" />
+
+	<!-- *.pearsoncmg.com -->
+	<target host="register.pearsoncmg.com" />
+		<test url="http://register.pearsoncmg.com/userprofile" />
+
+	<!-- *.pearsonvue.com -->
+	<target host="pearsonvue.com" />
+	<target host="www.pearsonvue.com" />
+	<target host="www8.pearsonvue.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://pearson\.com/"
+		to="https://www.pearson.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

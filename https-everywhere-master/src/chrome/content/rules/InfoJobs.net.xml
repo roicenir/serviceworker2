@@ -1,0 +1,65 @@
+<!--
+	Nonfunctional subdomains:
+
+		- plandecarrera *
+
+	* Refused
+
+
+	Problematic subdomains:
+
+		- static1 *
+
+	* Mismatched, CN: www.infojobs.net
+
+
+	Fully covered subdomains:
+
+		- (www.)?
+		- citrix
+		- formacion
+		- m
+		- media
+		- nosotros
+		- static1	(→ es-static0.infojobs.com)
+
+
+	Insecure cookies are set for these domains:
+
+		- .infojobs.net
+		- citrix.infojobs.net
+
+
+	Mixed content:
+
+		- Images on media from media *
+
+	* Secured by us
+
+-->
+<ruleset name="InfoJobs.net (partial)">
+
+	<target host="infojobs.net" />
+	<target host="citrix.infojobs.net" />
+	<target host="formacion.infojobs.net" />
+	<target host="m.infojobs.net" />
+	<target host="media.infojobs.net" />
+	<target host="nosotros.infojobs.net" />
+	<target host="www.infojobs.net" />
+	<target host="static1.infojobs.net" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.infojobs\.net$" name="^(IJCKIPLCY|IJTESTUID|IJUSERUID)$" /-->
+	<!--securecookie host="^citrix\.infojobs\.net$" name="^ASP\.NET_SessionId$" /-->
+
+	<securecookie host="^citrix\.infojobs\.net$" name=".+" />
+
+
+
+	<rule from="^http://static1\.infojobs\.net/"
+		to="https://es-static0.infojobs.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

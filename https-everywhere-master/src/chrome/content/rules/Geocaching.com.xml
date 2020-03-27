@@ -1,0 +1,42 @@
+<!--
+	For other Groundspeak coverage, see Groundspeak.com.xml.
+
+
+	Nonfunctional hosts in *.geocaching.com:
+
+		- status.geocaching.com (t)
+
+	h: http redirect
+	m: certificate mismatch
+	r: connection refused
+	s: self-signed certificate
+	t: timeout on https
+
+
+	Insecure cookies are set for these hosts:
+
+		- shop.geocaching.com
+		- www.geocaching.com
+-->
+<ruleset name="Geocaching.com">
+
+	<target host="geocaching.com" />
+	<target host="www.geocaching.com" />
+	<target host="blog.geocaching.com" />
+	<target host="forums.geocaching.com" />
+	<target host="img.geocaching.com" />
+	<target host="shop.geocaching.com" />
+	<target host="apidevelopers.geocaching.com" />
+	<target host="payments.geocaching.com" />
+	<target host="newsroom.geocaching.com" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^www\.geocaching\.com$" name="^(__RequestVerificationToken|ASP\.NET_SessionId)$" /-->
+	<!--securecookie host="^shop\.geocaching\.com$" name="^(CUSTOMER|CUSTOMER_AUTH|CUSTOMER_INFO|CUSTOMER_SEGMENT_IDS|NEWMESSAGE|frontend)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

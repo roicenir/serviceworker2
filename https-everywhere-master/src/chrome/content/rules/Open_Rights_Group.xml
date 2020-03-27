@@ -1,0 +1,27 @@
+<!--
+	Other Open Rights Group rulesets:
+
+		- Blocked.org.uk.xml
+
+	Widcard matching cannot be used since some subdomains point at third-party services
+	(without matching https certificates) such as news.openrightsgroup.org or gowers.openrightsgroup.org
+
+-->
+<ruleset name="Open Rights Group.org">
+
+	<target host="openrightsgroup.org" />
+	<target host="bug.openrightsgroup.org" />
+	<target host="cardiff.openrightsgroup.org" />
+	<target host="lists.openrightsgroup.org" />
+	<target host="northeast.openrightsgroup.org" />
+	<target host="scotland.openrightsgroup.org" />
+	<target host="sheffield.openrightsgroup.org" />
+	<target host="widgets.openrightsgroup.org" />
+	<target host="wiki.openrightsgroup.org" />
+	<target host="www.openrightsgroup.org" />
+	<target host="zine.openrightsgroup.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

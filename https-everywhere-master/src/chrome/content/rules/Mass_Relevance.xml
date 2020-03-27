@@ -1,0 +1,41 @@
+<!--
+	CDN buckets:
+
+		- d1rts87l9itzp2.cloudfront.net
+
+			- up.massrelevance.com
+
+		- massrelevance.wpengine.netdna-cdn.com
+
+			- www.massrelevance.com
+
+
+	Nonfunctional domains:
+
+		- www.massrelevance.com		(redirects to http)
+
+
+	Problematic domains:
+
+		- www.tweetriver.com		(mismatched)
+
+-->
+<ruleset name="Mass Relevance">
+
+	<target host="massrelevance.com" />
+	<target host="api.massrelevance.com" />
+	<target host="secure-up.massrelevance.com" />
+	<target host="up.massrelevance.com" />
+	<target host="tweetriver.com" />
+	<target host="www.tweetriver.com" />
+	<target host="proxy.tweetriver.com" />
+
+
+
+
+	<rule from="^http://(?:www\.)?tweetriver\.com/"
+		to="https://tweetriver.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,36 @@
+<!--
+	For other Amazon coverage, see Amazon.xml.
+
+
+	Insecure cookies are set for these domains: ᶜ
+
+		- .amazon.ca
+
+	ᶜ See https://owasp.org/index.php/SecureFlag
+
+-->
+<ruleset name="Amazon.ca">
+
+	<target host="amazon.ca" />
+	<target host="advertising.amazon.ca" />
+	<target host="associates.amazon.ca" />
+	<target host="astore.amazon.ca" />
+	<target host="fls-na.amazon.ca" />
+	<target host="rcm-ca.amazon.ca" />
+	<target host="read.amazon.ca" />
+	<target host="sellercentral.amazon.ca" />
+	<target host="widgets.amazon.ca" />
+	<target host="ws.amazon.ca" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.amazon\.ca$" name="^(?:session-id|session-id-time|ubid-acbca|x-wl-uid)$" /-->
+
+	<securecookie host=".+" name="^aps-trtmnt$" />
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

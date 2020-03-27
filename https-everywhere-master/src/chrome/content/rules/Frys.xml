@@ -1,0 +1,26 @@
+<!--
+	For problematic rules, see Frys-mismatches.xml.
+
+-->
+<ruleset name="Frys (partial)">
+
+	<target host="images.frys.com" />
+	<target host="shop1.frys.com" />
+	<target host="shop2.frys.com" />
+	<target host="shop3.frys.com" />
+	<target host="shop4.frys.com" />
+	<target host="shop5.frys.com" />
+	<target host="shop6.frys.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<!--	Guilty of giving ExtremeTech http
+		data on https pages.	-->
+	<rule from="^http://images\.frys\.com/"
+		to="https://frys.hs.llnwd.net/e1/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

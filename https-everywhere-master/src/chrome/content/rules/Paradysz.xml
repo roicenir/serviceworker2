@@ -1,0 +1,23 @@
+<!--
+	Nonfunctional domains:
+
+		- (www.)marketrelevance.com	(times out)
+		- (www.)paradysz.com *
+		- (www.)paradyszmatera.com *	(redirects to paradysz.com over http)
+
+	* 404, CN:  *.clockwork.net
+
+-->
+<ruleset name="Paradysz">
+
+	<target host="offeredby.net" />
+	<target host="ssl.analytics.offeredby.net" />
+	<target host="www.offeredby.net" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

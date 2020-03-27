@@ -1,0 +1,56 @@
+<!--
+	National Research Nuclear University
+
+	For problematic rules, see Mephi.ru-problematic.xml.
+
+
+	Nonfunctional subdomains:
+
+		- (www.)		(refused)
+		- readme.campus		(http reply; expired 2011-05-25, mismatched, CN: server.IrcCity.Net)
+		- eng			(dropped)
+
+
+	Problematic subdomains:
+
+		- voip	(works; mismatched, CN: oir.mephi.ru)
+
+
+	Fully covered subdomains:
+
+		- ca
+		- eis
+		- oir
+		- ut
+		- mail.ut
+
+
+	Observed cookie domains:
+
+		- .
+		- .eng
+		- oir
+		- ut
+		- .mail.ut
+		- voip
+
+-->
+<ruleset name="MEPhI.ru (partial)">
+
+	<target host="ca.mephi.ru" />
+	<target host="eis.mephi.ru" />
+	<target host="oir.mephi.ru" />
+	<target host="ut.mephi.ru" />
+	<target host="mail.ut.mephi.ru" />
+		<!--exclusion pattern="^http://(readme\.campus|voip|www)\." /-->
+
+
+	<!--	Could we secure any of these safely?
+							-->
+	<!--securecookie host="^\.mephi\.ru$" name="^(BITRIX_SM_GUEST_ID|BITRIX_SM_LAST_VISIT|PHPSESSID)" /-->
+	<securecookie host="^(?:oir|ut|\.mail\.ut)\.mephi\.ru$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,34 @@
+<!--
+	For other Beta & Cie coverage, see Beta-and-Cie.xml.
+
+	03.2018: all included subdomains fail.
+
+	HTTP 504:
+		cdn6.fmylife.com
+		cdn7.fmylife.com
+		media.fmylife.com
+
+	HTTP 521:
+		fmylife.com
+		www.fmylife.com
+
+-->
+<ruleset name="FMyLife.com" default_off="other">
+
+	<target host="fmylife.com" />
+	<target host="*.fmylife.com" />
+
+
+	<securecookie host="^(?:www)?\.fmylife\.com$" name=".+" />
+
+
+	<rule from="^http://(www\.)?fmylife\.com/"
+		to="https://$1fmylife.com/" />
+
+	<rule from="^http://cdn\d\.fmylife\.com/"
+		to="https://betacie.cachefly.net/" />
+
+	<rule from="^http://media\.fmylife\.com/"
+		to="https://cdn.betacie.com/" />
+
+</ruleset>

@@ -1,0 +1,12 @@
+<!--
+	Non-functional hosts
+		Incomplete certificate chain error:
+		- onestepahead.networkdepot.com
+-->
+<ruleset name="Network Depot (partial)">
+	<target host="networkdepot.com" />
+	<target host="tips.networkdepot.com" />
+	<target host="www.networkdepot.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

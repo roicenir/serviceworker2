@@ -1,0 +1,16 @@
+<!--
+	!www 404s over http
+
+-->
+<ruleset name="Ironwhale.com">
+
+	<target host="mail.ironwhale.com" />
+	<target host="www.ironwhale.com" />
+
+
+	<securecookie host="^www\.ironwhale\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

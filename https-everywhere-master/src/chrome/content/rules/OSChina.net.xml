@@ -1,0 +1,18 @@
+<ruleset name="OSChina.net">
+	<target host="oschina.net" />
+	<target host="www.oschina.net" />
+	<target host="city.oschina.net" />
+	<target host="git.oschina.net" />
+	<target host="job.oschina.net" />
+	<target host="m.oschina.net" />
+	<target host="my.oschina.net" />
+	<target host="static.oschina.net" />
+	<target host="team.oschina.net" />
+	<target host="tool.oschina.net" />
+	<target host="tools.oschina.net" />
+	<target host="zb.oschina.net" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

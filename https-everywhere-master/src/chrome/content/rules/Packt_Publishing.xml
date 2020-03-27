@@ -1,0 +1,39 @@
+<!--
+	For problematic rules, see Packt_Publishing-problematic.xml.
+
+
+	CDN buckets:
+
+		- dgdsbygo8mp3h.cloudfront.net
+
+
+	Problematic subdomains:
+
+		- link *
+
+	* Works; mismatched, CN: salesdb.packtpub.com
+
+
+	Observed cookie domains:
+
+		- . *
+		- careers *
+
+	* Secured by us <= not secured by server
+
+-->
+<ruleset name="Packt Publishing (partial)">
+
+	<target host="packtpub.com" />
+	<target host="careers.packtpub.com" />
+	<target host="packtlib.packtpub.com" />
+	<target host="salesdb.packtpub.com" />
+	<target host="www.packtpub.com" />
+
+
+	<securecookie host=".*\.packtpub\.com$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

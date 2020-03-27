@@ -1,0 +1,13 @@
+<ruleset name="Apoteket.se">
+	<target host="apoteket.se" />
+	<target host="www.apoteket.se" />
+	<target host="apoteksombud.apoteket.se" />
+	<target host="id.apoteket.se" />
+	<target host="idx.apoteket.se" />
+	<target host="officewebapps-test.apoteket.se" />
+	<target host="samarbetsytor.apoteket.se" />
+	<target host="testid.apoteket.se" />
+	<target host="webbabest.apoteket.se" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

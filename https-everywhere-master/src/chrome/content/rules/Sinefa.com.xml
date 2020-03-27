@@ -1,0 +1,32 @@
+<!--
+	Nonfunctional subdomains:
+
+		- (www.) *
+
+	* $ redirects to http, other paths 404
+
+
+	Problematic subdomains:
+
+		- community *
+
+	* zendesk
+
+-->
+<ruleset name="Sinefa.com (partial)">
+
+	<target host="controller.sinefa.com" />
+	<target host="community.sinefa.com" />
+
+
+	<!--	Not secured by server:
+					-->
+	<securecookie host="^controller\.sinefa\.com$" name=".+" />
+
+
+
+	<rule from="^http://community\.sinefa\.com/"
+		to="https://sinefa.zendesk.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

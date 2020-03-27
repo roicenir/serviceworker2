@@ -1,0 +1,30 @@
+<!--
+	For problematic rules, See Tucows-mismatches.xml.
+
+	For other Tucows coverage, see Tucows.xml.
+
+-->
+<ruleset name="OpenSRS.com (partial)">
+
+	<target host="opensrs.com" />
+	<target host="signup.opensrs.com" />
+	<target host="www.opensrs.com" />
+		<!--
+			blog posts redirect to /www., for which the cert is invalid.
+											-->
+		<exclusion pattern="^http://www\.opensrs\.com/blog[\w/-]*/$"/>
+	<target host="opensrs.net" />
+	<target host="signup.opensrs.net" />
+	<target host="www.opensrs.net" />
+	<target host="rr-n1-tor.opensrs.net" />
+
+
+	<securecookie host="^(?:signup\.)?opensrs\.com$" name=".+" />
+
+
+	<rule from="^http://(?:(signup\.)|www\.)?opensrs\.(?:com|net)/"
+		to="https://$1opensrs.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

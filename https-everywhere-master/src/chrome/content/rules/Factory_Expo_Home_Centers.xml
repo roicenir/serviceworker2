@@ -1,0 +1,44 @@
+<!--
+	Other Factory Expo Home Centers rulesets:
+
+		- Park_Models_Direct.xml
+
+	Nonfunctional domains:
+		SSL errors:
+		- prestigehomes.com
+		- www.prestigehomes.com
+
+		Mismatched:
+		- factorydirectcabins.com
+		- www.factorydirectcabins.com
+-->
+<ruleset name="Factory Expo Home Centers">
+
+	<target host="azchampion.com" />
+	<target host="www.azchampion.com" />
+	<target host="cimacorp.net" />
+	<target host="www.cimacorp.net" />
+	<target host="expohomes.com" />
+	<target host="www.expohomes.com" />
+	<target host="expomobilehomes.com" />
+	<target host="www.expomobilehomes.com" />
+	<target host="factoryexpo.net" />
+	<target host="www.factoryexpo.net" />
+	<target host="factoryexpodirect.com" />
+	<target host="www.factoryexpodirect.com" />
+	<target host="factoryexpohomes.com" />
+	<target host="www.factoryexpohomes.com" />
+	<target host="factoryhomesale.com" />
+	<target host="www.factoryhomesale.com" />
+	<target host="factoryselecthomes.com" />
+	<target host="www.factoryselecthomes.com" />
+	<target host="fbhexpo.com" />
+	<target host="www.fbhexpo.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

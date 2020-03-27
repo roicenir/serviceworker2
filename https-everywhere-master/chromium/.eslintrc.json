@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "webextensions": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "script"
+  },
+  "rules": {
+    "indent": ["error", 2, {"outerIIFEBody": 0}],
+    "no-unused-vars": "error",
+    "no-undef": "error",
+    "strict": ["error", "global"],
+    "space-before-blocks": ["error"],
+    "brace-style": ["error"],
+    "no-trailing-spaces": "error"
+  },
+  "globals": {
+    "exports": true,
+    "require": true,
+    "wasm_bindgen": true
+  }
+}

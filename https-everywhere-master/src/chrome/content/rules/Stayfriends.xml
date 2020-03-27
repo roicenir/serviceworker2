@@ -1,0 +1,19 @@
+<ruleset name="StayFriends" platform="mixedcontent">
+
+	<target host="stayfriends.at" />
+	<target host="stayfriends.ch" />
+	<target host="stayfriends.de" />
+	<target host="images.stayfriends.at" />
+	<target host="images.stayfriends.ch" />
+	<target host="images.stayfriends.de" />
+	<target host="www.stayfriends.at" />
+	<target host="www.stayfriends.ch" />
+	<target host="www.stayfriends.de" />
+
+
+	<securecookie host="^(?:www)?\.stayfriends\.(?:at|ch|de)$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

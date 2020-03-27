@@ -1,0 +1,14 @@
+<!--
+	For rules not causing false/broken MCB, see Vungle.xml.
+
+-->
+<ruleset name="Vungle.com (false MCB)" platform="mixedcontent">
+
+	<target host="blog.vungle.com" />
+	<target host="www.vungle.com" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

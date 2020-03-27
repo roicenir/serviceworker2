@@ -1,0 +1,30 @@
+<!--
+	Fully covered subdomains:
+
+		- (www.)
+		- dl
+		- forums
+		- wiki
+
+
+	Observed cookie domains:
+
+		- .forums
+		- wiki
+
+-->
+<ruleset name="dolphin-emu.org">
+
+	<target host="dolphin-emu.org" />
+	<target host="dl.dolphin-emu.org" />
+	<target host="forums.dolphin-emu.org" />
+	<target host="wiki.dolphin-emu.org" />
+	<target host="www.dolphin-emu.org" />
+
+
+	<securecookie host=".+\.dolphin-emu\.org$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

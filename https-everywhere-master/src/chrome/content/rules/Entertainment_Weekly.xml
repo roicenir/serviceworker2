@@ -1,0 +1,32 @@
+<!--
+	For other Time Inc coverage, see Time_Inc.xml.
+
+
+	Problematic subdomains:
+
+		- ^		(mismatched, CN: i2.timeinc.net)
+		- insidemovies *
+		- popwatch *
+		- tvrecaps *
+		- www		(works, akamai)
+
+	* wordpress
+
+-->
+<ruleset name="Entertainment Weekly (partial)" default_off="mismatched">
+
+	<target host="ew.com" />
+	<target host="www.ew.com" />
+	<target host="popwatch.ew.com" />
+	<target host="tvrecaps.ew.com" />
+
+
+	<securecookie host="^\.ew\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?ew\.com/"
+		to="https://www.ew.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

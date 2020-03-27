@@ -1,0 +1,22 @@
+<!--
+	Nonfunctional subdomains:
+
+		- abstract
+		- radiographics
+		- radiology
+
+-->
+<ruleset name="Radiological Society of North America (partial)">
+
+	<target host="rsna.org" />
+	<target host="careers.rsna.org" />
+	<target host="www.rsna.org" />
+	<target host="www2.rsna.org" />
+
+
+	<securecookie host="^(?:careers\.|www\.)?rsna\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

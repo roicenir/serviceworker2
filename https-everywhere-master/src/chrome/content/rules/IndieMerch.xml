@@ -1,0 +1,29 @@
+<!--
+	Other IndieMerch rulesets:
+
+		- IndieMerchstore.xml
+
+
+	Problematic subdomains:
+
+		- ^	(cert only matches www)
+		- blog	(works; mismatched, CN: *.gridserver.com)
+
+-->
+<ruleset name="IndieMerch (partial)">
+
+	<target host="indiemerch.com" />
+	<target host="cdn.indiemerch.com" />
+	<target host="pad.indiemerch.com" />
+	<target host="www.indiemerch.com" />
+
+
+	<securecookie host="^.+\.indiemerch\.com$" name=".+" />
+
+
+	<rule from="^http://indiemerch\.com/"
+		to="https://www.indiemerch.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

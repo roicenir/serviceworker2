@@ -1,0 +1,11 @@
+<!--
+	For othe AOL coverage, see AOL.xml.
+-->
+<ruleset name="Moviefone.com">
+
+	<target host="moviefone.com" />
+	<target host="www.moviefone.com" />
+
+	<rule from="^http://(www\.)?moviefone\.com/"
+			to="https://www.moviefone.com/" />
+</ruleset>

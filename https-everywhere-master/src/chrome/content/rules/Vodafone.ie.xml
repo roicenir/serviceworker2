@@ -1,0 +1,56 @@
+<!--
+	For other Vodafone Group coverage, see Vodafone.xml.
+
+
+	Nonfunctional hosts in *vodafone.ie:
+
+		- deviceguides *
+		- onlineforms	(certificate has expired)
+
+	* Handshake fails
+
+
+	Insecure cookies are set for these hosts:
+
+		- community.vodafone.ie
+		- shop.vodafone.ie
+		- support.vodafone.ie
+		- www.vodafone.ie
+
+
+	Mixed content:
+
+		- Image on support from www.vodafone.ie *
+		- favicon on support from www.vodafone.ie *
+
+	* Secured by us
+
+	Some pages redirect to HTTP:
+		shop.vodafone.ie
+			<test url="http://shop.vodafone.ie/shop/phonesAndPlans/phonesAndPlansHome.jsp?subPage=phones&planFilter=onAccount" />
+		Keeping partial coverage causes CORS issues
+
+	Mixed content:
+		community.vodafone.ie
+
+-->
+<ruleset name="Vodafone.ie (partial)">
+
+	<target host="vodafone.ie" />
+	<target host="www.vodafone.ie" />
+	<target host="nac.vodafone.ie" />
+	<target host="sso.vodafone.ie" />
+	<target host="support.vodafone.ie" />
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^nac\.vodafone\.ie$" name="^CAKEPHP$" /-->
+	<!--securecookie host="^support\.vodafone\.ie$" name="^(?:AJUDACLUSTER|eGain_eService_JSESSIONID)$" /-->
+	<!--securecookie host="^www\.vodafone\.ie$" name="^(?:JSESSIONID|SITESELECTION)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

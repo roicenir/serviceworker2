@@ -1,0 +1,13 @@
+<!--
+	For other Ookla coverage, see Ookla.xml.
+-->
+<ruleset name="Speedtest.net (partial)">
+
+	<target host="speedtest.net" />
+	<target host="www.speedtest.net" />
+	<target host="c.speedtest.net" />
+	<target host="zdstatic.speedtest.net" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

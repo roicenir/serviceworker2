@@ -1,0 +1,14 @@
+<ruleset name="Singlefeed">
+
+	<target host="reporting.singlefeed.com" />
+	<target host="www.singlefeed.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<!--	reporting is a tracking redirecter
+		that *.pgpartner.com uses.	-->
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,19 @@
+<!--
+	HTTP != HTTPS:
+		- forum.kooora.com
+-->
+<ruleset name="KOOORA.com">
+	<target host="kooora.com" />
+	<target host="www.kooora.com" />
+	<target host="img.kooora.com" />
+	<target host="m.kooora.com" />
+	<target host="o.kooora.com" />
+
+	<target host="kooora.ws" />
+	<target host="www.kooora.ws" />
+	<target host="ktv.kooora.ws" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

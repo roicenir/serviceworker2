@@ -1,0 +1,30 @@
+<!--
+	CDN buckets:
+
+		- invodo-www.s3.amazonaws.com
+
+
+	Problematic subdomains:
+
+		- (www.)	(redirects to login page)
+		- www2		(mismatched, CN: *.pardot.com)
+
+-->
+<ruleset name="Invodo (partial)">
+
+	<target host="invodo.com" />
+	<target host="www.invodo.com" />
+	<target host="e.invodo.com" />
+	<target host="www2.invodo.com" />
+
+
+	<rule from="^http://(www\.)?invodo\.com/register/"
+		to="https://$1invodo.com/register/" />
+
+	<rule from="^http://e\.invodo\.com/"
+		to="https://e.invodo.com/" />
+
+	<rule from="^http://www2\.invodo\.com/l/"
+		to="https://go.pardot.com/l/" />
+
+</ruleset>

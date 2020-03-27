@@ -1,0 +1,45 @@
+<!--
+	For other Digium coverage, see Digium.xml.
+
+	Invalid certificate:
+		- answers.asterisk.org
+		- forge.asterisk.org
+		- git.asterisk.org
+		- svn.asterisk.org
+-->
+<ruleset name="Asterisk.org">
+
+	<target host="asterisk.org" />
+	<target host="www.asterisk.org" />
+	<target host="ari.asterisk.org" />
+	<target host="asterisknow.asterisk.org" />
+	<target host="bamboo.asterisk.org" />
+	<target host="blog.asterisk.org" />
+	<target host="blogs.asterisk.org" />
+	<target host="code.asterisk.org" />
+	<target host="community.asterisk.org" />
+	<target host="crowd.asterisk.org" />
+	<target host="downloads.asterisk.org" />
+	<target host="doxygen.asterisk.org" />
+	<target host="forum.asterisk.org" />
+	<target host="forums.asterisk.org" />
+	<target host="gerrit.asterisk.org" />
+	<target host="issues.asterisk.org" />
+	<target host="jenkins.asterisk.org" />
+	<target host="jenkins2.asterisk.org" />
+	<target host="login.asterisk.org" />
+	<target host="myth.asterisk.org" />
+	<target host="openid.asterisk.org" />
+	<target host="packages.asterisk.org" />
+	<target host="profiles.asterisk.org" />
+	<target host="reviewboard.asterisk.org" />
+	<target host="shooty.asterisk.org" />
+	<target host="signup.asterisk.org" />
+	<target host="stats.asterisk.org" />
+	<target host="wiki.asterisk.org" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

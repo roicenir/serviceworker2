@@ -1,0 +1,23 @@
+<!--
+	CN: ssl2749.cloudflare.com
+
+
+	^thesecuritypractice.com doesn't exist
+
+
+	Mixed content:
+
+		- css from $self *
+
+	* Secured by us
+
+-->
+<ruleset name="The Security Practice.com" default_off="mismatched">
+
+	<target host="www.thesecuritypractice.com" />
+
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

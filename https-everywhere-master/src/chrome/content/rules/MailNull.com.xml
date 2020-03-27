@@ -1,0 +1,13 @@
+<!--
+	Mismatched:
+		- out
+		- outside
+-->
+<ruleset name="MailNull.com">
+	<target host="mailnull.com" />
+	<target host="www.mailnull.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

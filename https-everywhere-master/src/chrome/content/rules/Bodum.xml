@@ -1,0 +1,8 @@
+<ruleset name="Bodum">
+  <target host="bodum.com" />
+  <target host="www.bodum.com" />
+
+  <securecookie host=".+" name=".+" />
+
+  <rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,24 @@
+<!--
+	For other Gannett Company coverage, see Gannet-Company.xml.
+
+
+	Problematic subdomains:
+
+		- ^
+		- cmsimg	(503, akamai)
+
+-->
+<ruleset name="Bucyrus Telegraph Forum">
+
+	<target host="bucyrustelegraphforum.com" />
+	<target host="cmsimg.bucyrustelegraphforum.com" />
+	<target host="www.bucyrustelegraphforum.com" />
+
+
+	<securecookie host="^www\.bucyrustelegraphforum\.com$" name=".+" />
+
+
+	<rule from="^http://(?:cmsimg\.|www\.)?bucyrustelegraphforum\.com/"
+		to="https://www.bucyrustelegraphforum.com/" />
+
+</ruleset>

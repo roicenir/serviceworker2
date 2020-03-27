@@ -1,0 +1,13 @@
+<ruleset name="LiteSpeed Technologies (mismatches)" default_off="mismatched">
+
+	<target host="litespeedtech.com" />
+	<target host="www.litespeedtech.com" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?litespeedtech\.com/"
+		to="https://www.litespeedtech.com/" />
+
+</ruleset>

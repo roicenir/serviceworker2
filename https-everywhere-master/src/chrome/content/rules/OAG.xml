@@ -1,0 +1,15 @@
+<!--
+	For other UBM coverage, see UBM-mismatches.xml.
+
+-->
+<ruleset name="OAG (partial)">
+
+	<target host="oag.com" />
+	<target host="www.oag.com" />
+	<target host="tppro.oag.com" />
+
+	<securecookie host="^tppro\.oag\.com$" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

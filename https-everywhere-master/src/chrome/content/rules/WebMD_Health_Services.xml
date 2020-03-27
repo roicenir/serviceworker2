@@ -1,0 +1,25 @@
+<!--
+	For other WebMD coverage, see WebMD.xml
+
+
+	Problematic subdomains:
+
+		^	(cert only matches www)
+
+-->
+<ruleset name="WebMD Health Services">
+
+	<target host="webmdhealthservices.com" />
+	<target host="www.webmdhealthservices.com" />
+	<target host="insights.webmdhealthservices.com" />
+
+
+	<securecookie host="^(?:insights|www)\.webmdhealthservices\.com$" name=".+" />
+
+
+	<rule from="^http://(?:www\.)?webmdhealthservices\.com/"
+		to="https://www.webmdhealthservices.com/" />
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

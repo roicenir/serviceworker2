@@ -1,0 +1,102 @@
+<!--
+	CDN buckets:
+
+		- cdn-casino.winner.com.cdngc.net
+		- cdn-m.winner.com.cdngc.net
+
+		- 2-01-2d9c-0007.cdx.cedexis.net
+
+			- static
+
+
+	Nonfunctional subdomains:
+
+		- (www.)	(no https)
+		- cachepoker	(400; mismatched, CN: *.hs.llnwd.net)
+		- cdn-casino	(403; mismatched, CN: ssl2.cdngc.net)
+		- cdn-games *
+		- cdn-livecasino *
+		- cdn-m		(403; mismatched, CN: *.pantherssl.com)
+		- cdn-mobile	(reset)
+		- cdn-sports **
+		- cdn-www	(403; mismatched, CN: support3.cdnetworks.net)
+		- mpoker *
+		- sports	(redirects to http)
+
+	* Refused
+	** 403; mismatched, CN: *.pantherssl.com
+
+
+	Partially covered subdomains:
+
+		- casino	(some pages redirect to http)
+		- poker *
+		- static	(www/ 503s)
+
+	* Some pages redirect to http
+
+
+	Fully covered subdomains:
+
+		- bannercasino
+		- bingo		(→ securebingo)
+		- cdn-bingo
+		- chat-winnercasino
+		- games			(→ securegames)
+		- livecasino		(→ securelivecasino)
+		- login
+		- m
+		- mbingo
+		- mcasino
+		- mobile		(→ securemobile)
+		- secure
+		- securebingo
+		- securegames
+		- securelivecasino
+		- securemobile
+		- service
+		- wap
+
+-->
+<ruleset name="Winner.com (partial)">
+
+	<target host="casino.winner.com" />
+	<target host="bannercasino.winner.com" />
+	<target host="chat-winnercasino.winner.com" />
+	<target host="mcasino.winner.com" />
+	<target host="cdn-bingo.winner.com" />
+	<target host="login.winner.com" />
+	<target host="m.winner.com" />
+	<target host="mbingo.winner.com" />
+	<target host="poker.winner.com" />
+	<target host="secure.winner.com" />
+	<target host="service.winner.com" />
+	<target host="static.winner.com" />
+	<target host="wap.winner.com" />
+	<target host="bingo.winner.com" />
+	<target host="games.winner.com" />
+	<target host="livecasino.winner.com" />
+	<target host="mobile.winner.com" />
+	<target host="securebingo.winner.com" />
+	<target host="securegames.winner.com" />
+	<target host="securelivecasino.winner.com" />
+	<target host="securemobile.winner.com" />
+	<target host="cachepoker.winner.com" />
+		<exclusion pattern="^http://casino\.winner\.com/(?!media/)" />
+		<exclusion pattern="^http://poker\.winner\.com/(?!style/|tpl/)" />
+		<exclusion pattern="^http://static\.winner\.com/www/" />
+
+
+	<securecookie host="^\.winner\.com$" name="^banner_.+" />
+	<securecookie host=".+\.winner\.com$" name=".+" />
+
+
+
+	<rule from="^http://(?:secure)?(bingo|games|livecasino|mobile)\.winner\.com/"
+		to="https://secure$1.winner.com/" />
+
+	<rule from="^http://cachepoker\.winner\.com/"
+		to="https://poker.winner.com/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

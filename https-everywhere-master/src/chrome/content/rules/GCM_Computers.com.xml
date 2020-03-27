@@ -1,0 +1,18 @@
+<!--
+	Server is configured for rc4 only.
+
+-->
+<ruleset name="GCM Computers.com">
+
+	<target host="gcmcomputers.com" />
+	<target host="cp.gcmcomputers.com" />
+	<target host="webmail.gcmcomputers.com" />
+	<target host="www.gcmcomputers.com" />
+
+
+	<securecookie host="^(?:(?:cp|\.webmail|www)\.)?gcmcomputers\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

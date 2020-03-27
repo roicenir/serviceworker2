@@ -1,0 +1,25 @@
+<!--
+	CDN buckets:
+
+		- d3rvd86gsdneth.cloudfront.net
+
+			- assets.uptilo.com
+
+-->
+<ruleset name="Uptilo">
+
+	<target host="uptilo.com" />
+	<target host="esm.uptilo.com" />
+	<target host="www.uptilo.com" />
+	<target host="assets.uptilo.com" />
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+
+	<rule from="^http://assets\.uptilo\.com/"
+		to="https://d3rvd86gsdneth.cloudfront.net/" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

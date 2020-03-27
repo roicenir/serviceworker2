@@ -1,0 +1,14 @@
+<ruleset name="GAIA Host Collective">
+
+	<target host="gaiahost.coop" />
+	<target host="securehost4.gaiahost.coop" />
+	<target host="securemail2.gaiahost.coop" />
+	<target host="www.gaiahost.coop" />
+
+
+	<securecookie host=".+" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

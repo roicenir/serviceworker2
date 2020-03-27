@@ -1,0 +1,63 @@
+<!--
+	Other Economist Group rulesets:
+
+		- Roll_Call.com.xml
+		- Static-Economist.com.xml
+		- Which_MBA.com.xml
+
+
+	Problematic hosts in *economist.com:
+
+		- stats (mismatched)
+		- store (mismatched)
+		- success (expired)
+
+	These altnames don't exist:
+
+		- www.gmat.economist.com
+		- www.app.gmat.economist.com
+		- subscriptions.economist.com
+		- www.success.economist.com
+
+	Mixed content:
+
+		- Bugs on execed from ads.whichmba.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Economist.com (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="economist.com" />
+	<target host="www.economist.com" />
+	<target host="authenticate.economist.com" />
+	<target host="execed.economist.com" />
+	<target host="gmat.economist.com" />
+	<target host="app.gmat.economist.com" />
+	<target host="jobs.economist.com" />
+	<target host="media.economist.com" />
+	<target host="shop.economist.com" />
+	<target host="www.store.economist.com" />
+	<target host="subscription.economist.com" />
+	<target host="subscriptions.economist.com" />
+	<target host="ukshop.economist.com" />
+
+	<!--	Complications:
+				-->
+	<target host="stats.economist.com" />
+	<target host="store.economist.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http://store\.economist\.com/"
+		to="https://shop.economist.com/" />
+
+	<rule from="^http://stats\.economist\.com/"
+		to="https://economist.122.2o7.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

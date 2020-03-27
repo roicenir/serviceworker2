@@ -1,0 +1,28 @@
+<!--
+	Nonfunctional subdomains:
+
+		- lists		(refused)
+		- manual	(shows www; mismatched, CN: ardour.org)
+		- tracker	(dropped)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- (www.)community
+
+-->
+<ruleset name="Ardour (partial)">
+
+	<target host="ardour.org" />
+	<target host="community.ardour.org" />
+	<target host="www.ardour.org" />
+	<target host="www.community.ardour.org" />
+
+
+	<securecookie host="^\.community\.ardour\.org$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

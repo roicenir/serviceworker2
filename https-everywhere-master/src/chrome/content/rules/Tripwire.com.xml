@@ -1,0 +1,6 @@
+<ruleset name="Tripwire.com (partial)">
+	<target host="tripwire.com" />
+	<target host="www.tripwire.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

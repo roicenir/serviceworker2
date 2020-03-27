@@ -1,0 +1,22 @@
+<!--
+	Other MediaMind rulesets:
+		+ Peer39.xml
+		+ Serving-sys.com.xml
+
+	Non-functional hosts
+		Couldn't connect to server:
+		- creativezone.mediamind.com
+
+		SSL connect error:
+		- origin.demo.mediamind.com
+
+		Incomplete certificate chain error:
+		- mediamind.com
+-->
+<ruleset name="MediaMind (partial)">
+	<target host="www.mediamind.com" />
+	<target host="platform.mediamind.com" />
+	<target host="vpn.mediamind.com" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

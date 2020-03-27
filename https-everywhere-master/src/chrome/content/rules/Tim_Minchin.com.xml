@@ -1,0 +1,10 @@
+<ruleset name="Tim Minchin.com (partial)">
+
+	<target host="timminchin.com" />
+	<target host="www.timminchin.com" />
+	<target host="cdn1.timminchin.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,58 @@
+<!--
+	For other Deutsche Telekom coverage, see Deutsche_Telekom.xml.
+
+	Nonfunctional domains:
+
+		- augenblicke *
+		- downloads *
+		- dsl-und-dienste *
+		- einkaufswelt *
+		- eltern *
+		- handy1 *
+		- hilfe-und-service *
+		- horoskop ***
+		- kids *
+		- lifestyle *
+		- mediencenter **
+		- nachrichten *
+		- partnerfragmente2010 *
+		- service *
+		- sportwetten *
+		- top-themen *
+		- unterhaltung *
+		- wiga ****
+
+	* Refused
+	** Timeout
+	*** Unable to get local issuer certificate
+	**** Non-2xx HTTP code
+-->
+<ruleset name="T-Online (partial)">
+
+	<target host="t-online.de" />
+	<target host="www.t-online.de" />
+	<target host="im.banner.t-online.de" />
+	<target host="bilder.t-online.de" />
+	<target host="header.cdb.t-online.de" />
+	<target host="email.t-online.de" />
+	<target host="erotik.t-online.de" />
+	<target host="freemail.t-online.de" />
+	<target host="fssecure.t-online.de" />
+	<target host="gewinnspiele.t-online.de" />
+	<target host="hilfe.t-online.de" />
+	<target host="iss.t-online.de" />
+	<target host="routenplaner.t-online.de" />
+	<target host="stats.t-online.de" />
+	<target host="stayfriends.t-online.de" />
+	<target host="suche.t-online.de" />
+	<target host="themen.t-online.de" />
+	<target host="wiga.t-online.de" />
+		<test url="http://wiga.t-online.de/wetter/wetterinfoapp/configAndroid.xml" />
+		<exclusion pattern="^http://wiga\.t-online\.de/$" />
+		<test url="http://wiga.t-online.de/wetter/" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:"/>
+
+</ruleset>

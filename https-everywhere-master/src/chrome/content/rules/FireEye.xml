@@ -1,0 +1,49 @@
+<!--
+	Refused/Nonfunctional:
+		aiws.*
+		api.eu*
+		ati.*
+		autodiscover.*
+		avsuite-.*
+		bmw-.*
+		docs.*
+		drop.*
+		edulabs.
+		emea.*
+		engvpn.*
+		event-registration.*
+		faude-.*
+		hex.*
+		ir*.
+		jira.eng.*
+		learning.*
+		mirprd*.
+		selab.emea.*
+		user[0-9].*
+		validation.eng.*
+		vpn.selab.emea.*
+
+	Invalid Certificate:
+		arc.*
+
+	Redirects to Microsoft:
+		aware.fireeye.com
+-->
+<ruleset name="FireEye">
+	<target host="fireeye.com" />
+	<target host="ambassadors.fireeye.com" />
+	<target host="apps.fireeye.com" />
+	<target host="brand.fireeye.com" />
+	<target host="community.fireeye.com" />
+	<target host="connect.fireeye.com" />
+	<target host="console.eu.fireeye.com" />
+	<target host="content.fireeye.com" />
+	<target host="education.fireeye.com" />
+	<target host="etp.eu.fireeye.com" />
+	<target host="investors.fireeye.com" />
+	<target host="support.fireeye.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

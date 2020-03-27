@@ -1,0 +1,27 @@
+<!--
+	CDN buckets:
+
+		- d3e94wzv4dpoqy.cloudfront.net
+
+
+	Nonfunctional subdomains:
+
+		- blog
+
+-->
+<ruleset name="WePay (partial)">
+
+	<target host="wepay.com" />
+	<target host="stage.wepay.com" />
+	<target host="static.wepay.com" />
+	<target host="support.wepay.com" />
+	<target host="t.wepay.com" />
+	<target host="www.wepay.com" />
+
+
+	<securecookie host="^.+\.wepay\.com$" name=".+" />
+
+
+
+	<rule from="^http:" to="https:" />
+</ruleset>

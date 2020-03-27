@@ -1,0 +1,22 @@
+<!--
+	Other Datacard Group rulesets:
+
+		- Entrust.xml
+		- Entrust.com.xml
+
+
+	Non-functional hosts:
+		Timeout:
+		- careers.datacard.com
+
+-->
+<ruleset name="Datacard.com">
+
+	<target host="datacard.com" />
+	<target host="www.datacard.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

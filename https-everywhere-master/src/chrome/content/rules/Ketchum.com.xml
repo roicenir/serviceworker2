@@ -1,0 +1,11 @@
+<ruleset name="Ketchum.com (partial)">
+
+	<target host="facebook.ketchum.com" />
+
+
+	<securecookie host="^\.?facebook\.ketchum\.com$" name=".+" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>
