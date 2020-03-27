@@ -1,0 +1,7 @@
+RewriteEngine On
+# This will enable the Rewrite capabilities
+
+RewriteCond %{HTTPS} !=on
+# This checks to make sure the connection is not already HTTPS
+
+RewriteRule ^/?(.*) https://%{8001-bae2944d-1711-4033-bf90-ec748317743c.ws-us02.gitpod.io}/$1 [R,L]
