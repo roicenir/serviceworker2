@@ -9,7 +9,7 @@
   "dependencies": {
     "bittorrent-tracker": "^9.14.4",
     "drag-drop": "^5.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "webtorrent": "^0.107.16"
   },
   "devDependencies": {
